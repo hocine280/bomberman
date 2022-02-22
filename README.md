@@ -7,10 +7,7 @@ Il s'agit de notre projet d'INFO0402 dans lequel nous avons du développer le je
 - CHEMIN Pierre
 - HADID Hocine
 
-:heavy_check_mark:
-
-- [ ] Case déoché
-- [x] Case coché
+[color="#0000FF"] Texte bonjour [/color]
 
 ----
 
