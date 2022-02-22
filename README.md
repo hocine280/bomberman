@@ -1,16 +1,14 @@
-# Bomberman
+# <span style="color: #17b57d">**Bomberman**</span>
 
 Il s'agit de notre projet d'INFO0402 dans lequel nous avons du développer le jeu du **Bomberman**.
 
-## Auteurs
+## **Auteurs**
 
 - CHEMIN Pierre
 - HADID Hocine
 
-[color="#0000FF"] Texte bonjour [/color]
-
 ----
 
-## Sommaire
+## **Sommaire**
 1. Introduction
 2. 
