@@ -1,5 +1,11 @@
 #include "../../include/Map/Position.h"
 
+Position::Position(int x, int y): m_x(x), m_y(y)
+{
+	x >= 0;
+	y >= 0;
+}
+
 int Position::getX() const
 {
 	return m_x;

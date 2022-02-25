@@ -7,7 +7,7 @@ class Position
 		int m_x, m_y;
 		
 	public:
-		Position();
+		Position(int x = 0, int y = 0);
 
 		int getX() const;
 		int getY() const;
