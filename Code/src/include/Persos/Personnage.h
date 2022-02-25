@@ -10,12 +10,12 @@ class Personnage
 		int m_life, m_speed;
 		
 	public:
-		Personnage();
+		Personnage(Position position = Position(), int life = 3, int speed = 1);
 
 		Position getPosition() const;
 		int getLife() const;
 		int getSpeed() const;
-		bool move(DirectionEnum);
+		bool move(DirectionEnum direction);
 		void show() const;
 };
 
