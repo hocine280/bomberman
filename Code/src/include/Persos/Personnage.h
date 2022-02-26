@@ -11,8 +11,8 @@ class Personnage
 		int m_life, m_speed;
 		
 	public:
-		Personnage(Position position = Position position(), int life = 3, int speed = 1);
-		~Personnage();
+		Personnage(int x=0, int y=0, int life = 3, int speed = 1);
+		virtual ~Personnage();
 
 		Position getPosition() const;
 		int getLife() const;

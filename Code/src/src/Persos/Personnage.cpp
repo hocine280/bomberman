@@ -1,14 +1,21 @@
 #include "../../include/Persos/Personnage.h"
 
-Personnage::Personnage(Position position, int life, int speed): m_position(position), m_life(life), m_speed(speed)
+Personnage::Personnage(int x, int y, int life, int speed): m_position(x, y), m_life(life), m_speed(speed)
 {
-	life > 0;
-	speed > 0;
+	if(life < 1)
+	{
+		life = 3;
+	}
+	
+	if(speed < 1)
+	{
+		speed = 1;
+	}
 }
 
-Personnage::~Personnage()
+virtual Personnage::~Personnage()
 {
-	
+
 }
 
 Position Personnage::getPosition() const
