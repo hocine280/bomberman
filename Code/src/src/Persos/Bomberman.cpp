@@ -26,12 +26,20 @@ int Bomberman::getNbBomb() const
 	return m_nbBomb;
 }
 
-void Bomberman::addBomb()
+void Bomberman::addBomb(int nbBomb)
 {
-
+	if(nbBomb > 0)
+	{
+		m_nbBomb += nbBomb;
+	}
 }
 
 void Bomberman::dropBomb()
 {
+	m_nbBomb--;
+}
 
+void Bomberman::show() const
+{
+	
 }
