@@ -41,5 +41,5 @@ void Bomberman::dropBomb()
 
 void Bomberman::show() const
 {
-	
+	std::cout << "P";
 }

@@ -32,3 +32,8 @@ int Personnage::getSpeed() const
 {
 	return m_speed;
 }
+
+bool Personnage::move()
+{
+	
+}
