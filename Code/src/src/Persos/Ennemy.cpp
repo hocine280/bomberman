@@ -11,9 +11,9 @@ Ennemy::Ennemy(int x, int y, int life, int speed, int damage): Personnage(x, y, 
 	}
 }
 
-virtual Ennemy::~Ennemy()
+Ennemy::~Ennemy()
 {
-	Personnage::~Personnage();
+	
 }
 
 int Ennemy::getDamage() const

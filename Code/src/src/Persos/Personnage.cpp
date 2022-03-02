@@ -13,7 +13,7 @@ Personnage::Personnage(int x, int y, int life, int speed): m_position(x, y), m_l
 	}
 }
 
-virtual Personnage::~Personnage()
+Personnage::~Personnage()
 {
 
 }
@@ -33,7 +33,32 @@ int Personnage::getSpeed() const
 	return m_speed;
 }
 
-bool Personnage::move()
+bool Personnage::move(utilities::EDirection direction)
 {
-	
+	bool back = 1;
+
+	switch(direction)
+	{
+		case utilities::EDirection::TOP :
+			m_position.setX(m_position.getX()+1);
+			break;
+
+		case utilities::EDirection::BOTTOM :
+			m_position.setX(m_position.getX()-1);
+			break;
+
+		case utilities::EDirection::LEFT :
+			m_position.setY(m_position.getY()-1);
+			break;
+
+		case utilities::EDirection::RIGHT :
+			m_position.setY(m_position.getY()+1);
+			break;
+
+		default:
+			back = 0;
+			break;
+	}
+
+	return back;
 }
