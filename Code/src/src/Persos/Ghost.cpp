@@ -9,7 +9,7 @@ Ghost::~Ghost()
 
 }
 
-void Ghost::show() const
+void Ghost::show() const override
 {
 	std::cout << "G";
 }

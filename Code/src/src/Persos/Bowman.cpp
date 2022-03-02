@@ -9,7 +9,7 @@ Bowman::~Bowman()
 
 }
 
-void Bowman::show() const
+void Bowman::show() const override
 {
 	std::cout << "B";
 }

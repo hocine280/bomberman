@@ -11,7 +11,7 @@ class Ennemy: public Personnage
 		
 	public:
 		Ennemy(int x, int y, int life, int speed, int damage);
-		virtual ~Ennemy();
+		~Ennemy();
 
 		int getDamage() const;
 		void setDamage(int);

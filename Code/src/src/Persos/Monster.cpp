@@ -9,7 +9,7 @@ Monster::~Monster()
 
 }
 
-void Monster::show() const
+void Monster::show() const override
 {
 	std::cout << "M";
 }

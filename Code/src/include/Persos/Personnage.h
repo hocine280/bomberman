@@ -2,7 +2,7 @@
 #define __PERSONNAGE__
 
 #include "../Map/Position.h"
-#include "DirectionEnum.h"
+#include "../engine/utilities.h"
 
 class Personnage
 {
@@ -12,12 +12,12 @@ class Personnage
 		
 	public:
 		Personnage(int x=0, int y=0, int life = 3, int speed = 1);
-		virtual ~Personnage();
+		~Personnage();
 
 		Position getPosition() const;
 		int getLife() const;
 		int getSpeed() const;
-		bool move(DirectionEnum direction);
+		bool move(utilities::EDirection direction);
 		virtual void show() const = 0;
 };
 

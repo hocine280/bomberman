@@ -9,7 +9,7 @@ class Monster: public Ennemy
 		Monster(int x, int y, int life, int speed, int damage);
 		~Monster();
 
-		void show() const;
+		void show() const override;
 };
 
 #endif

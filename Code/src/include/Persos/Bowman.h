@@ -2,6 +2,7 @@
 #define __BOWMAN__
 
 #include "Ennemy.h"
+#include "../engine/utilities.h"
 
 class Bowman
 {	
@@ -9,10 +10,10 @@ class Bowman
 		Bowman(int x, int y, int life, int speed, int damage);
 		~Bowman();
 
-		void show() const;
+		void show() const override;
 
-		void shootArrow(DirectionEnum) const;
-		DirectionEnum shootPlayer() const;
+		Arrow shootArrow(utilities::EDirection) const;
+		utilities::EDirection shootPlayer() const;
 };
 
 #endif
