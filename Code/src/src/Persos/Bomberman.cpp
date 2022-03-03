@@ -46,7 +46,7 @@ void Bomberman::dropBomb()
 	m_nbBomb--;
 }
 
-void Bomberman::show() const override
+void Bomberman::show() const
 {
 	std::cout << "P";
 }
