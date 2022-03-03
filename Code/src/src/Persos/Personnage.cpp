@@ -40,11 +40,11 @@ bool Personnage::move(utilities::EDirection direction)
 	switch(direction)
 	{
 		case utilities::EDirection::TOP :
-			m_position.setX(m_position.getX()+1);
+			m_position.setX(m_position.getX()-1);
 			break;
 
 		case utilities::EDirection::BOTTOM :
-			m_position.setX(m_position.getX()-1);
+			m_position.setX(m_position.getX()+1);
 			break;
 
 		case utilities::EDirection::LEFT :
