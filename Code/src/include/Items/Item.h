@@ -9,11 +9,11 @@ class Item
 		Position m_position;
 		
 	public:
-		Item(Position position = Position position());
+		Item(int x = 0, int y = 0);
 		~Item();
 
 		Position getPosition() const;
-		void show() const;
+		virtual void show() const = 0;
 };
 
 
