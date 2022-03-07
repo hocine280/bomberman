@@ -1,8 +1,20 @@
 #include "../../include/Map/Map.h"
 
+using namespace std;
+
 Map::Map(int nbLine, int nbColumn): m_nbLine(nbLine), m_nbColumn(nbColumn)
 {
-	loadMap();
+	for(i=0; i<m_nbLine; i++)
+	{
+		m_mapTile.push_back(vector <Tile>(m_nbColumn));
+		for(int j=0; j<m_nbColumn; j++)
+		{
+			Tile t(i, j, true);
+			m_mapTile[i][j] = &t;
+		}
+	}
+
+	m_player = Bomberman();
 }
 
 Map::~Map()
@@ -28,24 +40,6 @@ Tile Map::getTarget() const
 Bomberman Map::getPlayer() const
 {
 	return m_player;
-}
-
-void Map::loadMap()
-{
-	m_mapTile = (Tile**) malloc(nbLine * sizeof(Tile*));
-	for(int i=0; i<m_nbLine; i++)
-	{
-		m_mapTile[i] = (Tile*) malloc(m_nbColumn * sizeof(Tile));
-	}
-
-	for(i=0; i<m_nbLine; i++)
-	{
-		for(int j=0; j<m_nbColumn; j++)
-		{
-			Tile t();
-			m_mapTile[i][j] = &t;
-		}
-	}
 }
 
 void Map::showMap() const

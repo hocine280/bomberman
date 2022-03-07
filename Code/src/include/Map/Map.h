@@ -3,6 +3,11 @@
 
 #include <vector>
 
+#include "../Persos/Bomberman.h"
+#include "Tile.h"
+#include "../Items/Item.h"
+#include "../Persos/Ennemy.h"
+
 class Map
 {
 	private:
@@ -10,7 +15,7 @@ class Map
 		int m_nbLine;
 		Tile m_target;
 		Bomberman m_player;
-		Tile** m_mapTile;
+		std::vector < std::vector<Tile> > m_mapTile;
 		std::vector <Ennemy> m_listEnnemy;
 		std::vector <Item> m_listItems;
 
@@ -22,7 +27,6 @@ class Map
 		int getNbColumn() const;
 		int getNbLine() const;
 		Bomberman getPlayer() const;
-		void loadMap();
 		void showMap() const;
 };
 
