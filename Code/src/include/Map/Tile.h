@@ -15,6 +15,7 @@ class Tile
 
 		Position getPosition() const;
 		bool getBeCrossed() const;
+		virtual void show() const;
 };
 
 #endif

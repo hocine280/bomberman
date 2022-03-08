@@ -2,6 +2,7 @@
 #include "../../include/Map/Wall.h"
 
 #include <iostream>
+#include <typeinfo>
 
 int main(void)
 {
@@ -13,6 +14,8 @@ int main(void)
 	std::cin >> nbColumn;
 
 	Map map(nbLine, nbColumn);
+
+	std::cout << std::endl;
 
 	std::cout << "Map line: " << map.getNbLine() << " | column: " << map.getNbColumn() << std::endl;
 

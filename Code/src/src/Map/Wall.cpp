@@ -1,6 +1,6 @@
 #include "../../include/Map/Wall.h"
 
-#include <typeinfo>
+#include <iostream>
 
 Wall::Wall(int x, int y, bool beCrossed, bool destructible, int nbNecessaryBomb): Tile(x, y, beCrossed), m_destructible(destructible), m_nbNecessaryBomb(nbNecessaryBomb)
 {
@@ -34,6 +34,11 @@ bool Wall::getDestructible() const
 int Wall::getNbNecessaryBomb() const
 {
 	return m_nbNecessaryBomb;
+}
+
+void Wall::show() const
+{
+	std::cout << "W";
 }
 
 void Wall::weaken()
