@@ -10,7 +10,7 @@ class Tile
 		bool m_beCrossed;
 
 	public:
-		Tile(int x = 0; int y = 0, bool beCrossed = true);
+		Tile(int x = 0, int y = 0, bool beCrossed = true);
 		~Tile();
 
 		Position getPosition() const;

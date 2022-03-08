@@ -1,5 +1,7 @@
 #include "../../include/Map/Wall.h"
 
+#include <typeinfo>
+
 Wall::Wall(int x, int y, bool beCrossed, bool destructible, int nbNecessaryBomb): Tile(x, y, beCrossed), m_destructible(destructible), m_nbNecessaryBomb(nbNecessaryBomb)
 {
 	if(x < 0 || x > 7)

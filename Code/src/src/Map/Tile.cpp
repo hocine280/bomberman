@@ -14,5 +14,5 @@ Position Tile::getPosition() const
 
 bool Tile::getBeCrossed() const
 {
-	return m_position;
+	return m_beCrossed;
 }

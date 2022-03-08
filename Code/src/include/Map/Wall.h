@@ -10,7 +10,7 @@ class Wall : public Tile
 		int m_nbNecessaryBomb;
 
 	public:
-		Wall(int x = 0, int y = 0, bool beCrossed, bool destructible, int nbNecessaryBomb);
+		Wall(int x = 0, int y = 0, bool beCrossed = false, bool destructible = true, int nbNecessaryBomb = 2);
 		~Wall();
 
 		bool getDestructible() const;
