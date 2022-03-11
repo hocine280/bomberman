@@ -15,8 +15,9 @@ Map::Map(int nbLine, int nbColumn): m_nbLine(nbLine), m_nbColumn(nbColumn)
 			m_mapTile[i][j] = t;
 		}
 	}
+	m_listWall.push_back(Wall(1, 0, false, true, 2));
 	m_target = Tile(0, 0, false);
-	//m_player = Bomberman;
+	m_player = Bomberman(1, 1, 3, 1, 5, 2);
 }
 
 Map::~Map()
@@ -69,7 +70,11 @@ void Map::showMap() const
 						cout << "| ";
 						
 						//Affichage de la valeur centrale
-						if(!m_listWall.empty())
+						if(m_player.getPosition().getX() == line && m_player.getPosition().getY() == column)
+						{
+							m_player.show();
+						}
+						else if(!m_listWall.empty())
 						{
 							int k = 0;
 							while((m_listWall[k].getPosition().getX() != line || m_listWall[k].getPosition().getY() != column) && k<m_listWall.size())
@@ -82,6 +87,7 @@ void Map::showMap() const
 							}
 							else
 							{
+								
 								m_mapTile[line][column].show();
 							}
 						}
