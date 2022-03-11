@@ -1,5 +1,4 @@
 #include "../../include/Map/Map.h"
-#include "../../include/Map/Wall.h"
 
 #include <iostream>
 
@@ -12,22 +11,12 @@ Map::Map(int nbLine, int nbColumn): m_nbLine(nbLine), m_nbColumn(nbColumn)
 		m_mapTile.push_back(vector <Tile>(m_nbColumn));
 		for(int j=0; j<m_nbColumn; j++)
 		{
-			if(i == 1 && j == 0)
-			{
-				Wall w(1, 0, false, true, 2);
-				Tile& t = w;
-				m_mapTile[i][j] = t;
-			}
-			else
-			{
-				Tile t(i, j, true);
-				m_mapTile[i][j] = t;
-			}
-			
+			Tile t(i, j, true);
+			m_mapTile[i][j] = t;
 		}
 	}
 	m_target = Tile(0, 0, false);
-	//m_player = Bomberman();
+	//m_player = Bomberman;
 }
 
 Map::~Map()
@@ -76,10 +65,34 @@ void Map::showMap() const
 						break;
 
 					case 1:
+					{
 						cout << "| ";
-						cout << " "; 	//Affichage de la valeur
+						
+						//Affichage de la valeur centrale
+						if(!m_listWall.empty())
+						{
+							int k = 0;
+							while((m_listWall[k].getPosition().getX() != line || m_listWall[k].getPosition().getY() != column) && k<m_listWall.size())
+							{
+								k++;
+							}
+							if(k<m_listWall.size())
+							{
+								m_listWall[k].show();
+							}
+							else
+							{
+								m_mapTile[line][column].show();
+							}
+						}
+						else
+						{
+							m_mapTile[line][column].show();
+						}
+						
 						cout << " ";
 						break;
+					}
 
 					case 2:
 						cout << "|   ";
