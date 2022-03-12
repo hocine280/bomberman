@@ -9,22 +9,39 @@ Map::Map(int nbLine, int nbColumn): m_nbLine(nbLine), m_nbColumn(nbColumn)
 {
 	for(int i=0; i<m_nbLine; i++)
 	{
-		m_mapTile.push_back(vector <Tile>(m_nbColumn));
+		m_mapTile.push_back(vector <Tile*>(m_nbColumn));
 		for(int j=0; j<m_nbColumn; j++)
 		{
-			Tile t(i, j, true);
-			m_mapTile[i][j] = t;
+			if(i == 0 && j == 0)
+			{
+				m_mapTile[i][j] = new Wall(i, j, false, true, 2);
+			}
+			else
+			{
+				m_mapTile[i][j] = new Tile(i, j, true);
+			}
+			
 		}
 	}
-	m_listWall.push_back(Wall(1, 0, false, true, 2));
-	m_listEnnemy.push_back(Ghost(0, 1, 1, 1, 2));
+	m_listEnnemy.push_back(new Ghost(0, 1, 1, 1, 2));
 	m_target = Tile(0, 0, false);
 	m_player = Bomberman(1, 1, 3, 1, 5, 2);
 }
 
 Map::~Map()
 {
+	for(int i=0; i<m_nbLine; i++)
+	{
+		for(int j=0; j<m_nbColumn; j++)
+		{
+			delete m_mapTile[i][j];
+		}
+	}
 
+	for(int i=0; i<m_listEnnemy.size(); i++)
+	{
+		delete m_listEnnemy[i];
+	}
 }
 
 int Map::getNbColumn() const
@@ -41,11 +58,11 @@ Tile Map::getTarget() const
 {
 	return m_target;
 }
-/*
-Bomberman Map::getPlayer() const
+
+bool Map::movePlayer(utilities::EDirection direction)
 {
-	return m_player;
-}*/
+	return m_player.move(direction);
+}
 
 void Map::showMap() const
 {
@@ -72,46 +89,29 @@ void Map::showMap() const
 						cout << "| ";
 						
 						//Affichage de la valeur centrale
-						if(m_player.getPosition() == m_mapTile[line][column].getPosition())
+						if(m_player.getPosition() == m_mapTile[line][column]->getPosition())
 						{
 							m_player.show();
 						}
-						else if(!m_listWall.empty())
+						else if(!m_listEnnemy.empty())
 						{
-							int k = 0;
-							while(m_listWall[k].getPosition() != m_mapTile[line][column].getPosition() && k<m_listWall.size())
+							int k=0;
+							while(k<m_listEnnemy.size() && m_listEnnemy[k]->getPosition() != m_mapTile[line][column]->getPosition())
 							{
 								k++;
 							}
-							if(k<m_listWall.size())
+							if(k<m_listEnnemy.size())
 							{
-								m_listWall[k].show();
-							} 
-							else if(!m_listEnnemy.empty())
-							{
-								int k=0;
-								while(m_listEnnemy[k].getPosition() != m_mapTile[line][column].getPosition() && k<m_listEnnemy.size())
-								{
-									k++;
-								}
-								if(k<m_listEnnemy.size())
-								{
-									m_listEnnemy[k].show();
-								}
-								else
-								{
-									m_mapTile[line][column].show();
-								}
+								m_listEnnemy[k]->show();
 							}
 							else
 							{
-								
-								m_mapTile[line][column].show();
+								m_mapTile[line][column]->show();
 							}
 						}
 						else
 						{
-							m_mapTile[line][column].show();
+							m_mapTile[line][column]->show();
 						}
 						
 						cout << " ";

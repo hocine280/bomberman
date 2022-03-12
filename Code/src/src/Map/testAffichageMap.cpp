@@ -22,6 +22,10 @@ int main(void)
 	std::cout << std::endl << std::endl;
 
 	map.showMap();
+	
+	map.movePlayer(utilities::EDirection::RIGHT);
+
+	map.showMap();
 
 	return 0;
 }
