@@ -1,3 +1,13 @@
+/**
+ * \file Map.h
+ * \author Pierre CHEMIN
+ * \brief 
+ * \version 0.1
+ * \date 2022-03-12
+ * 
+ * \copyright Copyright (c) 2022
+ * 
+ */
 #ifndef __MAP__
 #define __MAP__
 
@@ -24,9 +34,32 @@ class Map
 		Map(int nbLine = 8, int nbColumn = 8);
 		~Map();
 
+		/**
+		 * \brief Get the Target object
+		 * 
+		 * \return Tile the target
+		 */
 		Tile getTarget() const;
+
+		/**
+		 * \brief Get the Nb Column object
+		 * 
+		 * \return int the Nb Column
+		 */
 		int getNbColumn() const;
+		
+		/**
+		 * \brief Get the Nb Line object
+		 * 
+		 * @return int the Nb Line 
+		 */
 		int getNbLine() const;
+
+		/**
+		 * \brief Permet l'affichage de la map sur la console
+		 * \author Pierre CHEMIN
+		 * 
+		 */
 		void showMap() const;
 
 		bool movePlayer(utilities::EDirection direction);

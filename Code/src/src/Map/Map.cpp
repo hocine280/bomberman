@@ -42,6 +42,11 @@ Map::~Map()
 	{
 		delete m_listEnnemy[i];
 	}
+
+	for(int i=0; i<m_listItems.size(), i++)
+	{
+		delete m_listItems[i];
+	}
 }
 
 int Map::getNbColumn() const
