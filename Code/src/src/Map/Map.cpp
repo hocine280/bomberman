@@ -86,14 +86,17 @@ void Map::showMap() const
 
 					case 1:
 					{
-						cout << "| ";
+						bool show = false;
+						cout << "|";
 						
 						//Affichage de la valeur centrale
 						if(m_player.getPosition() == m_mapTile[line][column]->getPosition())
 						{
 							m_player.show();
+							show = true;
 						}
-						else if(!m_listEnnemy.empty())
+						
+						if(!m_listEnnemy.empty() && !show)
 						{
 							int k=0;
 							while(k<m_listEnnemy.size() && m_listEnnemy[k]->getPosition() != m_mapTile[line][column]->getPosition())
@@ -103,18 +106,29 @@ void Map::showMap() const
 							if(k<m_listEnnemy.size())
 							{
 								m_listEnnemy[k]->show();
-							}
-							else
-							{
-								m_mapTile[line][column]->show();
+								show = true;
 							}
 						}
-						else
+
+						if(!m_listItems.empty() && !show)
+						{
+							int k=0;
+							while(k<m_listItems.size() && m_listItems[k]->getPosition() != m_mapTile[line][column]->getPosition())
+							{
+								k++;
+							}
+							if(k<m_listItems.size())
+							{
+								m_listItems[k]->show();
+								show = true;
+							}
+						}
+						
+						if(!show)
 						{
 							m_mapTile[line][column]->show();
 						}
 						
-						cout << " ";
 						break;
 					}
 

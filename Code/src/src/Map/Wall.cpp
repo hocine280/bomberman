@@ -38,7 +38,7 @@ int Wall::getNbNecessaryBomb() const
 
 void Wall::show() const
 {
-	std::cout << "W";
+	std::cout << " W ";
 }
 
 void Wall::weaken()

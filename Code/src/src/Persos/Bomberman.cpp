@@ -48,7 +48,7 @@ void Bomberman::dropBomb()
 
 void Bomberman::show() const
 {
-	std::cout << "P";
+	std::cout << " P ";
 }
 
 void Bomberman::showPosition() const

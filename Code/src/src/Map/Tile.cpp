@@ -16,7 +16,7 @@ Position Tile::getPosition() const
 
 void Tile::show() const
 {
-	std::cout << " ";
+	std::cout << "   ";
 }
 
 bool Tile::getBeCrossed() const

@@ -23,6 +23,7 @@ int main(void)
 
 	map.showMap();
 	
+	std::cout << std::endl << "Déplacement du bomberman vers la droite" << std::endl << std::endl;
 	map.movePlayer(utilities::EDirection::RIGHT);
 
 	map.showMap();
