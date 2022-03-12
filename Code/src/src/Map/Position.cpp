@@ -31,3 +31,13 @@ void Position::setY(int y)
 		this->m_y = y;
 	}
 }
+
+bool Position::operator==(const Position& other)
+{
+	return (m_x == other.m_x && m_y == other.m_y);
+}
+
+bool Position::operator!=(const Position& other)
+{
+	return (m_x != other.m_x || m_y != other.m_y);
+}

@@ -13,6 +13,9 @@ class Position
 		int getY() const;
 		void setX(int);
 		void setY(int);
+
+		bool operator==(const Position& other);
+		bool operator!=(const Position& other);
 };
 
 #endif

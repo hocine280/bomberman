@@ -18,7 +18,7 @@ class Map
 		Bomberman m_player;
 		std::vector <std::vector<Tile>>m_mapTile;
 		std::vector <Wall> m_listWall;
-		//std::vector <Ennemy> m_listEnnemy;
+		std::vector <Ennemy> m_listEnnemy;
 		//std::vector <Item> m_listItems;
 
 	public:
