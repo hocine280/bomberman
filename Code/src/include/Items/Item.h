@@ -13,7 +13,9 @@ class Item
 		~Item();
 
 		Position getPosition() const;
-		virtual void show() const = 0;
+		virtual void showTop() const = 0;
+		virtual void showMiddle() const = 0;
+		virtual void showBottom() const = 0;
 };
 
 

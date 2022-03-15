@@ -13,9 +13,10 @@ class Arrow
 	public:
 		Arrow(int x = 0, int x = 0, int speed = 1, int damage = 1, utilities::EDirection direction = utilities::EDirection::NONE);
 
-		void increasePower() const;
 		void move();
-		void show() const override;
+		void showTop() const override;
+		void showMiddle() const override;
+		void showBottom() const override;
 };
 
 #endif
