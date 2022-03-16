@@ -15,10 +15,10 @@ class Bomberman: public Personnage
 
 		int getBombMax() const;
 		int getNbBomb() const;
-		void addBomb(int);
+		void addBomb(int nbBomb);
+		void addLife(int life);
 		void dropBomb();
 		virtual void show() const override;
-		void showPosition() const;
 };
 
 #endif

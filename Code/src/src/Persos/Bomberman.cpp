@@ -33,6 +33,11 @@ int Bomberman::getNbBomb() const
 	return m_nbBomb;
 }
 
+void Bomberman::addLife(int life)
+{
+	m_life += life;
+}
+
 void Bomberman::addBomb(int nbBomb)
 {
 	if(nbBomb > 0)
@@ -49,9 +54,4 @@ void Bomberman::dropBomb()
 void Bomberman::show() const
 {
 	std::cout << " P ";
-}
-
-void Bomberman::showPosition() const
-{
-	std::cout << "Position (x=" << m_position.getX() << " ; y=" << m_position.getY() << ")" << std::endl;
 }
