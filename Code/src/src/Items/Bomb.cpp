@@ -1,13 +1,18 @@
 #include "../../include/Items/Bomb.h"
 
-Bomb::Bomb(int x, int y, double scope, int turnBeforeExplosion): Item(x, y), m_scope(scope), m_turnBeforeExplosion(turnBeforeExplosion)
+#include <iostream>
+
+int Bomb::power = 1;
+double Bomb::scope = 1.5;
+
+Bomb::Bomb(int x, int y, int turnBeforeExplosion): Item(x, y), m_turnBeforeExplosion(turnBeforeExplosion)
 {
 
 }
 
-double Bomb::getScope() const
+Bomb::~Bomb()
 {
-	return m_scope;
+	
 }
 
 int Bomb::getTurnBeforeExplosion() const

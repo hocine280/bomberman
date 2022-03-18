@@ -1,19 +1,19 @@
-#ifndef __SPEEDUP__
-#define __SPEEDUP__
+#ifndef __MOREBOMB__
+#define __MOREBOMB__
 
 #include "Item.h"
 #include "../Persos/Bomberman.h"
 
-class SpeedUp: public Item
+class MoreBomb: public Item
 {
 	private:
-		int m_speed;
+		int m_nbBomb;
 		
 	public:
-		SpeedUp(int x = 0, int y = 0, int speed = 1);
-		~SpeedUp();
+		MoreBomb(int x = 0, int y = 0, int nbBomb = 1);
+		~MoreBomb();
 
-		void increaseBomberman(Bomberman* b);
+		void increaseNbBomb(Bomberman* b);
 
 		void showTop() const override;
 		void showMiddle() const override;

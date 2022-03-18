@@ -46,6 +46,11 @@ void Bomberman::addBomb(int nbBomb)
 	}
 }
 
+void Bomberman::addSpeed(int speed)
+{
+	m_speed += speed;
+}
+
 void Bomberman::dropBomb()
 {
 	m_nbBomb--;

@@ -17,6 +17,7 @@ class Bomberman: public Personnage
 		int getNbBomb() const;
 		void addBomb(int nbBomb);
 		void addLife(int life);
+		void addSpeed(int speed);
 		void dropBomb();
 		virtual void show() const override;
 };

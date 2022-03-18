@@ -4,7 +4,7 @@
 #include "Item.h"
 #include "../Persos/Bomberman.h"
 
-class PowerUp
+class PowerUp: public Item
 {
 	private:
 		int m_powerPoint;

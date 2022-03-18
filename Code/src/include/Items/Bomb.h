@@ -3,16 +3,16 @@
 
 #include "Item.h"
 
-class Bomb
+class Bomb: public Item
 {
 	private:
-		double m_scope;
-		int m_turnBeforeExplosion
+		int m_turnBeforeExplosion;
 		
 	public:
-		int static power = 1;
+		static int power;
+		static double scope;
 
-		Bomb(int x = 0, int y = 0, double scope, int turnBeforeExplosion);
+		Bomb(int x = 0, int y = 0, int turnBeforeExplosion = 2);
 		~Bomb();
 
 		double getScope() const;

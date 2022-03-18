@@ -4,7 +4,7 @@
 #include "Item.h"
 #include "../Persos/Bomberman.h"
 
-class MoreLife
+class MoreLife: public Item
 {
 	private:
 		int m_lifePoint;
