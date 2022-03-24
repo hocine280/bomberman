@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Map::Map(int nbLine, int nbColumn): m_nbLine(nbLine), m_nbColumn(nbColumn)
+Map::Map(Bomberman& player, int nbLine, int nbColumn): m_nbLine(nbLine), m_nbColumn(nbColumn)
 {
 	for(int i=0; i<m_nbLine; i++)
 	{
@@ -25,7 +25,7 @@ Map::Map(int nbLine, int nbColumn): m_nbLine(nbLine), m_nbColumn(nbColumn)
 	}
 	m_listEnnemy.push_back(new Ghost(0, 1, 1, 1, 2));
 	m_target = Tile(0, 0, false);
-	m_player = Bomberman(1, 1, 3, 1, 5, 2);
+	m_player = player;
 }
 
 Map::~Map()

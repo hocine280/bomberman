@@ -31,7 +31,7 @@ class Map
 		std::vector <Item*> m_listItems;
 
 	public:
-		Map(int nbLine = 8, int nbColumn = 8);
+		Map(Bomberman& player, int nbLine = 8, int nbColumn = 8);
 		~Map();
 
 		/**
