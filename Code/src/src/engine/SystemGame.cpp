@@ -1,5 +1,6 @@
 #include "../../include/engine/SystemGame.h"
 #include "../../include/engine/utilities.h"
+#include "../../include/Map/MoveException.h"
 
 #include <iostream>
 
@@ -46,23 +47,52 @@ void SystemGame::turnPlayer()
 		switch (action)
 		{
 			case 8:
-				m_map.movePlayer(utilities::EDirection::TOP);
-				finAction = 0;
+				try
+				{
+					m_map.movePlayer(utilities::EDirection::TOP);
+					finAction = 0;
+				}
+				catch(const MoveException& e)
+				{
+					std::cerr << e.what() << '\n';
+				}
+				
 				break;
 				
 			case 4:
-				m_map.movePlayer(utilities::EDirection::LEFT);
-				finAction = 0;
+				try
+				{
+					m_map.movePlayer(utilities::EDirection::LEFT);
+					finAction = 0;
+				}
+				catch(const MoveException& e)
+				{
+					std::cerr << e.what() << '\n';
+				}
 				break;
 
 			case 6:
-				m_map.movePlayer(utilities::EDirection::RIGHT);
-				finAction = 0;
+				try
+				{
+					m_map.movePlayer(utilities::EDirection::RIGHT);
+					finAction = 0;
+				}
+				catch(const MoveException& e)
+				{
+					std::cerr << e.what() << '\n';
+				}
 				break;
 
 			case 2:
-				m_map.movePlayer(utilities::EDirection::BOTTOM);
-				finAction = 0;
+				try
+				{
+					m_map.movePlayer(utilities::EDirection::BOTTOM);
+					finAction = 0;
+				}
+				catch(const MoveException& e)
+				{
+					std::cerr << e.what() << '\n';
+				}
 				break;
 
 			case 5:

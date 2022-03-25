@@ -1,5 +1,7 @@
 #include "../../include/Map/Map.h"
 #include "../../include/Persos/Ghost.h"
+#include "../../include/Map/Position.h"
+#include "../../include/Map/MoveException.h"
 
 #include <iostream>
 
@@ -65,6 +67,14 @@ Tile Map::getTarget() const
 
 bool Map::movePlayer(utilities::EDirection direction)
 {
+	Bomberman bTest = m_player;
+	bTest.move(direction);
+
+	if(bTest.getPosition().getX() >= m_nbLine || bTest.getPosition().getY() >= m_nbColumn || bTest.getPosition().getX() < 0 || bTest.getPosition().getY() < 0){
+		throw MoveException();
+		return false;
+	}
+
 	return m_player.move(direction);
 }
 

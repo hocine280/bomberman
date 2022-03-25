@@ -1,6 +1,6 @@
 CC = g++
 CFLAGS = -Wall
-REP_SOURE= src/src/
+REP_SOURE= src/src
 EXEC_NAME = program
 OBJ_FILES = $(REP_SOURE)/engine/*.cpp $(REP_SOURE)/Map/*.cpp $(REP_SOURE)/Persos/*.cpp $(REP_SOURE)/Items/*.cpp ProgBomberman.cpp
 

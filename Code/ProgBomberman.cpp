@@ -12,7 +12,6 @@ int main(void)
 
 	SG.playTurn();
 	SG.playTurn();
-	SG.playTurn();
 
 	std::cout << "============= Fin du test ===================" << std::endl << std::endl;
 	return 0;

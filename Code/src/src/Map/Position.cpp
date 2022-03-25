@@ -18,18 +18,12 @@ int Position::getY() const
 
 void Position::setX(int x)
 {
-	if(x >= 0)
-	{
-		this->m_x = x;
-	}
+	this->m_x = x;
 }
 
 void Position::setY(int y)
 {
-	if(y >= 0)
-	{
-		this->m_y = y;
-	}
+	this->m_y = y;
 }
 
 bool Position::operator==(const Position& other)
