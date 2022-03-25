@@ -3,6 +3,7 @@
 #include "../../include/Map/MoveException.h"
 
 #include <iostream>
+#include <limits>
 
 SystemGame::SystemGame(): m_player(), m_map(m_player, 4, 5)
 {
@@ -28,7 +29,7 @@ void SystemGame::turnPlayer()
 	int action;
 	bool finAction = 1;
 	do
-	{
+	{	
 		std::cout << std::endl << std::endl;
 		std::cout << "=============== Action joueur =================" << std::endl;
 		std::cout << std::endl;
@@ -36,12 +37,12 @@ void SystemGame::turnPlayer()
 		std::cout << "8 - Déplacement vers le haut" << std::endl;
 		std::cout << "4 - Déplacement vers la gauche" << std::endl;
 		std::cout << "6 - Déplacement vers la droite" << std::endl;
-		std::cout << "2 - Déplacement vers la bas" << std::endl;
+		std::cout << "2 - Déplacement vers le bas" << std::endl;
 		std::cout << std::endl;
 		std::cout << "      -------- Action -----------" << std::endl;
 		std::cout << "5 - Poser une bombe" << std::endl;
 		std::cout << std::endl;
-		std::cout << "Saisir votre action : ";
+		std::cout << "Saisir votre choix : ";
 
 		std::cin >> action;
 		switch (action)
@@ -100,6 +101,8 @@ void SystemGame::turnPlayer()
 				break;
 			
 			default:
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				finAction = 1;
 				break;
 		}

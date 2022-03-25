@@ -9,17 +9,22 @@ Tile::~Tile()
 
 }
 
+void Tile::setBeCrossed(bool beCrossed)
+{
+	m_beCrossed = beCrossed;
+}
+
 Position Tile::getPosition() const
 {
 	return m_position;
 }
 
-void Tile::show() const
-{
-	std::cout << "   ";
-}
-
 bool Tile::getBeCrossed() const
 {
 	return m_beCrossed;
+}
+
+void Tile::show() const
+{
+	std::cout << "   ";
 }

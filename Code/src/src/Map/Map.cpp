@@ -71,11 +71,25 @@ bool Map::movePlayer(utilities::EDirection direction)
 	bTest.move(direction);
 
 	if(bTest.getPosition().getX() >= m_nbLine || bTest.getPosition().getY() >= m_nbColumn || bTest.getPosition().getX() < 0 || bTest.getPosition().getY() < 0){
-		throw MoveException();
-		return false;
+		throw MoveException("\nDéplacement impossible !\nCause : sortie de map");
 	}
 
-	return m_player.move(direction);
+	if(!m_mapTile[bTest.getPosition().getX()][bTest.getPosition().getY()]->getBeCrossed())
+	{
+		throw MoveException("\nDéplacement impossible !\nCause : La case ne peut être traversé");
+	}
+
+	bTest = m_player;
+	if(m_player.move(direction))
+	{
+		m_mapTile[bTest.getPosition().getX()][bTest.getPosition().getY()]->setBeCrossed(true);
+		m_mapTile[m_player.getPosition().getX()][m_player.getPosition().getY()]->setBeCrossed(false);
+		return true;
+	}
+	else
+	{
+		throw MoveException("Une erreur est survenue ! Le déplacement n'a pas pu être effectué");
+	}
 }
 
 void Map::showMap() const
