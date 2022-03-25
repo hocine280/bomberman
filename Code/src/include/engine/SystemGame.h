@@ -15,10 +15,9 @@ class SystemGame
 		void turnEnnemy();
 		
 	public:
-		System();
+		SystemGame();
 
-		void refreshMap();
-		void showGame();
+		void showMap();
 		void playTurn();
 };
 

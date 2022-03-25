@@ -5,14 +5,14 @@
 
 using namespace std;
 
-Map::Map(Bomberman& player, int nbLine, int nbColumn): m_nbLine(nbLine), m_nbColumn(nbColumn)
+Map::Map(Bomberman& player, int nbLine, int nbColumn): m_player(player), m_nbLine(nbLine), m_nbColumn(nbColumn)
 {
 	for(int i=0; i<m_nbLine; i++)
 	{
 		m_mapTile.push_back(vector <Tile*>(m_nbColumn));
 		for(int j=0; j<m_nbColumn; j++)
 		{
-			if(i == 0 && j == 0)
+			if(i == 2 && j == 0)
 			{
 				m_mapTile[i][j] = new Wall(i, j, false, true, 2);
 			}
@@ -25,7 +25,6 @@ Map::Map(Bomberman& player, int nbLine, int nbColumn): m_nbLine(nbLine), m_nbCol
 	}
 	m_listEnnemy.push_back(new Ghost(0, 1, 1, 1, 2));
 	m_target = Tile(0, 0, false);
-	m_player = player;
 }
 
 Map::~Map()
@@ -43,7 +42,7 @@ Map::~Map()
 		delete m_listEnnemy[i];
 	}
 
-	for(int i=0; i<m_listItems.size(), i++)
+	for(int i=0; i<m_listItems.size(); i++)
 	{
 		delete m_listItems[i];
 	}
@@ -86,8 +85,28 @@ void Map::showMap() const
 				switch (i)
 				{
 					case 0:
-						cout << "|   ";
+					{
+						bool show = false;
+						if(!m_listItems.empty())
+						{
+							int k=0;
+							while(k<m_listItems.size() && m_listItems[k]->getPosition() != m_mapTile[line][column]->getPosition())
+							{
+								k++;
+							}
+							if(k<m_listItems.size())
+							{
+								m_listItems[k]->showTop();
+								show = true;
+							}
+						}
+						if(!show)
+						{
+							cout << "|   ";
+						}
+						
 						break;
+					}
 
 					case 1:
 					{
@@ -124,7 +143,7 @@ void Map::showMap() const
 							}
 							if(k<m_listItems.size())
 							{
-								m_listItems[k]->show();
+								m_listItems[k]->showMiddle();
 								show = true;
 							}
 						}
@@ -138,8 +157,27 @@ void Map::showMap() const
 					}
 
 					case 2:
-						cout << "|   ";
+					{
+						bool show = false;
+						if(!m_listItems.empty())
+						{
+							int k=0;
+							while(k<m_listItems.size() && m_listItems[k]->getPosition() != m_mapTile[line][column]->getPosition())
+							{
+								k++;
+							}
+							if(k<m_listItems.size())
+							{
+								m_listItems[k]->showBottom();
+								show = true;
+							}
+						}
+						if(!show)
+						{
+							cout << "|   ";
+						}
 						break;
+					}
 					
 					default:
 						cout << "|   ";

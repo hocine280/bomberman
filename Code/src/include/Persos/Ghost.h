@@ -9,7 +9,7 @@ class Ghost: public Ennemy
 		Ghost(int x, int y, int life, int speed, int damage);
 		~Ghost();
 
-		void show() const override;
+		virtual void show() const override;
 };
 
 #endif

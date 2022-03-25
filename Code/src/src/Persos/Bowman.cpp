@@ -9,17 +9,17 @@ Bowman::~Bowman()
 
 }
 
-void Bowman::show() const override
+void Bowman::show() const
 {
 	std::cout << "B";
 }
 
 Arrow Bowman::shootArrow(utilities::EDirection) const
 {
-
+	return Arrow();
 }
 
 utilities::EDirection Bowman::shootPlayer() const
 {
-	
+	return utilities::EDirection::NONE;
 }
