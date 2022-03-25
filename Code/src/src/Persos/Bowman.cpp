@@ -11,7 +11,7 @@ Bowman::~Bowman()
 
 void Bowman::show() const
 {
-	std::cout << "B";
+	std::cout << " B ";
 }
 
 Arrow Bowman::shootArrow(utilities::EDirection) const

@@ -1,32 +1,23 @@
 #include "../../include/Map/Map.h"
-#include "../../include/Persos/Ghost.h"
 #include "../../include/Map/Position.h"
 #include "../../include/Map/MoveException.h"
 
+#include "../../include/Persos/Ghost.h"
+#include "../../include/Persos/Monster.h"
+#include "../../include/Persos/Bowman.h"
+
+#include "../../include/Items/MoreLife.h"
+#include "../../include/Items/PowerUp.h"
+#include "../../include/Items/MoreBomb.h"
+#include "../../include/Items/SpeedUp.h"
+#include "../../include/Items/ScaleUp.h"
+
 #include <iostream>
+#include <fstream>
 
-using namespace std;
-
-Map::Map(Bomberman& player, int nbLine, int nbColumn): m_player(player), m_nbLine(nbLine), m_nbColumn(nbColumn)
+Map::Map(int level)
 {
-	for(int i=0; i<m_nbLine; i++)
-	{
-		m_mapTile.push_back(vector <Tile*>(m_nbColumn));
-		for(int j=0; j<m_nbColumn; j++)
-		{
-			if(i == 2 && j == 0)
-			{
-				m_mapTile[i][j] = new Wall(i, j, false, true, 2);
-			}
-			else
-			{
-				m_mapTile[i][j] = new Tile(i, j, true);
-			}
-			
-		}
-	}
-	m_listEnnemy.push_back(new Ghost(0, 1, 1, 1, 2));
-	m_target = Tile(0, 0, false);
+	loadMap(level);
 }
 
 Map::~Map()
@@ -65,6 +56,133 @@ Tile Map::getTarget() const
 	return m_target;
 }
 
+void Map::loadMap(int map)
+{
+	std::fstream fileMap;
+	std::string line;
+	std::string tile;
+	int lineMap = 0, columnMap = 0, i;
+
+	std::cout << "===================== LANCEMENT CHARGEMENT MAP ===========================" << std::endl << std::endl;
+
+	if(!m_mapTile.empty())
+	{
+		for(int i=0; i<m_nbLine; i++)
+		{
+			for(int j=0; j<m_nbColumn; j++)
+			{
+				delete m_mapTile[i][j];
+			}
+		}
+	}
+		
+	fileMap.open("resources/map/" + std::to_string(map) + ".txt", std::fstream::in);
+	
+	if(fileMap.is_open())
+	{
+		fileMap >> m_nbLine;
+		fileMap >> m_nbColumn;
+		for(int i=0; i<m_nbLine; i++)
+		{
+			m_mapTile.push_back(std::vector <Tile*>(m_nbColumn));
+		}
+		
+		getline(fileMap, line);
+		while(getline(fileMap, line))
+		{
+			columnMap = 0;
+			i=0;
+			while(i<line.length())
+			{
+				if(line[i] != ',')
+				{
+					tile = "";
+					while(line[i] != ',' && i<line.length())
+					{
+						tile += line[i];
+						i++;
+					}
+					if(tile.compare("P") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
+						m_player = Bomberman(lineMap, columnMap, 3, 1, 5, 2);
+					}
+					else if(tile.compare("w") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Wall(lineMap, columnMap, false, true, 1);
+					}
+					else if(tile.compare("W") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Wall(lineMap, columnMap, false, true);
+					}
+					else if(tile.compare("I") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Wall(lineMap, columnMap, false, false, 0);
+					}
+					else if(tile.compare("M") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
+						m_listEnnemy.push_back(new Monster(lineMap, columnMap, 2, 1, 1));
+					}
+					else if(tile.compare("G") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
+						m_listEnnemy.push_back(new Ghost(lineMap, columnMap, 2, 1, 1));
+					}
+					else if(tile.compare("B") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
+						m_listEnnemy.push_back(new Bowman(lineMap, columnMap, 2, 1, 1));
+					}
+					else if(tile.compare("ML") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, true);
+						m_listItems.push_back(new MoreLife(lineMap, columnMap, 1));
+					}
+					else if(tile.compare("PU") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, true);
+						m_listItems.push_back(new PowerUp(lineMap, columnMap, 1));
+					}
+					else if(tile.compare("MB") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, true);
+						m_listItems.push_back(new MoreBomb(lineMap, columnMap, 3));
+					}
+					else if(tile.compare("SP") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, true);
+						m_listItems.push_back(new SpeedUp(lineMap, columnMap, 1));
+					}
+					else if(tile.compare("SC") == 0)
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, true);
+						m_listItems.push_back(new ScaleUp(lineMap, columnMap, 0.5));
+					}
+					else if(tile.compare("X") == 0)
+					{
+						m_target = Tile(lineMap, columnMap, true);
+						m_mapTile[lineMap][columnMap] = &m_target;
+					}
+					else
+					{
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, true);
+					}
+					columnMap++;
+				}
+				i++;
+			}
+			lineMap++;
+		}
+	}
+	else
+	{
+		std::cout << std::endl << "### Impossible de charger la map ! Vérifiez que le map existe bien ###" << std::endl << std::endl;
+	}
+	fileMap.close();
+	std::cout << "===================== CHARGEMENT MAP TERMINE =============================" << std::endl << std::endl;
+}
+
 bool Map::movePlayer(utilities::EDirection direction)
 {
 	Bomberman bTest = m_player;
@@ -98,9 +216,9 @@ void Map::showMap() const
 	{
 		for(int column=0; column<m_nbColumn; column++)
 		{
-			cout << "+---";
+			std::cout << "+---";
 		}
-		cout << "+" << endl;
+		std::cout << "+" << std::endl;
 
 		for(int i=0; i<3; i++)
 		{
@@ -111,6 +229,7 @@ void Map::showMap() const
 					case 0:
 					{
 						bool show = false;
+						std::cout << "|";
 						if(!m_listItems.empty())
 						{
 							int k=0;
@@ -126,7 +245,7 @@ void Map::showMap() const
 						}
 						if(!show)
 						{
-							cout << "|   ";
+							std::cout << "   ";
 						}
 						
 						break;
@@ -135,12 +254,17 @@ void Map::showMap() const
 					case 1:
 					{
 						bool show = false;
-						cout << "|";
-						
+						std::cout << "|";
 						//Affichage de la valeur centrale
 						if(m_player.getPosition() == m_mapTile[line][column]->getPosition())
 						{
 							m_player.show();
+							show = true;
+						}
+
+						if(m_target.getPosition() == m_mapTile[line][column]->getPosition())
+						{
+							std::cout << " X ";
 							show = true;
 						}
 						
@@ -183,6 +307,7 @@ void Map::showMap() const
 					case 2:
 					{
 						bool show = false;
+						std::cout << "|";
 						if(!m_listItems.empty())
 						{
 							int k=0;
@@ -198,23 +323,23 @@ void Map::showMap() const
 						}
 						if(!show)
 						{
-							cout << "|   ";
+							std::cout << "   ";
 						}
 						break;
 					}
 					
 					default:
-						cout << "|   ";
+						std::cout << "|   ";
 						break;
 				}
 			}
-			cout << "|" << endl;
+			std::cout << "|" << std::endl;
 		}
 	}
 	
 	for(int column=0; column<m_nbColumn; column++)
 	{
-		cout << "+---";
+		std::cout << "+---";
 	}
-	cout << "+" << endl;
+	std::cout << "+" << std::endl;
 }

@@ -38,7 +38,21 @@ int Wall::getNbNecessaryBomb() const
 
 void Wall::show() const
 {
-	std::cout << " W ";
+	if(m_destructible)
+	{
+		if(m_nbNecessaryBomb == 1)
+		{
+			std::cout << " w ";
+		}
+		else
+		{
+			std::cout << " W ";
+		}
+	}
+	else
+	{
+		std::cout << " I ";
+	}
 }
 
 void Wall::weaken()

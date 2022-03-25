@@ -11,5 +11,5 @@ Monster::~Monster()
 
 void Monster::show() const
 {
-	std::cout << "M";
+	std::cout << " M ";
 }

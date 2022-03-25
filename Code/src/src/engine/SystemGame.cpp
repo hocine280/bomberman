@@ -5,7 +5,7 @@
 #include <iostream>
 #include <limits>
 
-SystemGame::SystemGame(): m_player(), m_map(m_player, 4, 5)
+SystemGame::SystemGame(): m_map()
 {
 
 }

@@ -1,0 +1,6 @@
+5 15
+t,w,t,W,t,W,t,W,t,W,t,w,t,W,t
+t,t,P,t,t,t,t,t,B,t,t,SC,X,t,t
+t,t,t,t,t,M,PU,w,I,W,t,t,t,w,t
+t,t,W,t,t,G,t,ML,t,I,t,t,MB,t,t
+t,t,t,I,t,I,t,I,t,t,t,SP,t,t,t

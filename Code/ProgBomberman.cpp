@@ -8,6 +8,7 @@ int main(void)
 
 	SystemGame SG;
 
+	std::cout << "=============== AFFICHAGE DE LA MAP ===============" << std::endl;
 	SG.showMap();
 
 	SG.playTurn();

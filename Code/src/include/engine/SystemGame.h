@@ -7,7 +7,6 @@
 class SystemGame
 {
 	private:
-		Bomberman m_player;
 		Map m_map;
 
 		void turnPlayer();

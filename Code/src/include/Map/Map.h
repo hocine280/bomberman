@@ -31,7 +31,7 @@ class Map
 		std::vector <Item*> m_listItems;
 
 	public:
-		Map(Bomberman& player, int nbLine = 8, int nbColumn = 8);
+		Map(int level = 0);
 		~Map();
 
 		/**
@@ -61,6 +61,8 @@ class Map
 		 * 
 		 */
 		void showMap() const;
+
+		void loadMap(int map);
 
 		bool movePlayer(utilities::EDirection direction);
 };
