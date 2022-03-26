@@ -23,7 +23,7 @@ Map::Map(int level)
 Map::~Map()
 {
 	for(int i=0; i<m_nbLine; i++)
-	{
+	{	
 		for(int j=0; j<m_nbColumn; j++)
 		{
 			delete m_mapTile[i][j];
@@ -162,7 +162,7 @@ void Map::loadMap(int map)
 					else if(tile.compare("X") == 0)
 					{
 						m_target = Tile(lineMap, columnMap, true);
-						m_mapTile[lineMap][columnMap] = &m_target;
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, true);
 					}
 					else
 					{
