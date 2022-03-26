@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits>
+#include <fstream>
 
 #include "src/include/engine/SystemGame.h"
 
@@ -36,13 +37,18 @@ int main(void)
 				{
 					std::cout << std::endl << "Sélectionnez la map souhaitée :";
 					std::cin >> level;
-					if(level != 1)
+					std::cin.clear();
+
+					std::fstream fileTest;
+					fileTest.open("resources/map/" + std::to_string(level) + ".txt");
+					if(fileTest.fail())
 					{
-						std::cin.clear();
 						std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 						std::cout << "Cette map n'existe pas" << std::endl;
 						level = -1;
 					}
+					fileTest.close();
+					
 				} while (level == -1);
 				playGame(level);
 				break;
@@ -62,11 +68,12 @@ int main(void)
 void playGame(int level)
 {
 	std::cout << "LANCEMENT DE LA PARTIE AVEC LA MAP " << level << std::endl;
+
 	SystemGame SG(level);
 
+	SG.showMap();
 	while(!SG.endGame())
 	{
-		SG.showMap();
 		SG.playTurn();
 	}
 }

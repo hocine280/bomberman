@@ -4,6 +4,8 @@
 #include "../Map/Position.h"
 #include "Personnage.h"
 
+#include "../engine/utilities.h"
+
 class Ennemy: public Personnage
 {
 	protected:
@@ -15,6 +17,8 @@ class Ennemy: public Personnage
 
 		int getDamage() const;
 		void setDamage(int);
+
+		virtual void play(utilities::EDirection direction);
 };
 
 #endif

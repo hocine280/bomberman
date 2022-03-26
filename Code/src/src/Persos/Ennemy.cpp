@@ -28,3 +28,8 @@ void Ennemy::setDamage(int damage)
 		m_damage = damage;
 	}
 }
+
+void Ennemy::play(utilities::EDirection direction)
+{
+	move(direction);
+}

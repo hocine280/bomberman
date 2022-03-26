@@ -56,6 +56,11 @@ Tile Map::getTarget() const
 	return m_target;
 }
 
+std::vector<Ennemy*> Map::getListEnnemy() const
+{
+	return m_listEnnemy;
+}
+
 void Map::loadMap(int map)
 {
 	std::fstream fileMap;
@@ -210,6 +215,14 @@ bool Map::movePlayer(utilities::EDirection direction)
 	}
 }
 
+void Map::moveEnnemy(int ennemy)
+{
+	if(m_listEnnemy[ennemy])
+	{
+		m_listEnnemy[ennemy]->play(utilities::EDirection::LEFT);
+	}
+}
+
 void Map::showMap() const
 {
 	for(int line=0; line<m_nbLine; line++)
@@ -262,7 +275,7 @@ void Map::showMap() const
 							show = true;
 						}
 
-						if(m_target.getPosition() == m_mapTile[line][column]->getPosition())
+						if(m_target.getPosition() == m_mapTile[line][column]->getPosition() && !show)
 						{
 							std::cout << " X ";
 							show = true;

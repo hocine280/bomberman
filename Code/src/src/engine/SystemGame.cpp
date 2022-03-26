@@ -121,5 +121,9 @@ void SystemGame::turnBomb()
 
 void SystemGame::turnEnnemy()
 {
-
+	for (int i = 0; i < m_map.getListEnnemy().size(); i++)
+	{
+		m_map.getListEnnemy()[i]->play(utilities::EDirection::LEFT);
+	}
+	
 }

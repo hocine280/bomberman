@@ -55,6 +55,8 @@ class Map
 		 */
 		int getNbLine() const;
 
+		std::vector<Ennemy*> getListEnnemy() const;
+
 		/**
 		 * \brief Permet l'affichage de la map sur la console
 		 * \author Pierre CHEMIN
@@ -65,6 +67,8 @@ class Map
 		void loadMap(int map);
 
 		bool movePlayer(utilities::EDirection direction);
+
+		void moveEnnemy(int ennemy);
 };
 
 #endif
