@@ -14,10 +14,11 @@ class SystemGame
 		void turnEnnemy();
 		
 	public:
-		SystemGame();
+		SystemGame(int level = 1);
 
 		void showMap();
 		void playTurn();
+		bool endGame();
 };
 
 #endif

@@ -174,13 +174,13 @@ void Map::loadMap(int map)
 			}
 			lineMap++;
 		}
+		std::cout << "===================== CHARGEMENT MAP TERMINE =============================" << std::endl << std::endl;
 	}
 	else
 	{
-		std::cout << std::endl << "### Impossible de charger la map ! Vérifiez que le map existe bien ###" << std::endl << std::endl;
+		std::cout << std::endl << "### Impossible de charger la map ! Vérifiez que la map existe bien ###" << std::endl << std::endl;
 	}
 	fileMap.close();
-	std::cout << "===================== CHARGEMENT MAP TERMINE =============================" << std::endl << std::endl;
 }
 
 bool Map::movePlayer(utilities::EDirection direction)

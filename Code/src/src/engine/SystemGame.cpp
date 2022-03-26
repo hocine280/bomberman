@@ -5,7 +5,7 @@
 #include <iostream>
 #include <limits>
 
-SystemGame::SystemGame(): m_map()
+SystemGame::SystemGame(int level): m_map(level)
 {
 
 }
@@ -13,6 +13,11 @@ SystemGame::SystemGame(): m_map()
 void SystemGame::showMap()
 {
 	m_map.showMap();
+}
+
+bool SystemGame::endGame()
+{
+	return false;
 }
 
 void SystemGame::playTurn()
