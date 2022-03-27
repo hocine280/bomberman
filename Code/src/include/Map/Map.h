@@ -1,6 +1,6 @@
 /**
  * \file Map.h
- * \author Pierre CHEMIN
+ * \author Pierre CHEMIN & Hocine HADID
  * \brief 
  * \version 0.1
  * \date 2022-03-12
@@ -55,9 +55,7 @@ class Map
 		 */
 		int getNbLine() const;
 
-		std::vector<Ennemy*> getListEnnemy() const;
-
-		bool tileIsFree(Position position);
+		std::vector <Ennemy*> getListEnnemy() const;
 
 		/**
 		 * \brief Permet l'affichage de la map sur la console

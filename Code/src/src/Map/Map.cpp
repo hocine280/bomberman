@@ -58,14 +58,9 @@ Tile Map::getTarget() const
 	return m_target;
 }
 
-std::vector<Ennemy*> Map::getListEnnemy() const
+std::vector <Ennemy*> Map::getListEnnemy() const
 {
 	return m_listEnnemy;
-}
-
-bool Map::tileIsFree(Position position)
-{
-	return m_mapTile[position.getX()][m_mapTile.getY()]->getBeCrossed();
 }
 
 void Map::loadMap(int map)
@@ -134,17 +129,17 @@ void Map::loadMap(int map)
 					else if(tile.compare("M") == 0)
 					{
 						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
-						m_listEnnemy.push_back(new Monster(lineMap, columnMap, 2, 1, 1));
+						m_listEnnemy.push_back(new Monster(lineMap, columnMap, 2, 1, 1, 0));
 					}
 					else if(tile.compare("G") == 0)
 					{
 						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
-						m_listEnnemy.push_back(new Ghost(lineMap, columnMap, 2, 1, 1));
+						m_listEnnemy.push_back(new Ghost(lineMap, columnMap, 2, 1, 1, 0));
 					}
 					else if(tile.compare("B") == 0)
 					{
 						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
-						m_listEnnemy.push_back(new Bowman(lineMap, columnMap, 2, 1, 1));
+						m_listEnnemy.push_back(new Bowman(lineMap, columnMap, 2, 1, 1, 0));
 					}
 					else if(tile.compare("ML") == 0)
 					{
@@ -226,7 +221,12 @@ void Map::moveEnnemy(int ennemy)
 {
 	if(m_listEnnemy[ennemy])
 	{
-		// m_listEnnemy[ennemy]->play(&this);
+		Position lastPosition = m_listEnnemy[ennemy]->getPosition();
+		if(m_listEnnemy[ennemy]->play(m_mapTile) != utilities::EDirection::NONE)
+		{
+			m_mapTile[lastPosition.getX()][lastPosition.getY()]->setBeCrossed(true);
+			m_mapTile[m_listEnnemy[ennemy]->getPosition().getX()][m_listEnnemy[ennemy]->getPosition().getY()]->setBeCrossed(false);
+		}
 	}
 }
 

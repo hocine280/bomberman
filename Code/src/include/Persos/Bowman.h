@@ -8,7 +8,7 @@
 class Bowman : public Ennemy
 {	
 	public:
-		Bowman(int x, int y, int life, int speed, int damage);
+		Bowman(int x, int y, int life, int speed, int damage, int still);
 		~Bowman();
 
 		virtual void show() const override;

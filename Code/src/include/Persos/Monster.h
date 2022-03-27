@@ -6,7 +6,7 @@
 class Monster: public Ennemy
 {
 	public:
-		Monster(int x, int y, int life, int speed, int damage);
+		Monster(int x, int y, int life, int speed, int damage, int still);
 		~Monster();
 
 		virtual void show() const override;

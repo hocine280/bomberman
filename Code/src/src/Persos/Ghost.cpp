@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Ghost::Ghost(int x, int y, int life, int speed, int damage): Ennemy(x, y , life, speed, damage){}
+Ghost::Ghost(int x, int y, int life, int speed, int damage, int still): Ennemy(x, y , life, speed, damage, still){}
 
 Ghost::~Ghost()
 {

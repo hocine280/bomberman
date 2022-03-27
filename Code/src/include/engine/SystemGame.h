@@ -8,6 +8,7 @@ class SystemGame
 {
 	private:
 		Map m_map;
+		bool m_endGame;
 
 		void turnPlayer();
 		void turnBomb();

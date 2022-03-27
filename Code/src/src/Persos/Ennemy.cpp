@@ -1,4 +1,5 @@
 #include "../../include/Persos/Ennemy.h"
+#include <iostream>
 
 Ennemy::Ennemy(int x, int y, int life, int speed, int damage, int still): Personnage(x, y, life, speed), m_damage(damage), m_still(still)
 {
@@ -25,39 +26,52 @@ void Ennemy::setDamage(int damage)
 		m_damage = damage;
 	}
 }
-/*
-void Ennemy::play(Map map)
+
+utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map)
 {
 	if(m_still > 0)
 	{
 		m_still--;
-		return;
+		return utilities::EDirection::NONE;
 	}
 
+	utilities::EDirection moveDirection = utilities::EDirection::NONE;
+	bool validateMove = false;
 	Position testPosition = getPosition();
 
-	testPosition.setX(testPosition.getX()-m_speed);
-	if(map.tileIsFree(testPosition))
+	testPosition.setY(testPosition.getY()-m_speed);
+	if(testPosition.getY() >= 0 &&  map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
 	{
-		move(utilities::EDirection::LEFT);
+		moveDirection = utilities::EDirection::LEFT;
+		validateMove = true;
 	}
 	
-	testPosition.setX(testPosition.getX()+2*m_speed);
-	if(map.tileIsFree(testPosition))
+	testPosition.setY(testPosition.getY()+2*m_speed);
+	if(!validateMove && testPosition.getY() < map[testPosition.getX()].size() && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
 	{
-		move(utilities::EDirection::RIGHT);
+		moveDirection = utilities::EDirection::RIGHT;
+		validateMove = true;
 	}
 
 	testPosition.setX(testPosition.getX()-m_speed);
 	testPosition.setY(testPosition.getY()-m_speed);
-	if(map.tileIsFree(testPosition))
+	if(!validateMove && testPosition.getX() >= 0 && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
 	{
-		move(utilities::EDirection::TOP);
+		moveDirection = utilities::EDirection::TOP;
+		validateMove = true;
 	}
 
-	testPosition.setY(testPosition.getY()+2*speed);
-	if(map.tileIsFree(testPosition))
+	testPosition.setX(testPosition.getX()+2*m_speed);
+	if(!validateMove && testPosition.getX() < map.size() && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
 	{
-		move(utilities::EDirection::BOTTOM);
+		moveDirection = utilities::EDirection::BOTTOM;
+		validateMove = true;
 	}
-}*/
+
+	if(validateMove)
+	{
+		move(moveDirection);
+	}
+
+	return moveDirection;
+}

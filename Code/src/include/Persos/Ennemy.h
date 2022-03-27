@@ -2,10 +2,13 @@
 #define __ENNEMY__
 
 #include "../Map/Position.h"
-#include "../Map/Map.h"
+#include "../Map/Tile.h"
+
 #include "Personnage.h"
 
 #include "../engine/utilities.h"
+
+#include <vector>
 
 class Ennemy: public Personnage
 {
@@ -20,7 +23,7 @@ class Ennemy: public Personnage
 		int getDamage() const;
 		void setDamage(int);
 
-		//virtual void play(Map map);
+		virtual utilities::EDirection play(std::vector<std::vector<Tile*>> map);
 };
 
 #endif

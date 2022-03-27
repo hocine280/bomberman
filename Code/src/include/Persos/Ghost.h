@@ -6,7 +6,7 @@
 class Ghost: public Ennemy
 {
 	public:
-		Ghost(int x, int y, int life, int speed, int damage);
+		Ghost(int x, int y, int life, int speed, int damage, int still);
 		~Ghost();
 
 		virtual void show() const override;

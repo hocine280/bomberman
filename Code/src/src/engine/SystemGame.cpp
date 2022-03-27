@@ -7,7 +7,7 @@
 #include <iostream>
 #include <limits>
 
-SystemGame::SystemGame(int level): m_map(level)
+SystemGame::SystemGame(int level): m_map(level), m_endGame(false)
 {
 
 }
@@ -19,7 +19,7 @@ void SystemGame::showMap()
 
 bool SystemGame::endGame()
 {
-	return false;
+	return m_endGame;
 }
 
 void SystemGame::playTurn()
@@ -34,7 +34,7 @@ void SystemGame::playTurn()
 void SystemGame::turnPlayer()
 {
 	int action;
-	bool finAction = 1;
+	bool finAction = false;
 	do
 	{	
 		std::cout << std::endl << std::endl;
@@ -46,8 +46,9 @@ void SystemGame::turnPlayer()
 		std::cout << "6 - Déplacement vers la droite" << std::endl;
 		std::cout << "2 - Déplacement vers le bas" << std::endl;
 		std::cout << std::endl;
-		std::cout << "      -------- Action -----------" << std::endl;
+		std::cout << "      ---------- Action ----------" << std::endl;
 		std::cout << "5 - Poser une bombe" << std::endl;
+		std::cout << "1 - Quitter la partie" << std::endl;
 		std::cout << std::endl;
 		std::cout << "Saisir votre choix : ";
 
@@ -58,7 +59,7 @@ void SystemGame::turnPlayer()
 				try
 				{
 					m_map.movePlayer(utilities::EDirection::TOP);
-					finAction = 0;
+					finAction = true;
 				}
 				catch(const MoveException& e)
 				{
@@ -71,7 +72,7 @@ void SystemGame::turnPlayer()
 				try
 				{
 					m_map.movePlayer(utilities::EDirection::LEFT);
-					finAction = 0;
+					finAction = true;
 				}
 				catch(const MoveException& e)
 				{
@@ -83,7 +84,7 @@ void SystemGame::turnPlayer()
 				try
 				{
 					m_map.movePlayer(utilities::EDirection::RIGHT);
-					finAction = 0;
+					finAction = true;
 				}
 				catch(const MoveException& e)
 				{
@@ -95,7 +96,7 @@ void SystemGame::turnPlayer()
 				try
 				{
 					m_map.movePlayer(utilities::EDirection::BOTTOM);
-					finAction = 0;
+					finAction = true;
 				}
 				catch(const MoveException& e)
 				{
@@ -104,16 +105,21 @@ void SystemGame::turnPlayer()
 				break;
 
 			case 5:
-				finAction = 0;
+				finAction = true;
+				break;
+
+			case 1:
+				m_endGame = true;
+				finAction = true;
 				break;
 			
 			default:
 				std::cin.clear();
 				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-				finAction = 1;
+				finAction = false;
 				break;
 		}
-	} while (finAction);
+	} while (!finAction);
 }
 
 void SystemGame::turnBomb()
@@ -125,7 +131,6 @@ void SystemGame::turnEnnemy()
 {
 	for (int i = 0; i < m_map.getListEnnemy().size(); i++)
 	{
-		m_map.moveEnnemy(m_map.getListEnnemy()[i]);
+		m_map.moveEnnemy(i);
 	}
-	
 }

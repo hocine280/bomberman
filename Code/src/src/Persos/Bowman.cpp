@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Bowman::Bowman(int x, int y, int life, int speed, int damage): Ennemy(x, y, life, speed, damage){}
+Bowman::Bowman(int x, int y, int life, int speed, int damage, int still): Ennemy(x, y, life, speed, damage, still){}
 
 Bowman::~Bowman()
 {
