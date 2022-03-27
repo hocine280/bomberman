@@ -57,6 +57,8 @@ class Map
 
 		std::vector<Ennemy*> getListEnnemy() const;
 
+		bool tileIsFree(Position position);
+
 		/**
 		 * \brief Permet l'affichage de la map sur la console
 		 * \author Pierre CHEMIN

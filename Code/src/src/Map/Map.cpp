@@ -12,6 +12,8 @@
 #include "../../include/Items/SpeedUp.h"
 #include "../../include/Items/ScaleUp.h"
 
+#include "../../include/engine/utilities.h"
+
 #include <iostream>
 #include <fstream>
 
@@ -59,6 +61,11 @@ Tile Map::getTarget() const
 std::vector<Ennemy*> Map::getListEnnemy() const
 {
 	return m_listEnnemy;
+}
+
+bool Map::tileIsFree(Position position)
+{
+	return m_mapTile[position.getX()][m_mapTile.getY()]->getBeCrossed();
 }
 
 void Map::loadMap(int map)
@@ -219,7 +226,7 @@ void Map::moveEnnemy(int ennemy)
 {
 	if(m_listEnnemy[ennemy])
 	{
-		m_listEnnemy[ennemy]->play(utilities::EDirection::LEFT);
+		// m_listEnnemy[ennemy]->play(&this);
 	}
 }
 

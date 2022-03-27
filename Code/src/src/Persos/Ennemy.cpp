@@ -1,9 +1,6 @@
 #include "../../include/Persos/Ennemy.h"
 
-#include "../../include/Persos/Personnage.h"
-#include "../../include/Map/Position.h"
-
-Ennemy::Ennemy(int x, int y, int life, int speed, int damage): Personnage(x, y, life, speed), m_damage(damage)
+Ennemy::Ennemy(int x, int y, int life, int speed, int damage, int still): Personnage(x, y, life, speed), m_damage(damage), m_still(still)
 {
 	if(damage < 1)
 	{
@@ -28,8 +25,39 @@ void Ennemy::setDamage(int damage)
 		m_damage = damage;
 	}
 }
-
-void Ennemy::play(utilities::EDirection direction)
+/*
+void Ennemy::play(Map map)
 {
-	move(direction);
-}
+	if(m_still > 0)
+	{
+		m_still--;
+		return;
+	}
+
+	Position testPosition = getPosition();
+
+	testPosition.setX(testPosition.getX()-m_speed);
+	if(map.tileIsFree(testPosition))
+	{
+		move(utilities::EDirection::LEFT);
+	}
+	
+	testPosition.setX(testPosition.getX()+2*m_speed);
+	if(map.tileIsFree(testPosition))
+	{
+		move(utilities::EDirection::RIGHT);
+	}
+
+	testPosition.setX(testPosition.getX()-m_speed);
+	testPosition.setY(testPosition.getY()-m_speed);
+	if(map.tileIsFree(testPosition))
+	{
+		move(utilities::EDirection::TOP);
+	}
+
+	testPosition.setY(testPosition.getY()+2*speed);
+	if(map.tileIsFree(testPosition))
+	{
+		move(utilities::EDirection::BOTTOM);
+	}
+}*/

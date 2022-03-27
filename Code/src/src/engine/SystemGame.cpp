@@ -2,6 +2,8 @@
 #include "../../include/engine/utilities.h"
 #include "../../include/Map/MoveException.h"
 
+#include "../../include/Persos/Ennemy.h"
+
 #include <iostream>
 #include <limits>
 
@@ -123,7 +125,7 @@ void SystemGame::turnEnnemy()
 {
 	for (int i = 0; i < m_map.getListEnnemy().size(); i++)
 	{
-		m_map.getListEnnemy()[i]->play(utilities::EDirection::LEFT);
+		m_map.moveEnnemy(m_map.getListEnnemy()[i]);
 	}
 	
 }
