@@ -68,6 +68,11 @@ std::vector <Ennemy*> Map::getListEnnemy() const
 	return m_listEnnemy;
 }
 
+std::vector <Item*> Map::getListItems() const
+{
+	return m_listItems;
+}
+
 void Map::loadMap(int map)
 {
 	std::fstream fileMap;
@@ -222,16 +227,24 @@ bool Map::movePlayer(utilities::EDirection direction)
 	}
 }
 
-void Map::moveEnnemy(int ennemy)
+void Map::playEnnemy(int ennemy)
 {
-	if(ennemy < m_listEnnemy.size() && m_listEnnemy[ennemy])
+	if(ennemy < m_listEnnemy.size() && ennemy >= 0)
 	{
 		Position lastPosition = m_listEnnemy[ennemy]->getPosition();
-		if(m_listEnnemy[ennemy]->play(m_mapTile, &m_player) != utilities::EDirection::NONE)
+		if(m_listEnnemy[ennemy]->play(m_mapTile, &m_player, &m_listItems) != utilities::EDirection::NONE)
 		{
 			m_mapTile[lastPosition.getX()][lastPosition.getY()]->setBeCrossed(true);
 			m_mapTile[m_listEnnemy[ennemy]->getPosition().getX()][m_listEnnemy[ennemy]->getPosition().getY()]->setBeCrossed(false);
 		}
+	}
+}
+
+void Map::playItem(int item)
+{
+	if(item < m_listItems.size() && item >= 0)
+	{
+		m_listItems[item]->play();
 	}
 }
 

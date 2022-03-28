@@ -18,6 +18,8 @@ class Arrow: public Item
 		virtual void showTop() const override;
 		virtual void showMiddle() const override;
 		virtual void showBottom() const override;
+
+		virtual void play() override;
 };
 
 #endif

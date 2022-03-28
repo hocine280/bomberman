@@ -25,7 +25,7 @@ bool SystemGame::endGame()
 void SystemGame::playTurn()
 {
 	turnPlayer();
-	turnBomb();
+	turnItems();
 	turnEnnemy();
 
 	showMap();
@@ -33,6 +33,12 @@ void SystemGame::playTurn()
 	if(m_map.getPlayer().getLife() == 0)
 	{
 		m_endGame = true;
+		std::cout << std::endl << "Perdu ! Vous n'avez plus de vie ..." << std::endl;
+	}
+	else if(m_map.getPlayer().getPosition() == m_map.getTarget().getPosition() && m_map.getListEnnemy().empty())
+	{
+		m_endGame = true;
+		std::cout << std::endl << "Victoire ! Vous avez atteint l'objectif et éliminé tous les ennemies !!" << std::endl;
 	}
 }
 
@@ -127,8 +133,12 @@ void SystemGame::turnPlayer()
 	} while (!finAction);
 }
 
-void SystemGame::turnBomb()
+void SystemGame::turnItems()
 {
+	for (int i = 0; i < m_map.getListItems().size(); i++)
+	{
+		m_map.playItem(i);
+	}
 	
 }
 
@@ -136,6 +146,6 @@ void SystemGame::turnEnnemy()
 {
 	for (int i = 0; i < m_map.getListEnnemy().size(); i++)
 	{
-		m_map.moveEnnemy(i);
+		m_map.playEnnemy(i);
 	}
 }

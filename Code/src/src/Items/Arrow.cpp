@@ -40,6 +40,11 @@ void Arrow::move()
 	}
 }
 
+void Arrow::play()
+{
+	move();
+}
+
 void Arrow::showTop() const
 {
 	if(m_direction == utilities::EDirection::TOP)
@@ -57,11 +62,11 @@ void Arrow::showMiddle() const
 	switch(m_direction)
 	{
 		case utilities::EDirection::TOP :
-				std::cout << " | ";
+			std::cout << " | ";
 			break;
 
 		case utilities::EDirection::BOTTOM :
-				std::cout << " | ";
+			std::cout << " | ";
 			break;
 
 		case utilities::EDirection::LEFT :

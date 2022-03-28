@@ -11,7 +11,7 @@ class SystemGame
 		bool m_endGame;
 
 		void turnPlayer();
-		void turnBomb();
+		void turnItems();
 		void turnEnnemy();
 		
 	public:

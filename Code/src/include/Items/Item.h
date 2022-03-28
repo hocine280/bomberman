@@ -16,6 +16,8 @@ class Item
 		virtual void showTop() const = 0;
 		virtual void showMiddle() const = 0;
 		virtual void showBottom() const = 0;
+
+		virtual void play();
 };
 
 

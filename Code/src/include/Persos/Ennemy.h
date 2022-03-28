@@ -1,11 +1,13 @@
 #ifndef __ENNEMY__
 #define __ENNEMY__
 
+#include "Personnage.h"
+#include "Bomberman.h"
+
 #include "../Map/Position.h"
 #include "../Map/Tile.h"
 
-#include "Personnage.h"
-#include "Bomberman.h"
+#include "../Items/Item.h"
 
 #include "../engine/utilities.h"
 
@@ -24,7 +26,7 @@ class Ennemy: public Personnage
 		int getDamage() const;
 		void setDamage(int);
 
-		virtual utilities::EDirection play(std::vector<std::vector<Tile*>> map, Bomberman *player);
+		virtual utilities::EDirection play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items);
 };
 
 #endif

@@ -27,7 +27,7 @@ void Ennemy::setDamage(int damage)
 	}
 }
 
-utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map, Bomberman *player)
+utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
 {
 	if(m_still > 0)
 	{
@@ -37,7 +37,7 @@ utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map, Bomberma
 
 	utilities::EDirection moveDirection = utilities::EDirection::NONE;
 	bool validateMove = false;
-	Position testPosition = getPosition();
+	Position testPosition = m_position;
 
 	testPosition.setY(testPosition.getY()-m_speed);
 	if(testPosition.getY() >= 0 &&  map[testPosition.getX()][testPosition.getY()]->getBeCrossed())

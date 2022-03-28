@@ -9,7 +9,7 @@ Ghost::~Ghost()
 
 }
 
-utilities::EDirection Ghost::play(std::vector<std::vector<Tile*>> map, Bomberman *player)
+utilities::EDirection Ghost::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
 {
 	if(m_still > 0)
 	{
@@ -18,7 +18,7 @@ utilities::EDirection Ghost::play(std::vector<std::vector<Tile*>> map, Bomberman
 	}
 
 	bool validateMove = false;
-	Position testPosition = getPosition();
+	Position testPosition = m_position;
 
 	testPosition.setY(testPosition.getY()-m_speed);
 	if(testPosition == player->getPosition())

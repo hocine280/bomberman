@@ -59,6 +59,8 @@ class Map
 
 		std::vector <Ennemy*> getListEnnemy() const;
 
+		std::vector <Item*> getListItems() const;
+
 		/**
 		 * \brief Permet l'affichage de la map sur la console
 		 * \author Pierre CHEMIN
@@ -70,7 +72,9 @@ class Map
 
 		bool movePlayer(utilities::EDirection direction);
 
-		void moveEnnemy(int ennemy);
+		void playEnnemy(int ennemy);
+
+		void playItem(int item);
 };
 
 #endif

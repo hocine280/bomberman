@@ -11,3 +11,8 @@ Position Item::getPosition() const
 {
 	return m_position;
 }
+
+void Item::play()
+{
+	return;
+}
