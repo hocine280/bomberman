@@ -40,9 +40,23 @@ void Arrow::move()
 	}
 }
 
-void Arrow::play()
+bool Arrow::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
 {
-	move();
+	bool remove = false;
+	Arrow test = *this;
+	test.move();
+	
+	if(test.getPosition() == player->getPosition())
+	{
+		player->receiveDamage(m_damage);
+		remove = true;
+	}
+	else
+	{
+		move();
+	}
+
+	return remove;
 }
 
 void Arrow::showTop() const

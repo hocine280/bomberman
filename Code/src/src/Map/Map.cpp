@@ -244,7 +244,10 @@ void Map::playItem(int item)
 {
 	if(item < m_listItems.size() && item >= 0)
 	{
-		m_listItems[item]->play();
+		if(m_listItems[item]->play(m_mapTile, &m_player, &m_listItems))
+		{
+			m_listItems.erase(m_listItems.begin()+item);
+		}
 	}
 }
 

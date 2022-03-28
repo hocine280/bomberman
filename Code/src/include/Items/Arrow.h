@@ -19,7 +19,7 @@ class Arrow: public Item
 		virtual void showMiddle() const override;
 		virtual void showBottom() const override;
 
-		virtual void play() override;
+		virtual bool play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items) override;
 };
 
 #endif

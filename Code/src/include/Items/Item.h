@@ -2,6 +2,11 @@
 #define __ITEM__
 
 #include "../Map/Position.h"
+#include "../Map/Tile.h"
+
+#include "../Persos/Bomberman.h"
+
+#include <vector>
 
 class Item
 {
@@ -17,7 +22,7 @@ class Item
 		virtual void showMiddle() const = 0;
 		virtual void showBottom() const = 0;
 
-		virtual void play();
+		virtual bool play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items);
 };
 
 
