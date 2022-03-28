@@ -45,10 +45,18 @@ bool Arrow::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::ve
 	bool remove = false;
 	Arrow test = *this;
 	test.move();
-	
+	std::cout << std::endl << "Position flèche : [" << test.getPosition().getX() << " ; " << test.getPosition().getY() << "]" << std::endl;
 	if(test.getPosition() == player->getPosition())
 	{
 		player->receiveDamage(m_damage);
+		remove = true;
+	}
+	else if(test.getPosition().getX() < 0 || test.getPosition().getX() >= map.size() || test.getPosition().getY() < 0 || test.getPosition().getY() >= map[test.getPosition().getX()].size())
+	{
+		remove = true;
+	}
+	else if(!map[test.getPosition().getX()][test.getPosition().getY()]->getBeCrossed())
+	{
 		remove = true;
 	}
 	else
