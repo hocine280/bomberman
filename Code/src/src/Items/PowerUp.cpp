@@ -32,3 +32,16 @@ void PowerUp::showBottom() const
 {
 	std::cout << "   ";
 }
+
+bool PowerUp::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
+{
+	bool remove = false;
+
+	if(player->getPosition() == m_position)
+	{
+		increasePower();
+		remove = true;
+	}
+
+	return remove;
+}

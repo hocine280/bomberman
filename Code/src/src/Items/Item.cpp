@@ -11,8 +11,3 @@ Position Item::getPosition() const
 {
 	return m_position;
 }
-
-bool Item::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
-{
-	return false;
-}

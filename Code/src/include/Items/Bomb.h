@@ -12,7 +12,7 @@ class Bomb: public Item
 		static int power;
 		static double scope;
 
-		Bomb(int x = 0, int y = 0, int turnBeforeExplosion = 2);
+		Bomb(int x = 0, int y = 0, int turnBeforeExplosion = 3);
 		~Bomb();
 
 		double getScope() const;
@@ -23,6 +23,8 @@ class Bomb: public Item
 		void showTop() const override;
 		void showMiddle() const override;
 		void showBottom() const override;
+
+		virtual bool play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items) override;
 };
 
 #endif

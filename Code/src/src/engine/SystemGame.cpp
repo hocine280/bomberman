@@ -1,5 +1,6 @@
 #include "../../include/engine/SystemGame.h"
 #include "../../include/engine/utilities.h"
+
 #include "../../include/Map/MoveException.h"
 
 #include "../../include/Persos/Ennemy.h"
@@ -27,6 +28,7 @@ void SystemGame::playTurn()
 	turnPlayer();
 	turnItems();
 	turnEnnemy();
+	turnBombs();
 
 	showMap();
 
@@ -116,6 +118,7 @@ void SystemGame::turnPlayer()
 				break;
 
 			case 5:
+				m_map.addBomb(m_map.getPlayer().getPosition());
 				finAction = true;
 				break;
 
@@ -148,4 +151,13 @@ void SystemGame::turnEnnemy()
 	{
 		m_map.playEnnemy(i);
 	}
+}
+
+void SystemGame::turnBombs()
+{
+	for (int i = 0; i < m_map.getListBombs().size(); i++)
+	{
+		m_map.playBomb(i);
+	}
+	
 }

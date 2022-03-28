@@ -13,6 +13,7 @@ class SystemGame
 		void turnPlayer();
 		void turnItems();
 		void turnEnnemy();
+		void turnBombs();
 		
 	public:
 		SystemGame(int level = 1);

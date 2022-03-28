@@ -22,7 +22,7 @@ class Item
 		virtual void showMiddle() const = 0;
 		virtual void showBottom() const = 0;
 
-		virtual bool play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items);
+		virtual bool play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items) = 0;
 };
 
 

@@ -18,6 +18,8 @@ class MoreBomb: public Item
 		void showTop() const override;
 		void showMiddle() const override;
 		void showBottom() const override;
+
+		virtual bool play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items) override;
 };
 
 #endif

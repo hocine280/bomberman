@@ -13,11 +13,15 @@
 
 #include <vector>
 
-#include "../Persos/Bomberman.h"
 #include "Tile.h"
-#include "../Items/Item.h"
-#include "../Persos/Ennemy.h"
+#include "Position.h"
 #include "Wall.h"
+
+#include "../Persos/Ennemy.h"
+#include "../Persos/Bomberman.h"
+
+#include "../Items/Item.h"
+#include "../Items/Bomb.h"
 
 class Map
 {
@@ -29,6 +33,7 @@ class Map
 		std::vector <std::vector<Tile*>>m_mapTile;
 		std::vector <Ennemy*> m_listEnnemy;
 		std::vector <Item*> m_listItems;
+		std::vector <Bomb*> m_listBombs;
 
 	public:
 		Map(int level = 0);
@@ -61,6 +66,12 @@ class Map
 
 		std::vector <Item*> getListItems() const;
 
+		std::vector <Bomb*> getListBombs() const;
+
+		void addBomb(Position position);
+
+		void showMapBombExplose(Position positionExplosion) const;
+
 		/**
 		 * \brief Permet l'affichage de la map sur la console
 		 * \author Pierre CHEMIN
@@ -75,6 +86,8 @@ class Map
 		void playEnnemy(int ennemy);
 
 		void playItem(int item);
+
+		void playBomb(int bomb);
 };
 
 #endif

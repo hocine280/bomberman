@@ -32,3 +32,16 @@ void ScaleUp::showBottom() const
 {
 	std::cout << "   ";
 }
+
+bool ScaleUp::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
+{
+	bool remove = false;
+
+	if(player->getPosition() == m_position)
+	{
+		increaseScope();
+		remove = true;
+	}
+
+	return remove;
+}

@@ -1,11 +1,11 @@
 #include "../../include/Map/Map.h"
-#include "../../include/Map/Position.h"
 #include "../../include/Map/MoveException.h"
 
 #include "../../include/Persos/Ghost.h"
 #include "../../include/Persos/Monster.h"
 #include "../../include/Persos/Bowman.h"
 
+#include "../../include/Items/Bomb.h"
 #include "../../include/Items/MoreLife.h"
 #include "../../include/Items/PowerUp.h"
 #include "../../include/Items/MoreBomb.h"
@@ -41,6 +41,12 @@ Map::~Map()
 	{
 		delete m_listItems[i];
 	}
+
+	for (int i = 0; i < m_listBombs.size(); i++)
+	{
+		delete m_listBombs[i];
+	}
+	
 }
 
 int Map::getNbColumn() const
@@ -71,6 +77,16 @@ std::vector <Ennemy*> Map::getListEnnemy() const
 std::vector <Item*> Map::getListItems() const
 {
 	return m_listItems;
+}
+
+std::vector <Bomb*> Map::getListBombs() const
+{
+	return m_listBombs;
+}
+
+void Map::addBomb(Position position)
+{
+	m_listItems.push_back(new Bomb(position.getX(), position.getY()));
 }
 
 void Map::loadMap(int map)
@@ -249,6 +265,76 @@ void Map::playItem(int item)
 			m_listItems.erase(m_listItems.begin()+item);
 		}
 	}
+}
+
+void Map::playBomb(int bomb)
+{
+	if(bomb < m_listBombs.size() && bomb >= 0)
+	{
+		if(m_listBombs[bomb]->play(m_mapTile, &m_player, &m_listItems))
+		{
+			showMapBombExplose(m_listBombs[bomb]->getPosition());
+			m_listBombs.erase(m_listBombs.begin()+bomb);
+		}
+	}
+}
+
+void Map::showMapBombExplose(Position positionExplosion) const
+{
+	for (int line = 0; line < m_nbLine; line++)
+	{
+		for(int column=0; column<m_nbColumn; column++)
+		{
+			std::cout << "+---";
+		}
+		std::cout << "+" << std::endl;
+
+		for (int i = 0; i < 3; i++)
+		{
+			for (int column = 0; column < m_nbColumn; column++)
+			{
+				switch (i)
+				{
+				case 0:
+				{
+					std::cout << "|";
+					if(column-Bomb::scope == positionExplosion.getY() || column+Bomb::scope == positionExplosion.getY())
+					{
+						std::cout << " | ";
+					}
+					else
+					{
+						std::cout << "   ";
+					}
+				}
+					break;
+
+				case 1:
+				{
+					std::cout << "|";
+
+				}
+					break;
+
+				case 2:
+					std::cout << "|";
+					break;
+				
+				default:
+					break;
+				}	
+			}
+			std::cout << "|" << std::endl;
+		}
+		
+	}
+
+	for(int column=0; column<m_nbColumn; column++)
+	{
+		std::cout << "+---";
+	}
+	std::cout << "+" << std::endl;
+	
 }
 
 void Map::showMap() const

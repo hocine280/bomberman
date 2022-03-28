@@ -12,7 +12,7 @@ SpeedUp::~SpeedUp()
 	
 }
 
-void SpeedUp::increaseBomberman(Bomberman* b)
+void SpeedUp::increaseSpeed(Bomberman* b)
 {
 	b->addSpeed(m_speed);
 }
@@ -30,4 +30,17 @@ void SpeedUp::showMiddle() const
 void SpeedUp::showBottom() const
 {
 	std::cout << "   ";
+}
+
+bool SpeedUp::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
+{
+	bool remove = false;
+
+	if(player->getPosition() == m_position)
+	{
+		increaseSpeed(player);
+		remove = true;
+	}
+
+	return remove;
 }

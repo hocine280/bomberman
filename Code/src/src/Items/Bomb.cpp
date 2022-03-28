@@ -42,3 +42,19 @@ void Bomb::showBottom() const
 {
 	std::cout << "   ";
 }
+
+bool Bomb::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
+{
+	bool remove = false;
+
+	if(m_turnBeforeExplosion > 0)
+	{
+		m_turnBeforeExplosion--;
+	}
+	else
+	{
+		remove = true;
+	}
+
+	return remove;
+}

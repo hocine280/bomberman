@@ -13,11 +13,13 @@ class SpeedUp: public Item
 		SpeedUp(int x = 0, int y = 0, int speed = 1);
 		~SpeedUp();
 
-		void increaseBomberman(Bomberman* b);
+		void increaseSpeed(Bomberman* b);
 
 		void showTop() const override;
 		void showMiddle() const override;
 		void showBottom() const override;
+
+		virtual bool play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items) override;
 };
 
 #endif
