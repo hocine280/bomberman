@@ -58,6 +58,11 @@ Tile Map::getTarget() const
 	return m_target;
 }
 
+Bomberman Map::getPlayer() const
+{
+	return m_player;
+}
+
 std::vector <Ennemy*> Map::getListEnnemy() const
 {
 	return m_listEnnemy;
@@ -133,7 +138,7 @@ void Map::loadMap(int map)
 					}
 					else if(tile.compare("G") == 0)
 					{
-						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
+						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, true);
 						m_listEnnemy.push_back(new Ghost(lineMap, columnMap, 2, 1, 1, 0));
 					}
 					else if(tile.compare("B") == 0)
@@ -219,10 +224,10 @@ bool Map::movePlayer(utilities::EDirection direction)
 
 void Map::moveEnnemy(int ennemy)
 {
-	if(m_listEnnemy[ennemy])
+	if(ennemy < m_listEnnemy.size() && m_listEnnemy[ennemy])
 	{
 		Position lastPosition = m_listEnnemy[ennemy]->getPosition();
-		if(m_listEnnemy[ennemy]->play(m_mapTile) != utilities::EDirection::NONE)
+		if(m_listEnnemy[ennemy]->play(m_mapTile, &m_player) != utilities::EDirection::NONE)
 		{
 			m_mapTile[lastPosition.getX()][lastPosition.getY()]->setBeCrossed(true);
 			m_mapTile[m_listEnnemy[ennemy]->getPosition().getX()][m_listEnnemy[ennemy]->getPosition().getY()]->setBeCrossed(false);

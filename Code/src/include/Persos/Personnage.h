@@ -17,6 +17,7 @@ class Personnage
 		Position getPosition() const;
 		int getLife() const;
 		int getSpeed() const;
+		void receiveDamage(int damage);
 		bool move(utilities::EDirection direction);
 		virtual void show() const = 0;
 };

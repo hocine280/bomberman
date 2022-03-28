@@ -29,6 +29,11 @@ void SystemGame::playTurn()
 	turnEnnemy();
 
 	showMap();
+
+	if(m_map.getPlayer().getLife() == 0)
+	{
+		m_endGame = true;
+	}
 }
 
 void SystemGame::turnPlayer()

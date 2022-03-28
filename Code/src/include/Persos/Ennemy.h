@@ -5,6 +5,7 @@
 #include "../Map/Tile.h"
 
 #include "Personnage.h"
+#include "Bomberman.h"
 
 #include "../engine/utilities.h"
 
@@ -23,7 +24,7 @@ class Ennemy: public Personnage
 		int getDamage() const;
 		void setDamage(int);
 
-		virtual utilities::EDirection play(std::vector<std::vector<Tile*>> map);
+		virtual utilities::EDirection play(std::vector<std::vector<Tile*>> map, Bomberman *player);
 };
 
 #endif

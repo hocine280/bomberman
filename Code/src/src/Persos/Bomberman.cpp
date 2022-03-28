@@ -35,6 +35,10 @@ int Bomberman::getNbBomb() const
 
 void Bomberman::addLife(int life)
 {
+	if(life < 0)
+	{
+		life = -life;
+	}
 	m_life += life;
 }
 
@@ -48,6 +52,10 @@ void Bomberman::addBomb(int nbBomb)
 
 void Bomberman::addSpeed(int speed)
 {
+	if(speed < 0)
+	{
+		speed = -speed;
+	}
 	m_speed += speed;
 }
 

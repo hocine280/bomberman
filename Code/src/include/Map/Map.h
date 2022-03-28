@@ -55,6 +55,8 @@ class Map
 		 */
 		int getNbLine() const;
 
+		Bomberman getPlayer() const;
+
 		std::vector <Ennemy*> getListEnnemy() const;
 
 		/**

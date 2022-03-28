@@ -27,7 +27,7 @@ void Ennemy::setDamage(int damage)
 	}
 }
 
-utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map)
+utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map, Bomberman *player)
 {
 	if(m_still > 0)
 	{
@@ -45,11 +45,23 @@ utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map)
 		moveDirection = utilities::EDirection::LEFT;
 		validateMove = true;
 	}
+	else if(testPosition == player->getPosition())
+	{
+		player->receiveDamage(m_damage);
+		m_still = 3;
+		validateMove = true;
+	}
 	
 	testPosition.setY(testPosition.getY()+2*m_speed);
 	if(!validateMove && testPosition.getY() < map[testPosition.getX()].size() && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
 	{
 		moveDirection = utilities::EDirection::RIGHT;
+		validateMove = true;
+	}
+	else if(testPosition == player->getPosition() && !validateMove)
+	{
+		player->receiveDamage(m_damage);
+		m_still = 3;
 		validateMove = true;
 	}
 
@@ -60,11 +72,23 @@ utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map)
 		moveDirection = utilities::EDirection::TOP;
 		validateMove = true;
 	}
+	else if(testPosition == player->getPosition() && !validateMove)
+	{
+		player->receiveDamage(m_damage);
+		m_still = 3;
+		validateMove = true;
+	}
 
 	testPosition.setX(testPosition.getX()+2*m_speed);
 	if(!validateMove && testPosition.getX() < map.size() && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
 	{
 		moveDirection = utilities::EDirection::BOTTOM;
+		validateMove = true;
+	}
+	else if(testPosition == player->getPosition() && !validateMove)
+	{
+		player->receiveDamage(m_damage);
+		m_still = 3;
 		validateMove = true;
 	}
 

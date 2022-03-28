@@ -33,6 +33,14 @@ int Personnage::getSpeed() const
 	return m_speed;
 }
 
+void Personnage::receiveDamage(int damage)
+{
+	if(damage > 0)
+	{
+		m_life -= damage;
+	}
+}
+
 bool Personnage::move(utilities::EDirection direction)
 {
 	bool back = 1;
