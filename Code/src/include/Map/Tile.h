@@ -17,6 +17,8 @@ class Tile
 		void setBeCrossed(bool beCrossed);
 		bool getBeCrossed() const;
 		virtual void show() const;
+
+		virtual void weaken();
 };
 
 #endif

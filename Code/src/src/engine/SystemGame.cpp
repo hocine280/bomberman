@@ -16,6 +16,7 @@ SystemGame::SystemGame(int level): m_map(level), m_endGame(false)
 void SystemGame::showMap()
 {
 	m_map.showMap();
+	m_map.eraseBombExplosion();
 }
 
 bool SystemGame::endGame()

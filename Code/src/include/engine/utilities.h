@@ -11,6 +11,14 @@ namespace utilities
 		RIGHT,
 		NONE
 	}EDirection;
+
+	typedef enum
+	{
+		LINE,
+		COLUMN,
+		CENTER,
+		NOEXPLOSION
+	}EBombExplosionDirection;
 }
 
 #endif

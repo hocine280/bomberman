@@ -12,8 +12,6 @@
 #include "../../include/Items/SpeedUp.h"
 #include "../../include/Items/ScaleUp.h"
 
-#include "../../include/engine/utilities.h"
-
 #include <iostream>
 #include <fstream>
 
@@ -86,7 +84,7 @@ std::vector <Bomb*> Map::getListBombs() const
 
 void Map::addBomb(Position position)
 {
-	m_listItems.push_back(new Bomb(position.getX(), position.getY()));
+	m_listBombs.push_back(new Bomb(position.getX(), position.getY()));
 }
 
 void Map::loadMap(int map)
@@ -106,7 +104,18 @@ void Map::loadMap(int map)
 			{
 				delete m_mapTile[i][j];
 			}
+			m_mapTile[i].clear();
 		}
+		m_mapTile.clear();
+	}
+
+	if(!m_bombExplosion.empty())
+	{
+		for (int i = 0; i < m_bombExplosion.size(); i++)
+		{
+			m_bombExplosion[i].clear();
+		}
+		m_bombExplosion.clear();
 	}
 		
 	fileMap.open("resources/map/" + std::to_string(map) + ".txt", std::fstream::in);
@@ -118,6 +127,7 @@ void Map::loadMap(int map)
 		for(int i=0; i<m_nbLine; i++)
 		{
 			m_mapTile.push_back(std::vector <Tile*>(m_nbColumn));
+			m_bombExplosion.push_back(std::vector<utilities::EBombExplosionDirection>(m_nbColumn, utilities::EBombExplosionDirection::NOEXPLOSION));
 		}
 		
 		getline(fileMap, line);
@@ -273,68 +283,89 @@ void Map::playBomb(int bomb)
 	{
 		if(m_listBombs[bomb]->play(m_mapTile, &m_player, &m_listItems))
 		{
-			showMapBombExplose(m_listBombs[bomb]->getPosition());
+			bombExplosion(m_listBombs[bomb]->getPosition());
 			m_listBombs.erase(m_listBombs.begin()+bomb);
 		}
 	}
 }
 
-void Map::showMapBombExplose(Position positionExplosion) const
+void Map::bombExplosion(Position positionExplosion)
 {
 	for (int line = 0; line < m_nbLine; line++)
 	{
-		for(int column=0; column<m_nbColumn; column++)
+		for (int column = 0; column < m_nbColumn; column++)
 		{
-			std::cout << "+---";
-		}
-		std::cout << "+" << std::endl;
-
-		for (int i = 0; i < 3; i++)
-		{
-			for (int column = 0; column < m_nbColumn; column++)
+			if(positionExplosion.getX() == line && positionExplosion.getY() == column)
 			{
-				switch (i)
+				m_bombExplosion[line][column] = utilities::EBombExplosionDirection::CENTER;
+			}
+			else if(positionExplosion.getX()+Bomb::scope > line && line > positionExplosion.getX()-Bomb::scope && positionExplosion.getY() == column)
+			{
+				m_bombExplosion[line][column] = utilities::EBombExplosionDirection::COLUMN;
+			}
+			else if(positionExplosion.getY()+Bomb::scope > column && column > positionExplosion.getY()-Bomb::scope && positionExplosion.getX() == line)
+			{
+				m_bombExplosion[line][column] = utilities::EBombExplosionDirection::LINE;
+			}
+			else
+			{
+				m_bombExplosion[line][column] = utilities::EBombExplosionDirection::NOEXPLOSION;
+			}
+
+			if(m_bombExplosion[line][column] != utilities::EBombExplosionDirection::NOEXPLOSION)
+			{
+				bool ok = false;
+				int i = 0;
+				while(!ok && i < m_listEnnemy.size())
 				{
-				case 0:
-				{
-					std::cout << "|";
-					if(column-Bomb::scope == positionExplosion.getY() || column+Bomb::scope == positionExplosion.getY())
+					if(m_listEnnemy[i]->getPosition().getX() == line && m_listEnnemy[i]->getPosition().getY() == column)
 					{
-						std::cout << " | ";
+						m_listEnnemy[i]->receiveDamage(Bomb::power);
+						if(m_listEnnemy[i]->getLife() == 0)
+						{
+							m_mapTile[line][column]->setBeCrossed(true);
+							m_listEnnemy.erase(m_listEnnemy.begin()+i);
+							i--;
+						}
+						ok = true;
+					}
+					i++;
+				}
+
+				if(!ok && !m_mapTile[line][column]->getBeCrossed())
+				{
+					if(m_player.getPosition().getX() == line && m_player.getPosition().getY() == column)
+					{
+						m_player.receiveDamage(Bomb::power);
 					}
 					else
 					{
-						std::cout << "   ";
+						Wall *w = reinterpret_cast<Wall*>(m_mapTile[line][column]);
+						w->weaken();
+						if(w->getNbNecessaryBomb() == 0)
+						{
+							delete m_mapTile[line][column];
+							m_mapTile[line][column] = new Tile(line, column, true);
+						}
 					}
 				}
-					break;
-
-				case 1:
-				{
-					std::cout << "|";
-
-				}
-					break;
-
-				case 2:
-					std::cout << "|";
-					break;
 				
-				default:
-					break;
-				}	
 			}
-			std::cout << "|" << std::endl;
+		}
+	}
+	
+}
+
+void Map::eraseBombExplosion()
+{
+	for (int i = 0; i < m_bombExplosion.size(); i++)
+	{
+		for (int j = 0; j < m_bombExplosion[i].size(); j++)
+		{
+			m_bombExplosion[i][j] = utilities::EBombExplosionDirection::NOEXPLOSION;
 		}
 		
 	}
-
-	for(int column=0; column<m_nbColumn; column++)
-	{
-		std::cout << "+---";
-	}
-	std::cout << "+" << std::endl;
-	
 }
 
 void Map::showMap() const
@@ -357,7 +388,12 @@ void Map::showMap() const
 					{
 						bool show = false;
 						std::cout << "|";
-						if(!m_listItems.empty())
+						if(m_bombExplosion[line][column] == utilities::EBombExplosionDirection::COLUMN || m_bombExplosion[line][column] == utilities::EBombExplosionDirection::CENTER)
+						{
+							std::cout << " | ";
+							show = true;
+						}
+						else if(!m_listItems.empty())
 						{
 							int k=0;
 							while(k<m_listItems.size() && m_listItems[k]->getPosition() != m_mapTile[line][column]->getPosition())
@@ -370,6 +406,7 @@ void Map::showMap() const
 								show = true;
 							}
 						}
+						
 						if(!show)
 						{
 							std::cout << "   ";
@@ -383,6 +420,22 @@ void Map::showMap() const
 						bool show = false;
 						std::cout << "|";
 						//Affichage de la valeur centrale
+						if(m_bombExplosion[line][column] == utilities::EBombExplosionDirection::LINE)
+						{
+							std::cout << "---";
+							show = true;
+						}
+						else if(m_bombExplosion[line][column] == utilities::EBombExplosionDirection::COLUMN)
+						{
+							std::cout << " | ";
+							show = true;
+						}
+						else if(m_bombExplosion[line][column] == utilities::EBombExplosionDirection::CENTER)
+						{
+							std::cout << "-@-";
+							show = true;
+						}
+
 						if(m_player.getPosition() == m_mapTile[line][column]->getPosition())
 						{
 							m_player.show();
@@ -422,6 +475,20 @@ void Map::showMap() const
 								show = true;
 							}
 						}
+
+						if(!m_listBombs.empty() && !show)
+						{
+							int k=0;
+							while(k<m_listBombs.size() && m_listBombs[k]->getPosition() != m_mapTile[line][column]->getPosition())
+							{
+								k++;
+							}
+							if(k<m_listBombs.size())
+							{
+								m_listBombs[k]->showMiddle();
+								show = true;
+							}
+						}
 						
 						if(!show)
 						{
@@ -435,6 +502,12 @@ void Map::showMap() const
 					{
 						bool show = false;
 						std::cout << "|";
+						if(m_bombExplosion[line][column] == utilities::EBombExplosionDirection::COLUMN || m_bombExplosion[line][column] == utilities::EBombExplosionDirection::CENTER)
+						{
+							std::cout << " | ";
+							show = true;
+						}
+
 						if(!m_listItems.empty())
 						{
 							int k=0;
@@ -448,6 +521,7 @@ void Map::showMap() const
 								show = true;
 							}
 						}
+
 						if(!show)
 						{
 							std::cout << "   ";

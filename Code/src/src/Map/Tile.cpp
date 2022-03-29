@@ -28,3 +28,8 @@ void Tile::show() const
 {
 	std::cout << "   ";
 }
+
+void Tile::weaken()
+{
+	return;
+}

@@ -17,7 +17,7 @@ class Wall : public Tile
 		int getNbNecessaryBomb() const;
 		virtual void show() const override;
 
-		void weaken();
+		virtual void weaken();
 };
 
 #endif

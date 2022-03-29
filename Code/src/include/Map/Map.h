@@ -23,6 +23,8 @@
 #include "../Items/Item.h"
 #include "../Items/Bomb.h"
 
+#include "../engine/utilities.h"
+
 class Map
 {
 	private:
@@ -30,10 +32,13 @@ class Map
 		int m_nbLine;
 		Tile m_target;
 		Bomberman m_player;
+		std::vector <std::vector<utilities::EBombExplosionDirection>>m_bombExplosion;
 		std::vector <std::vector<Tile*>>m_mapTile;
 		std::vector <Ennemy*> m_listEnnemy;
 		std::vector <Item*> m_listItems;
 		std::vector <Bomb*> m_listBombs;
+
+		void bombExplosion(Position positionExplosion);
 
 	public:
 		Map(int level = 0);
@@ -70,7 +75,7 @@ class Map
 
 		void addBomb(Position position);
 
-		void showMapBombExplose(Position positionExplosion) const;
+		void eraseBombExplosion();
 
 		/**
 		 * \brief Permet l'affichage de la map sur la console
