@@ -325,7 +325,6 @@ void Map::bombExplosion(Position positionExplosion)
 						{
 							m_mapTile[line][column]->setBeCrossed(true);
 							m_listEnnemy.erase(m_listEnnemy.begin()+i);
-							i--;
 						}
 						ok = true;
 					}
@@ -436,19 +435,19 @@ void Map::showMap() const
 							show = true;
 						}
 
-						if(m_player.getPosition() == m_mapTile[line][column]->getPosition())
+						if(!show && m_player.getPosition() == m_mapTile[line][column]->getPosition())
 						{
 							m_player.show();
 							show = true;
 						}
 
-						if(m_target.getPosition() == m_mapTile[line][column]->getPosition() && !show)
+						if(!show && m_target.getPosition() == m_mapTile[line][column]->getPosition())
 						{
 							std::cout << " X ";
 							show = true;
 						}
 						
-						if(!m_listEnnemy.empty() && !show)
+						if(!show && !m_listEnnemy.empty())
 						{
 							int k=0;
 							while(k<m_listEnnemy.size() && m_listEnnemy[k]->getPosition() != m_mapTile[line][column]->getPosition())
@@ -462,7 +461,7 @@ void Map::showMap() const
 							}
 						}
 
-						if(!m_listItems.empty() && !show)
+						if(!show && !m_listItems.empty())
 						{
 							int k=0;
 							while(k<m_listItems.size() && m_listItems[k]->getPosition() != m_mapTile[line][column]->getPosition())
@@ -476,7 +475,7 @@ void Map::showMap() const
 							}
 						}
 
-						if(!m_listBombs.empty() && !show)
+						if(!show && !m_listBombs.empty())
 						{
 							int k=0;
 							while(k<m_listBombs.size() && m_listBombs[k]->getPosition() != m_mapTile[line][column]->getPosition())
