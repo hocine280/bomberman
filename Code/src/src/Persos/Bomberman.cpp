@@ -64,6 +64,41 @@ void Bomberman::dropBomb()
 	m_nbBomb--;
 }
 
+bool Bomberman::move(utilities::EDirection direction)
+{
+	return move(direction, m_speed);
+}
+
+bool Bomberman::move(utilities::EDirection direction, int speed)
+{
+	bool back = true;
+
+	switch(direction)
+	{
+		case utilities::EDirection::TOP :
+			m_position.setX(m_position.getX()-speed);
+			break;
+
+		case utilities::EDirection::BOTTOM :
+			m_position.setX(m_position.getX()+speed);
+			break;
+
+		case utilities::EDirection::LEFT :
+			m_position.setY(m_position.getY()-speed);
+			break;
+
+		case utilities::EDirection::RIGHT :
+			m_position.setY(m_position.getY()+speed);
+			break;
+
+		default:
+			back = false;
+			break;
+	}
+
+	return back;
+}
+
 void Bomberman::show() const
 {
 	std::cout << " P ";

@@ -43,7 +43,7 @@ void Personnage::receiveDamage(int damage)
 
 bool Personnage::move(utilities::EDirection direction)
 {
-	bool back = 1;
+	bool back = true;
 
 	switch(direction)
 	{
@@ -64,7 +64,7 @@ bool Personnage::move(utilities::EDirection direction)
 			break;
 
 		default:
-			back = 0;
+			back = false;
 			break;
 	}
 

@@ -226,10 +226,10 @@ void Map::loadMap(int map)
 	fileMap.close();
 }
 
-bool Map::movePlayer(utilities::EDirection direction)
+bool Map::movePlayer(utilities::EDirection direction, int nbCase)
 {
 	Bomberman bTest = m_player;
-	bTest.move(direction);
+	bTest.move(direction, nbCase);
 
 	if(bTest.getPosition().getX() >= m_nbLine || bTest.getPosition().getY() >= m_nbColumn || bTest.getPosition().getX() < 0 || bTest.getPosition().getY() < 0){
 		throw MoveException("\nDéplacement impossible !\nCause : sortie de map");
@@ -241,7 +241,7 @@ bool Map::movePlayer(utilities::EDirection direction)
 	}
 
 	bTest = m_player;
-	if(m_player.move(direction))
+	if(m_player.move(direction, nbCase))
 	{
 		m_mapTile[bTest.getPosition().getX()][bTest.getPosition().getY()]->setBeCrossed(true);
 		m_mapTile[m_player.getPosition().getX()][m_player.getPosition().getY()]->setBeCrossed(false);

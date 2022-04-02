@@ -18,7 +18,7 @@ class Personnage
 		int getLife() const;
 		int getSpeed() const;
 		void receiveDamage(int damage);
-		bool move(utilities::EDirection direction);
+		virtual bool move(utilities::EDirection direction);
 		virtual void show() const = 0;
 };
 

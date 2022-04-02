@@ -19,6 +19,8 @@ class Bomberman: public Personnage
 		void addLife(int life);
 		void addSpeed(int speed);
 		void dropBomb();
+		virtual bool move(utilities::EDirection direction);
+		bool move(utilities::EDirection direction, int speed);
 		virtual void show() const override;
 };
 

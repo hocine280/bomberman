@@ -86,7 +86,7 @@ class Map
 
 		void loadMap(int map);
 
-		bool movePlayer(utilities::EDirection direction);
+		bool movePlayer(utilities::EDirection direction, int nbCase);
 
 		void playEnnemy(int ennemy);
 

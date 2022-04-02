@@ -72,7 +72,22 @@ void SystemGame::turnPlayer()
 			case 8:
 				try
 				{
-					m_map.movePlayer(utilities::EDirection::TOP);
+					int nbCase = 1;
+					if(m_map.getPlayer().getSpeed() > 1)
+					{
+						std::cout << "De combien de case souhaitez-vous vous déplacer ?" << std::endl;
+						for (int i = 0; i < m_map.getPlayer().getSpeed(); i++)
+						{
+							std::cout << (i+1) << " - " << (i+1) << " case(s)" << std::endl;
+						}
+						do
+						{
+							std::cin.clear();
+							std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+							std::cin >> nbCase;
+						} while (nbCase < 1 && nbCase > m_map.getPlayer().getSpeed());
+					}
+					m_map.movePlayer(utilities::EDirection::TOP, nbCase);
 					finAction = true;
 				}
 				catch(const MoveException& e)
@@ -85,7 +100,22 @@ void SystemGame::turnPlayer()
 			case 4:
 				try
 				{
-					m_map.movePlayer(utilities::EDirection::LEFT);
+					int nbCase = 1;
+					if(m_map.getPlayer().getSpeed() > 1)
+					{
+						std::cout << "De combien de case souhaitez-vous vous déplacer ?" << std::endl;
+						for (int i = 0; i < m_map.getPlayer().getSpeed(); i++)
+						{
+							std::cout << (i+1) << " - " << (i+1) << " case(s)" << std::endl;
+						}
+						do
+						{
+							std::cin.clear();
+							std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+							std::cin >> nbCase;
+						} while (nbCase < 1 && nbCase > m_map.getPlayer().getSpeed());
+					}
+					m_map.movePlayer(utilities::EDirection::LEFT, nbCase);
 					finAction = true;
 				}
 				catch(const MoveException& e)
@@ -97,7 +127,22 @@ void SystemGame::turnPlayer()
 			case 6:
 				try
 				{
-					m_map.movePlayer(utilities::EDirection::RIGHT);
+					int nbCase = 1;
+					if(m_map.getPlayer().getSpeed() > 1)
+					{
+						std::cout << "De combien de case souhaitez-vous vous déplacer ?" << std::endl;
+						for (int i = 0; i < m_map.getPlayer().getSpeed(); i++)
+						{
+							std::cout << (i+1) << " - " << (i+1) << " case(s)" << std::endl;
+						}
+						do
+						{
+							std::cin.clear();
+							std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+							std::cin >> nbCase;
+						} while (nbCase < 1 && nbCase > m_map.getPlayer().getSpeed());
+					}
+					m_map.movePlayer(utilities::EDirection::RIGHT, nbCase);
 					finAction = true;
 				}
 				catch(const MoveException& e)
@@ -109,7 +154,22 @@ void SystemGame::turnPlayer()
 			case 2:
 				try
 				{
-					m_map.movePlayer(utilities::EDirection::BOTTOM);
+					int nbCase = 1;
+					if(m_map.getPlayer().getSpeed() > 1)
+					{
+						std::cout << "De combien de case souhaitez-vous vous déplacer ?" << std::endl;
+						for (int i = 0; i < m_map.getPlayer().getSpeed(); i++)
+						{
+							std::cout << (i+1) << " - " << (i+1) << " case(s)" << std::endl;
+						}
+						do
+						{
+							std::cin.clear();
+							std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+							std::cin >> nbCase;
+						} while (nbCase < 1 && nbCase > m_map.getPlayer().getSpeed());
+					}
+					m_map.movePlayer(utilities::EDirection::BOTTOM, nbCase);
 					finAction = true;
 				}
 				catch(const MoveException& e)
