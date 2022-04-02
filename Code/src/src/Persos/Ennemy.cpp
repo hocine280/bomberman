@@ -39,60 +39,124 @@ utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map, Bomberma
 	bool validateMove = false;
 	Position testPosition = m_position;
 
-	testPosition.setY(testPosition.getY()-m_speed);
-	if(testPosition.getY() >= 0 &&  map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
-	{
-		moveDirection = utilities::EDirection::LEFT;
-		validateMove = true;
-	}
-	else if(testPosition == player->getPosition())
-	{
-		player->receiveDamage(m_damage);
-		m_still = 3;
-		validateMove = true;
-	}
-	
-	testPosition.setY(testPosition.getY()+2*m_speed);
-	if(!validateMove && testPosition.getY() < map[testPosition.getX()].size() && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
-	{
-		moveDirection = utilities::EDirection::RIGHT;
-		validateMove = true;
-	}
-	else if(testPosition == player->getPosition() && !validateMove)
-	{
-		player->receiveDamage(m_damage);
-		m_still = 3;
-		validateMove = true;
-	}
+	int moveX =  player->getPosition().getX() - testPosition.getX();
+	int moveY = player->getPosition().getY() - testPosition.getY();
+	int i = 0;
 
-	testPosition.setX(testPosition.getX()-m_speed);
-	testPosition.setY(testPosition.getY()-m_speed);
-	if(!validateMove && testPosition.getX() >= 0 && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
+	if(moveX < 0)
 	{
 		moveDirection = utilities::EDirection::TOP;
-		validateMove = true;
 	}
-	else if(testPosition == player->getPosition() && !validateMove)
-	{
-		player->receiveDamage(m_damage);
-		m_still = 3;
-		validateMove = true;
-	}
-
-	testPosition.setX(testPosition.getX()+2*m_speed);
-	if(!validateMove && testPosition.getX() < map.size() && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
+	else if(moveX > 0)
 	{
 		moveDirection = utilities::EDirection::BOTTOM;
-		validateMove = true;
 	}
-	else if(testPosition == player->getPosition() && !validateMove)
+	else if(moveY < 0)
 	{
-		player->receiveDamage(m_damage);
-		m_still = 3;
-		validateMove = true;
+		moveDirection = utilities::EDirection::LEFT;
+	}
+	else if(moveY > 0)
+	{
+		moveDirection = utilities::EDirection::RIGHT;
 	}
 
-	if(validateMove)
+	while(!validateMove)
+	{
+		switch (moveDirection)
+		{
+			case utilities::EDirection::TOP:
+				testPosition.setX(testPosition.getX()-m_speed);
+				if(testPosition.getX() >= 0 && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
+				{
+					validateMove = true;
+				}
+				else if(testPosition == player->getPosition() && !validateMove)
+				{
+					player->receiveDamage(m_damage);
+					m_still = 3;
+					validateMove = true;
+				}
+				break;
+
+			case utilities::EDirection::BOTTOM:
+				testPosition.setX(testPosition.getX()+m_speed);
+				if(testPosition.getX() < map.size() && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
+				{
+					validateMove = true;
+				}
+				else if(testPosition == player->getPosition() && !validateMove)
+				{
+					player->receiveDamage(m_damage);
+					m_still = 3;
+					validateMove = true;
+				}
+				break;
+
+			case utilities::EDirection::LEFT:
+				testPosition.setY(testPosition.getY()-m_speed);
+				if(testPosition.getY() >= 0 &&  map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
+				{
+					validateMove = true;
+				}
+				else if(testPosition == player->getPosition())
+				{
+					player->receiveDamage(m_damage);
+					m_still = 3;
+					validateMove = true;
+				}
+				break;
+
+			case utilities::EDirection::RIGHT:
+				testPosition.setY(testPosition.getY()+m_speed);
+				if(testPosition.getY() < map[testPosition.getX()].size() && map[testPosition.getX()][testPosition.getY()]->getBeCrossed())
+				{
+					validateMove = true;
+				}
+				else if(testPosition == player->getPosition() && !validateMove)
+				{
+					player->receiveDamage(m_damage);
+					m_still = 3;
+					validateMove = true;
+				}
+				break;
+			
+			default:
+				validateMove = true;
+				break;
+		}
+
+		if(!validateMove)
+		{
+			switch (i)
+			{
+				case 0:
+					moveDirection = utilities::EDirection::LEFT;
+					i++;
+					break;
+
+				case 1:
+					moveDirection = utilities::EDirection::RIGHT;
+					i++;
+					break;
+
+				case 2:
+					moveDirection = utilities::EDirection::TOP;
+					i++;
+					break;
+
+				case 3:
+					moveDirection = utilities::EDirection::BOTTOM;
+					i++;
+					break;
+				
+				default:
+					moveDirection = utilities::EDirection::NONE;
+					break;
+			}
+		}
+	}
+
+	if(moveDirection != utilities::EDirection::NONE)
 	{
 		move(moveDirection);
 	}
