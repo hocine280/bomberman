@@ -82,9 +82,10 @@ std::vector <Bomb*> Map::getListBombs() const
 	return m_listBombs;
 }
 
-void Map::addBomb(Position position)
+void Map::playBomb()
 {
-	m_listBombs.push_back(new Bomb(position.getX(), position.getY()));
+	m_listBombs.push_back(new Bomb(m_player.getPosition().getX(), m_player.getPosition().getY()));
+	m_player.dropBomb();
 }
 
 void Map::loadMap(int map)
@@ -148,7 +149,7 @@ void Map::loadMap(int map)
 					if(tile.compare("P") == 0)
 					{
 						m_mapTile[lineMap][columnMap] = new Tile(lineMap, columnMap, false);
-						m_player = Bomberman(lineMap, columnMap, 3, 1, 5, 2);
+						m_player = Bomberman(lineMap, columnMap, 5, 1, 5, 5);
 					}
 					else if(tile.compare("w") == 0)
 					{

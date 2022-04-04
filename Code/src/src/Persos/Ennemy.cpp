@@ -127,6 +127,7 @@ utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map, Bomberma
 
 		if(!validateMove)
 		{
+			testPosition = m_position;
 			switch (i)
 			{
 				case 0:

@@ -23,16 +23,16 @@ int main(void)
 		switch (choix)
 		{
 			case 1:
-				std::cout << std::endl << std::endl;
-				std::cout << "                                 ###      A BIENTOT SUR BOMBERMAN      ###                                   " << std::endl << std::endl;
+				std::cout << std::endl << std::endl <<
+				"                                 ###      A BIENTOT SUR BOMBERMAN      ###                                   " << std::endl << std::endl;
 				break;
 
 			case 2:
 				int level;
-				std::cout << std::endl << std::endl;
-				std::cout << "=============================================================================================================" << std::endl;
-				std::cout << "                                            LANCEMENT D'UNE PARTIE                                           " << std::endl;
-				std::cout << "=============================================================================================================" << std::endl;
+				std::cout << std::endl << std::endl <<
+				"=============================================================================================================" << std::endl <<
+				"                                            LANCEMENT D'UNE PARTIE                                           " << std::endl <<
+				"=============================================================================================================" << std::endl;
 				do
 				{
 					std::cout << std::endl << "Sélectionnez la map souhaitée :";
@@ -51,6 +51,21 @@ int main(void)
 					
 				} while (level == -1);
 				playGame(level);
+				break;
+
+			case 3:
+				std::cout << std::endl << std::endl <<
+				"                                 ###             LES REGLES            ###                                   " << std::endl << std::endl <<
+				"Le but du jeux est d'atteindre la position marqué par un X. Mais cela ne sera pas sans peine !!" << std::endl <<
+				"En effet ! Des hordes d'ennemies vous en empêcheront et pour cela ils vous attaqueront de diverses manières !" << std::endl <<
+				"Passons en revue ces ennemies :" << std::endl <<
+				"1 - Monster : Ce petit monstre ne vous fera pas grand mal tant que vous vous éloignerez de lui ! En effet, il pourrait vous toucher et pour se laver ce n'est pas évident ..." << std::endl <<
+				"2 - Ghost : Celui là est un peu plus coriace étant donné que ce petit fantôme pourra traverser tous les murs, les bombes ainsi que ses copains." << std::endl <<
+				"3 - Bowman : Redoutable archer le Bowman vous visera sans scrupule dès que vous serez dans son viseur !! Attention à ne pas vous aligner avec lui ou soyez sûr d'être assez loin et protéger !" << std::endl << std::endl <<
+				"Malheureusement éviter les ennemies ne suffira pas ... Car la fuite n'est pas une victoire ! Il va falloir se battre et atteindre la case ne suffira pas !" << std::endl <<
+				"Soyez un vrai Bomberman, maître de la destruction et posez vos bombes pour éliminer tous vos adversaires !" << std::endl <<
+				"Une fois cela fait rendez-vous au point X pour l'emporter !" << std::endl << std::endl <<
+				"Courage petit Bomberman et fais tout péteeeeeeeeeeeeeeeeeeeeeeeeeeer !!!!!" << std::endl << std::endl;
 				break;
 			
 			default:
@@ -80,22 +95,21 @@ void playGame(int level)
 
 void showHome()
 {
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl <<
 
-	std::cout << "=============================================================================================================" << std::endl << std::endl;
+	"=============================================================================================================" << std::endl << std::endl <<
 
-	std::cout << "               ######    #####   ##   ##  ######   #######  ######   ##   ##    ##     ##   ##               " << std::endl;
-	std::cout << "                ##  ##  ##   ##  ### ###   ##  ##   ##   #   ##  ##  ### ###   ####    ###  ##               " << std::endl;
-	std::cout << "                ##  ##  ##   ##  #######   ##  ##   ## #     ##  ##  #######  ##  ##   #### ##               " << std::endl;
-	std::cout << "                #####   ##   ##  #######   #####    ####     #####   #######  ##  ##   ## ####               " << std::endl;
-	std::cout << "                ##  ##  ##   ##  ## # ##   ##  ##   ## #     ## ##   ## # ##  ######   ##  ###               " << std::endl;
-	std::cout << "                ##  ##  ##   ##  ##   ##   ##  ##   ##   #   ##  ##  ##   ##  ##  ##   ##   ##               " << std::endl;
-	std::cout << "               ######    #####   ##   ##  ######   #######  #### ##  ##   ##  ##  ##   ##   ##               " << std::endl;
+	"               ######    #####   ##   ##  ######   #######  ######   ##   ##    ##     ##   ##               " << std::endl <<
+	"                ##  ##  ##   ##  ### ###   ##  ##   ##   #   ##  ##  ### ###   ####    ###  ##               " << std::endl <<
+	"                ##  ##  ##   ##  #######   ##  ##   ## #     ##  ##  #######  ##  ##   #### ##               " << std::endl <<
+	"                #####   ##   ##  #######   #####    ####     #####   #######  ##  ##   ## ####               " << std::endl <<
+	"                ##  ##  ##   ##  ## # ##   ##  ##   ## #     ## ##   ## # ##  ######   ##  ###               " << std::endl <<
+	"                ##  ##  ##   ##  ##   ##   ##  ##   ##   #   ##  ##  ##   ##  ##  ##   ##   ##               " << std::endl <<
+	"               ######    #####   ##   ##  ######   #######  #### ##  ##   ##  ##  ##   ##   ##               " << std::endl << std::endl <<
 	
-	std::cout << std::endl;
-	std::cout << "=============================================================================================================" << std::endl << std::endl;
+	"=============================================================================================================" << std::endl << std::endl <<
 
-	std::cout << "                                 ### BIENVENUE SUR THE GREAT BOMBERMAN ###                                   " << std::endl << std::endl;
+	"                                 ### BIENVENUE SUR THE GREAT BOMBERMAN ###                                   " << std::endl << std::endl;
 }
 
 void showMenu()

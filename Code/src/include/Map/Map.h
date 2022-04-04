@@ -73,7 +73,7 @@ class Map
 
 		std::vector <Bomb*> getListBombs() const;
 
-		void addBomb(Position position);
+		void playBomb();
 
 		void eraseBombExplosion();
 

@@ -15,6 +15,8 @@ SystemGame::SystemGame(int level): m_map(level), m_endGame(false)
 
 void SystemGame::showMap()
 {
+	std::cout << "Point de vie restant : " << m_map.getPlayer().getLife() << "	Nombre de bombes restantes : " << m_map.getPlayer().getNbBomb() << std::endl << std::endl;
+
 	m_map.showMap();
 	m_map.eraseBombExplosion();
 }
@@ -179,8 +181,15 @@ void SystemGame::turnPlayer()
 				break;
 
 			case 5:
-				m_map.addBomb(m_map.getPlayer().getPosition());
-				finAction = true;
+				if(m_map.getPlayer().getNbBomb() > 0)
+				{
+					m_map.playBomb();
+					finAction = true;
+				}
+				else
+				{
+					std::cout << "Vous n'avez plus de bombes ..." << std::endl;
+				}
 				break;
 
 			case 1:
