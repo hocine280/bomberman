@@ -21,7 +21,7 @@ void SystemGame::showMap()
 	m_map.eraseBombExplosion();
 }
 
-bool SystemGame::endGame()
+bool SystemGame::getEndGame()
 {
 	return m_endGame;
 }

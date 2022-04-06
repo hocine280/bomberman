@@ -322,7 +322,7 @@ void Map::bombExplosion(Position positionExplosion)
 					if(m_listEnnemy[i]->getPosition().getX() == line && m_listEnnemy[i]->getPosition().getY() == column)
 					{
 						m_listEnnemy[i]->receiveDamage(Bomb::power);
-						if(m_listEnnemy[i]->getLife() == 0)
+						if(m_listEnnemy[i]->getLife() <= 0)
 						{
 							m_mapTile[line][column]->setBeCrossed(true);
 							m_listEnnemy.erase(m_listEnnemy.begin()+i);
@@ -342,7 +342,7 @@ void Map::bombExplosion(Position positionExplosion)
 					{
 						Wall *w = reinterpret_cast<Wall*>(m_mapTile[line][column]);
 						w->weaken();
-						if(w->getNbNecessaryBomb() == 0)
+						if(w->getNbNecessaryBomb() <= 0)
 						{
 							delete m_mapTile[line][column];
 							m_mapTile[line][column] = new Tile(line, column, true);

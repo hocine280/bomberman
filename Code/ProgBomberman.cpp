@@ -87,7 +87,7 @@ void playGame(int level)
 	SystemGame SG(level);
 
 	SG.showMap();
-	while(!SG.endGame())
+	while(!SG.getEndGame())
 	{
 		SG.playTurn();
 	}
