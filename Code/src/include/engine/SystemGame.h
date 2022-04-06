@@ -90,7 +90,7 @@ class SystemGame
 		 */
 		void playTurn();
 		/**
-		 * \brief Retourne l'attribut endGame
+		 * \brief accesseur de l'attribut endGame
 		 * 
 		 * \return vrai si la partie est terminé, faux sinon
 		 */
