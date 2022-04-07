@@ -44,9 +44,13 @@ void Bomberman::addLife(int life)
 
 void Bomberman::addBomb(int nbBomb)
 {
-	if(nbBomb > 0 && m_nbBomb <= m_bombMax)
+	if(nbBomb > 0 && nbBomb <= m_bombMax)
 	{
 		m_nbBomb += nbBomb;
+	}
+	else if(nbBomb > m_bombMax)
+	{
+		m_nbBomb = m_bombMax;
 	}
 }
 
