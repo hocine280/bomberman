@@ -31,11 +31,38 @@ class Personnage
 		int m_speed; /*!< La vitesse du personnage*/
 		
 	public:
+		/**
+		 * \brief Constructeur d'un Personnage
+		 * 
+		 * \param x La ligne sur laquelle se situe le Personnage
+		 * \param y La colonne sur laquelle se situe le Personnage
+		 * \param life Le nombre de point de vie du Personnage
+		 * \param speed La vitesse du Personnage
+		 */
 		Personnage(int x=0, int y=0, int life = 3, int speed = 1);
+		/**
+		 * \brief Destructeur d'un Personnage
+		 * 
+		 */
 		~Personnage();
 
+		/**
+		 * \brief Accesseur de l'attribut m_position
+		 * 
+		 * \return Position La position du Personnage
+		 */
 		Position getPosition() const;
+		/**
+		 * \brief Accesseur de l'attribut m_life
+		 * 
+		 * \return int Le nombre de point de vie restant du Personnage
+		 */
 		int getLife() const;
+		/**
+		 * \brief Accesseur de l'attribut m_speed
+		 * 
+		 * \return int La vitesse du Personnage
+		 */
 		int getSpeed() const;
 		/**
 		 * \brief Lorsque le personnage reçoit des dégâts

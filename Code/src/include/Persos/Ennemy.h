@@ -39,11 +39,22 @@ class Ennemy: public Personnage
 		int m_still; /*!< Le nombre de tour durant lequel un Ennemy ne peut jouer */
 		
 	public:
+		/**
+		 * \brief Constructeur d'un Ennemy
+		 * 
+		 * \param x La ligne sur laquelle se situe l'Ennemy
+		 * \param y La colonne sur laquelle se situe l'Ennemy
+		 * \param life Le nombre de point de vie de l'Ennemy
+		 * \param speed La vitesse de l'Ennemy
+		 * \param damage Les dégâts qu'inflie l'Ennemy
+		 * \param still Le nombre de tour à patienter par le Bowman avant de jouer
+		 */
 		Ennemy(int x, int y, int life, int speed, int damage, int still);
+		/**
+		 * \brief Destructeur d'un Ennemy
+		 * 
+		 */
 		~Ennemy();
-
-		int getDamage() const;
-		void setDamage(int);
 
 		/**
 		 * \brief Permets de faire jouer un Ennemy

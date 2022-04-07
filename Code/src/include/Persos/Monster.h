@@ -25,7 +25,21 @@
 class Monster: public Ennemy
 {
 	public:
+		/**
+		 * \brief Constructeur d'un Monster
+		 * 
+		 * \param x La ligne sur laquelle se situe le Monster
+		 * \param y La colonne sur laquelle se situe le Monster
+		 * \param life Le nombre de point de vie de le Monster
+		 * \param speed La vitesse de le Monster
+		 * \param damage Les dégâts qu'inflie le Monster
+		 * \param still Le nombre de tour à patienter par le Monster avant de jouer
+		 */
 		Monster(int x, int y, int life, int speed, int damage, int still);
+		/**
+		 * \brief Destructeur d'un Monster
+		 * 
+		 */
 		~Monster();
 
 		/**

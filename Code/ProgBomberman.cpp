@@ -1,11 +1,34 @@
+/**
+ * \file ProgBomberman.cpp
+ * \author Pierre CHEMIN & Hocine HADID
+ * \brief Fichier contenant la classe principal permettant de gérer le jeu du Bomberman
+ * \version 0.1
+ * \date 2022-04-08
+ * 
+ * \copyright Copyright (c) 2022
+ * 
+ */
 #include <iostream>
 #include <limits>
 #include <fstream>
 
 #include "src/include/engine/SystemGame.h"
 
+/**
+ * \brief Permets d'afficher le message d'accueil
+ * 
+ */
 void showHome();
+/**
+ * \brief Permets d'afficher le menu du jeu
+ * 
+ */
 void showMenu();
+/**
+ * \brief Permets de lancer une parie
+ * 
+ * \param level Le niveau de la Map choisit
+ */
 void playGame(int level);
 
 int main(void)

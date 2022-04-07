@@ -14,19 +14,6 @@ Ennemy::~Ennemy()
 	
 }
 
-int Ennemy::getDamage() const
-{
-	return m_damage;
-}
-
-void Ennemy::setDamage(int damage)
-{
-	if(damage > 0)
-	{
-		m_damage = damage;
-	}
-}
-
 utilities::EDirection Ennemy::play(std::vector<std::vector<Tile*>> map, Bomberman *player, std::vector<Item*> *items)
 {
 	if(m_still > 0)

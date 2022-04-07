@@ -48,13 +48,13 @@ class Bomb: public Item
 		/**
 		 * @brief accesseur de l'attribut scope
 		 * 
-		 * @return La porté de la bombe
+		 * @return double La porté de la bombe
 		 */
 		double getScope() const;
 		/**
 		 * @brief accesseur de l'attribut turnBeforeExplosion
 		 * 
-		 * @return Le nombre de tour avant l'explosion de la bombe
+		 * @return int Le nombre de tour avant l'explosion de la bombe
 		 */
 		int getTurnBeforeExplosion() const;
 

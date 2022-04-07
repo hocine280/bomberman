@@ -61,15 +61,58 @@ class Map
 		void bombExplosion(Position positionExplosion);
 
 	public:
+		/**
+		 * \brief Constructeur d'une Map
+		 * 
+		 * \param level Le niveau de la Map à charger
+		 */
 		Map(int level = 0);
+		/**
+		 * \brief Destructeur d'une Map
+		 * 
+		 */
 		~Map();
-
+		/**
+		 * @brief Accesseur de l'attribut m_target
+		 * 
+		 * @return Tile L'objectif de la map
+		 */
 		Tile getTarget() const;
+		/**
+		 * \brief Accesseur de l'attribut m_nbColumn
+		 * 
+		 * \return int Le nombre de colonne de la Map
+		 */
 		int getNbColumn() const;
+		/**
+		 * \brief Accesseur de l'attribut m_nbLine
+		 * 
+		 * \return int Le nombre de ligne de la Map
+		 */
 		int getNbLine() const;
+		/**
+		 * \brief Accesseur de l'attribut m_player
+		 * 
+		 * \return Bomberman Le Bomberman (joueur) de la Map
+		 */
 		Bomberman getPlayer() const;
+		/**
+		 * \brief Accesseur de l'attribut m_listEnnemy
+		 * 
+		 * \return std::vector<Ennemy*> La liste des ennemies de la Map
+		 */
 		std::vector <Ennemy*> getListEnnemy() const;
+		/**
+		 * \brief Accesseur de l'attribut m_listItems
+		 * 
+		 * \return std::vector<Item*> La liste des items de la Map
+		 */
 		std::vector <Item*> getListItems() const;
+		/**
+		 * \brief Accesseur de l'attribut m_listBombs
+		 * 
+		 * \return std::vector<Bomb*> La liste des bombes présentes sur la Map
+		 */
 		std::vector <Bomb*> getListBombs() const;
 
 		/**

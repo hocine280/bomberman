@@ -26,7 +26,21 @@
 class Ghost: public Ennemy
 {
 	public:
+		/**
+		 * \brief Constructeur d'un Ghost
+		 * 
+		 * \param x La ligne sur laquelle se situe le Ghost
+		 * \param y La colonne sur laquelle se situe le Ghost
+		 * \param life Le nombre de point de vie de le Ghost
+		 * \param speed La vitesse de le Ghost
+		 * \param damage Les dégâts qu'inflie le Ghost
+		 * \param still Le nombre de tour à patienter par le Ghost avant de jouer
+		 */
 		Ghost(int x, int y, int life, int speed, int damage, int still);
+		/**
+		 * \brief Destructeur d'un Ghost
+		 * 
+		 */
 		~Ghost();
 
 		/**

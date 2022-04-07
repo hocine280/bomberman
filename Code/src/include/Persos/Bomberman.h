@@ -30,10 +30,34 @@ class Bomberman: public Personnage
 		int m_nbBomb; /*!< Le nombre de bombe possédée par un Bomberman*/
 
 	public:
+		/**
+		 * \brief Constructeur d'un Bomberman
+		 * 
+		 * \param x La ligne sur laquelle se situe le Bomberman
+		 * \param y La colonne sur laquelle se situe le Bomberman
+		 * \param life Le nombre de point de vie du Bomberman
+		 * \param speed La vitesse du Bomberman
+		 * \param bombMax Le nombre de bombe maximal du Bomberman
+		 * \param nbBomb Le nombre de bombe en possession du Bomberman
+		 */
 		Bomberman(int x=0, int y=0, int life=3, int speed=1, int bombMax=5, int nbBomb=2);
+		/**
+		 * \brief Destructeur du Bomberman
+		 * 
+		 */
 		~Bomberman();
 
+		/**
+		 * \brief Accesseur de l'attribut m_bombMax
+		 * 
+		 * \return int Le nombre de bombe maximal du Bomberman
+		 */
 		int getBombMax() const;
+		/**
+	 * \brief Accesseur de l'attribut m_nbBomb
+		 * 
+		 * @return int Le nombre de bombe maximal du Bomberman
+		 */
 		int getNbBomb() const;
 		/**
 		 * \brief Permets d'ajouter des bombes au Bomberman

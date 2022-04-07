@@ -41,7 +41,21 @@ class Bowman : public Ennemy
 		Arrow shootArrow(utilities::EDirection direction) const;
 
 	public:
+		/**
+		 * \brief Constructeur d'un Bowman
+		 * 
+		 * \param x La ligne sur laquelle se situe le Bowman
+		 * \param y La colonne sur laquelle se situe le Bowman
+		 * \param life Le nombre de point de vie du Bowman
+		 * \param speed La vitesse du Bowman
+		 * \param damage Les dagâts qu'inflige le Bowman
+		 * \param still Le nombre de tour à patienter par le Bowman avant de jouer
+		 */
 		Bowman(int x, int y, int life, int speed, int damage, int still);
+		/**
+		 * \brief Destructeur d'un Bowman
+		 * 
+		 */
 		~Bowman();
 		
 		/**

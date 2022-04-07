@@ -27,11 +27,37 @@ class Tile
 		bool m_beCrossed; /*!< Indique si la case peut être traversée ou non*/
 
 	public:
+		/**
+		 * \brief Constructeur d'une Tile
+		 * 
+		 * \param x La ligne sur laquelle se situe la Tile
+		 * \param y La colonne sur laquelle se situe la Tile
+		 * \param beCrossed Si c'est possible de traverser la Tile
+		 */
 		Tile(int x = 0, int y = 0, bool beCrossed = true);
+		/**
+		 * \brief Destructeur d'une Tile
+		 * 
+		 */
 		~Tile();
 
+		/**
+		 * \brief Accesseur de l'attribut m_position
+		 * 
+		 * \return Position La position de la Tile
+		 */
 		Position getPosition() const;
+		/**
+		 * \brief Accesseur de l'attribut m_beCrossed
+		 * 
+		 * \param beCrossed si c'est possible de traverser la Tile ou non
+		 */
 		void setBeCrossed(bool beCrossed);
+		/**
+		 * \brief Accesseur de l'attribut m_beCrossed
+		 * 
+		 * \return bool La possibilité de traverser la Tile ou non
+		 */
 		bool getBeCrossed() const;
 		/**
 		 * \brief Permets d'afficher une Tile

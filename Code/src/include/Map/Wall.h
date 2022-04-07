@@ -27,10 +27,33 @@ class Wall : public Tile
 		int m_nbNecessaryBomb; /*!< Le nombre de bombe nécessaire pour détruire le mur*/
 
 	public:
+		/**
+		 * \brief Constructeur d'un Wall
+		 * 
+		 * \param x La ligne sur laquelle se situe le Wall
+		 * \param y La colonne sur laquelle se situe le Wall
+		 * \param beCrossed Si c'est possible de traverser le Wall
+		 * \param destructible Si le Wall est destructible ou non
+		 * \param nbNecessaryBomb Le nombre de bombe nécessaire pour détruire le Wall
+		 */
 		Wall(int x = 0, int y = 0, bool beCrossed = false, bool destructible = true, int nbNecessaryBomb = 2);
+		/**
+		 * \brief Destructeur d'un Wall
+		 * 
+		 */
 		~Wall();
 
+		/**
+		 * \brief Accesseur de l'attribut m_destructible
+		 * 
+		 * \return true si le Wall est destructible, false sinon
+		 */
 		bool getDestructible() const;
+		/**
+		 * \brief Accesseur de l'attribut m_nbNecessaryBomb
+		 * 
+		 * \return int Le nombre de bombe nécessaire pour détruire le Wall
+		 */
 		int getNbNecessaryBomb() const;
 		/**
 		 * \brief Permets d'afficher une Wall

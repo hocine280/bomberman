@@ -49,7 +49,7 @@ class Item
 		/**
 		 * \brief accesseur sur l'attribut position
 		 * 
-		 * @return La position de l'item
+		 * @return Position La position de l'item
 		 */
 		Position getPosition() const;
 		/**

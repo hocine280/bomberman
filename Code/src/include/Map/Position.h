@@ -26,12 +26,37 @@ class Position
 		int m_y; /*!< L'axe Y (ou la colonne) de la position*/
 		
 	public:
+		/**
+		 * \brief Constructeur d'un Position
+		 * 
+		 * \param x L'axe X (ou la ligne) de la Position
+		 * \param y L'axe Y (ou la colonne) de la Position
+		 */
 		Position(int x = 0, int y = 0);
-
+		/**
+		 * \brief Accesseur de l'attribut m_x
+		 * 
+		 * \return int L'axe X (ou la ligne) de la Position
+		 */
 		int getX() const;
+		/**
+		 * \brief Accesseur de l'attribut m_y
+		 * 
+		 * \return int L'axe Y (ou la colonne) de la Position
+		 */
 		int getY() const;
-		void setX(int);
-		void setY(int);
+		/**
+		 * \brief Accesseur de l'attribut m_x
+		 * 
+		 * \param x La nouvelle valeur de m_x
+		 */
+		void setX(int x);
+		/**
+		 * \brief Accesseur de l'attribut m_y
+		 * 
+		 * \param y La nouvelle valeur de m_y
+		 */
+		void setY(int y);
 
 		/**
 		 * \brief Surcharge de l'opérateur de comparaison, il permet de vérifier si deux Positions sont égales ou non
