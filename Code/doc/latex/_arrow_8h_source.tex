@@ -1,0 +1,30 @@
+\hypertarget{_arrow_8h_source}{}\doxysection{Arrow.\+h}
+\label{_arrow_8h_source}\index{src/include/Items/Arrow.h@{src/include/Items/Arrow.h}}
+\mbox{\hyperlink{_arrow_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef \_\_ARROW\_\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define \_\_ARROW\_\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_item_8h}{Item.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}../engine/utilities.h"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{class_arrow}{Arrow}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_item}{Item}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{keyword}{private}:}
+\DoxyCodeLine{29         \textcolor{keywordtype}{int} m\_speed; }
+\DoxyCodeLine{30         \textcolor{keywordtype}{int} m\_damage; }
+\DoxyCodeLine{31         \mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities::EDirection}} m\_direction; }
+\DoxyCodeLine{33     \textcolor{keyword}{public}:}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_arrow_a57a35bd365e67a87e7d405384bc6482d}{Arrow}}(\textcolor{keywordtype}{int} x = 0, \textcolor{keywordtype}{int} y = 0, \textcolor{keywordtype}{int} speed = 1, \textcolor{keywordtype}{int} damage = 1, \mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities::EDirection}} direction = \mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1}{utilities::EDirection::NONE}});}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{55         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_arrow_aab8bcf5d8e523c6d992c96af645dd30a}{move}}();}
+\DoxyCodeLine{61         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_arrow_a620802153320a2f7fd47b204622d5159}{showTop}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{67         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_arrow_a4a1a160823ad80e295c173fec629b63b}{showMiddle}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{73         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_arrow_ada8cd4ec00ca0ffac49ebabad9620f5c}{showBottom}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{91         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_arrow_a74e6d4613c8d1eeb3447350604f0eac6}{play}}(std::vector<std::vector<Tile*>> map, \mbox{\hyperlink{class_bomberman}{Bomberman}} *player, std::vector<Item*> *items) \textcolor{keyword}{override};}
+\DoxyCodeLine{92 \};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

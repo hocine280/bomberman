@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bomberman:  Fichier source de src/include/Items/Item.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Bomberman<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Bomberman est un jeu où le joueur incarne un poseur de bombe, le but étant de faire exploser les adversaires/ennemis pour gagner</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="dir_4654539cd53a98f272bf34f54b346e57.html">Items</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Item.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_item_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __ITEM__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __ITEM__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;../Map/Position.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;../Map/Tile.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;../Persos/Bomberman.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_item.html">   30</a></span><span class="keyword">class </span><a class="code hl_class" href="class_item.html">Item</a></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_item.html#a85783751bc91c857d772e798e322182e">   33</a></span>        <a class="code hl_class" href="class_position.html">Position</a> <a class="code hl_variable" href="class_item.html#a85783751bc91c857d772e798e322182e">m_position</a>; </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="class_item.html#a843599b31998ffaffbe1a5d610f18e70">Item</a>(<span class="keywordtype">int</span> x = 0, <span class="keywordtype">int</span> y = 0);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="class_item.html#a11663c84075b78c3ae5e30fdfcd7c458">~Item</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_class" href="class_position.html">Position</a> <a class="code hl_function" href="class_item.html#a5769a448ba84717044927115edd57e85">getPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_item.html#a9e06a24ba1b70f7f826796bb5fed62be">   60</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_item.html#a9e06a24ba1b70f7f826796bb5fed62be">showTop</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_item.html#aaf69cd9b8b9f1c2a5dd70943ceb5158d">   66</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_item.html#aaf69cd9b8b9f1c2a5dd70943ceb5158d">showMiddle</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_item.html#a8fc2a13f4f43ff9c60d56ad15cc2b074">   72</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_item.html#a8fc2a13f4f43ff9c60d56ad15cc2b074">showBottom</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="class_item.html#ae6d586a7503809a4825f35232264d13a">   87</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_item.html#ae6d586a7503809a4825f35232264d13a">play</a>(std::vector&lt;std::vector&lt;Tile*&gt;&gt; map, <a class="code hl_class" href="class_bomberman.html">Bomberman</a> *player, std::vector&lt;Item*&gt; *items) = 0;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_bomberman_html"><div class="ttname"><a href="class_bomberman.html">Bomberman</a></div><div class="ttdoc">La classe Bomberman hérite de la classe Personnage et permets de gérer un Bomberman (le joueur)</div><div class="ttdef"><b>Definition:</b> Bomberman.h:27</div></div>
+<div class="ttc" id="aclass_item_html"><div class="ttname"><a href="class_item.html">Item</a></div><div class="ttdoc">La classe abstraite Item.</div><div class="ttdef"><b>Definition:</b> Item.h:31</div></div>
+<div class="ttc" id="aclass_item_html_a11663c84075b78c3ae5e30fdfcd7c458"><div class="ttname"><a href="class_item.html#a11663c84075b78c3ae5e30fdfcd7c458">Item::~Item</a></div><div class="ttdeci">~Item()</div><div class="ttdoc">Destructeur de la classe Item.</div><div class="ttdef"><b>Definition:</b> Item.cpp:5</div></div>
+<div class="ttc" id="aclass_item_html_a5769a448ba84717044927115edd57e85"><div class="ttname"><a href="class_item.html#a5769a448ba84717044927115edd57e85">Item::getPosition</a></div><div class="ttdeci">Position getPosition() const</div><div class="ttdoc">accesseur sur l'attribut position</div><div class="ttdef"><b>Definition:</b> Item.cpp:10</div></div>
+<div class="ttc" id="aclass_item_html_a843599b31998ffaffbe1a5d610f18e70"><div class="ttname"><a href="class_item.html#a843599b31998ffaffbe1a5d610f18e70">Item::Item</a></div><div class="ttdeci">Item(int x=0, int y=0)</div><div class="ttdoc">Constructeur de la classe Item.</div><div class="ttdef"><b>Definition:</b> Item.cpp:3</div></div>
+<div class="ttc" id="aclass_item_html_a85783751bc91c857d772e798e322182e"><div class="ttname"><a href="class_item.html#a85783751bc91c857d772e798e322182e">Item::m_position</a></div><div class="ttdeci">Position m_position</div><div class="ttdef"><b>Definition:</b> Item.h:33</div></div>
+<div class="ttc" id="aclass_item_html_a8fc2a13f4f43ff9c60d56ad15cc2b074"><div class="ttname"><a href="class_item.html#a8fc2a13f4f43ff9c60d56ad15cc2b074">Item::showBottom</a></div><div class="ttdeci">virtual void showBottom() const =0</div><div class="ttdoc">Affiche la partie basse de la case lors de l'affichage de l'item.</div></div>
+<div class="ttc" id="aclass_item_html_a9e06a24ba1b70f7f826796bb5fed62be"><div class="ttname"><a href="class_item.html#a9e06a24ba1b70f7f826796bb5fed62be">Item::showTop</a></div><div class="ttdeci">virtual void showTop() const =0</div><div class="ttdoc">Affiche la partie haute de la case lors de l'affichage de l'item.</div></div>
+<div class="ttc" id="aclass_item_html_aaf69cd9b8b9f1c2a5dd70943ceb5158d"><div class="ttname"><a href="class_item.html#aaf69cd9b8b9f1c2a5dd70943ceb5158d">Item::showMiddle</a></div><div class="ttdeci">virtual void showMiddle() const =0</div><div class="ttdoc">Affiche la partie du milieu de la case lors de l'affichage de l'item.</div></div>
+<div class="ttc" id="aclass_item_html_ae6d586a7503809a4825f35232264d13a"><div class="ttname"><a href="class_item.html#ae6d586a7503809a4825f35232264d13a">Item::play</a></div><div class="ttdeci">virtual bool play(std::vector&lt; std::vector&lt; Tile * &gt; &gt; map, Bomberman *player, std::vector&lt; Item * &gt; *items)=0</div><div class="ttdoc">Permet de jouer un item.</div></div>
+<div class="ttc" id="aclass_position_html"><div class="ttname"><a href="class_position.html">Position</a></div><div class="ttdoc">La classe Position permets de définir une position.</div><div class="ttdef"><b>Definition:</b> Position.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

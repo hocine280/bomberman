@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bomberman:  Fichier source de src/include/Persos/Personnage.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Bomberman<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Bomberman est un jeu où le joueur incarne un poseur de bombe, le but étant de faire exploser les adversaires/ennemis pour gagner</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="dir_d20846c1c94160c31561c1c9cffc7414.html">Persos</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Personnage.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_personnage_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __PERSONNAGE__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __PERSONNAGE__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;../Map/Position.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;../engine/utilities.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_personnage.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_personnage.html">Personnage</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_personnage.html#a6c8a4f18ad8b976231b198c40a84860f">   29</a></span>        <a class="code hl_class" href="class_position.html">Position</a> <a class="code hl_variable" href="class_personnage.html#a6c8a4f18ad8b976231b198c40a84860f">m_position</a>; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_personnage.html#a58ea03d8242a52d78a5221f9163cc932">   30</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="class_personnage.html#a58ea03d8242a52d78a5221f9163cc932">m_life</a>; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_personnage.html#a19c2d9379dc75c951e2c2835bff22ec5">   31</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="class_personnage.html#a19c2d9379dc75c951e2c2835bff22ec5">m_speed</a>; </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <a class="code hl_function" href="class_personnage.html#a9c3221dfeaf1d11b5838995cab09c4fb">Personnage</a>(<span class="keywordtype">int</span> x=0, <span class="keywordtype">int</span> y=0, <span class="keywordtype">int</span> life = 3, <span class="keywordtype">int</span> speed = 1);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <a class="code hl_function" href="class_personnage.html#a05bdf2a469885bb1fbb6c2e8f98972ab">~Personnage</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_class" href="class_position.html">Position</a> <a class="code hl_function" href="class_personnage.html#a9231b287503dbcfbe5aca055de82a95e">getPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_personnage.html#a425e3bd3972613280ec13079f9ea687d">getLife</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_personnage.html#a784b94831f02dba3471036189e281c07">getSpeed</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_personnage.html#a8f34aef096ceace99ec1b2806f706676">receiveDamage</a>(<span class="keywordtype">int</span> damage);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_personnage.html#a7f4f2fe9d66df277adb9257d50fa6ad5">move</a>(<a class="code hl_enumeration" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a> direction);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_personnage.html#a9e32f326606ddeb5f6f948600027577a">   90</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_personnage.html#a9e32f326606ddeb5f6f948600027577a">show</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_personnage_html"><div class="ttname"><a href="class_personnage.html">Personnage</a></div><div class="ttdoc">La classe abstraite personnage.</div><div class="ttdef"><b>Definition:</b> Personnage.h:27</div></div>
+<div class="ttc" id="aclass_personnage_html_a05bdf2a469885bb1fbb6c2e8f98972ab"><div class="ttname"><a href="class_personnage.html#a05bdf2a469885bb1fbb6c2e8f98972ab">Personnage::~Personnage</a></div><div class="ttdeci">~Personnage()</div><div class="ttdoc">Destructeur d'un Personnage.</div><div class="ttdef"><b>Definition:</b> Personnage.cpp:16</div></div>
+<div class="ttc" id="aclass_personnage_html_a19c2d9379dc75c951e2c2835bff22ec5"><div class="ttname"><a href="class_personnage.html#a19c2d9379dc75c951e2c2835bff22ec5">Personnage::m_speed</a></div><div class="ttdeci">int m_speed</div><div class="ttdef"><b>Definition:</b> Personnage.h:31</div></div>
+<div class="ttc" id="aclass_personnage_html_a425e3bd3972613280ec13079f9ea687d"><div class="ttname"><a href="class_personnage.html#a425e3bd3972613280ec13079f9ea687d">Personnage::getLife</a></div><div class="ttdeci">int getLife() const</div><div class="ttdoc">Accesseur de l'attribut m_life.</div><div class="ttdef"><b>Definition:</b> Personnage.cpp:26</div></div>
+<div class="ttc" id="aclass_personnage_html_a58ea03d8242a52d78a5221f9163cc932"><div class="ttname"><a href="class_personnage.html#a58ea03d8242a52d78a5221f9163cc932">Personnage::m_life</a></div><div class="ttdeci">int m_life</div><div class="ttdef"><b>Definition:</b> Personnage.h:30</div></div>
+<div class="ttc" id="aclass_personnage_html_a6c8a4f18ad8b976231b198c40a84860f"><div class="ttname"><a href="class_personnage.html#a6c8a4f18ad8b976231b198c40a84860f">Personnage::m_position</a></div><div class="ttdeci">Position m_position</div><div class="ttdef"><b>Definition:</b> Personnage.h:29</div></div>
+<div class="ttc" id="aclass_personnage_html_a784b94831f02dba3471036189e281c07"><div class="ttname"><a href="class_personnage.html#a784b94831f02dba3471036189e281c07">Personnage::getSpeed</a></div><div class="ttdeci">int getSpeed() const</div><div class="ttdoc">Accesseur de l'attribut m_speed.</div><div class="ttdef"><b>Definition:</b> Personnage.cpp:31</div></div>
+<div class="ttc" id="aclass_personnage_html_a7f4f2fe9d66df277adb9257d50fa6ad5"><div class="ttname"><a href="class_personnage.html#a7f4f2fe9d66df277adb9257d50fa6ad5">Personnage::move</a></div><div class="ttdeci">virtual bool move(utilities::EDirection direction)</div><div class="ttdoc">Permets de déplacer un personnage.</div><div class="ttdef"><b>Definition:</b> Personnage.cpp:44</div></div>
+<div class="ttc" id="aclass_personnage_html_a8f34aef096ceace99ec1b2806f706676"><div class="ttname"><a href="class_personnage.html#a8f34aef096ceace99ec1b2806f706676">Personnage::receiveDamage</a></div><div class="ttdeci">void receiveDamage(int damage)</div><div class="ttdoc">Lorsque le personnage reçoit des dégâts.</div><div class="ttdef"><b>Definition:</b> Personnage.cpp:36</div></div>
+<div class="ttc" id="aclass_personnage_html_a9231b287503dbcfbe5aca055de82a95e"><div class="ttname"><a href="class_personnage.html#a9231b287503dbcfbe5aca055de82a95e">Personnage::getPosition</a></div><div class="ttdeci">Position getPosition() const</div><div class="ttdoc">Accesseur de l'attribut m_position.</div><div class="ttdef"><b>Definition:</b> Personnage.cpp:21</div></div>
+<div class="ttc" id="aclass_personnage_html_a9c3221dfeaf1d11b5838995cab09c4fb"><div class="ttname"><a href="class_personnage.html#a9c3221dfeaf1d11b5838995cab09c4fb">Personnage::Personnage</a></div><div class="ttdeci">Personnage(int x=0, int y=0, int life=3, int speed=1)</div><div class="ttdoc">Constructeur d'un Personnage.</div><div class="ttdef"><b>Definition:</b> Personnage.cpp:3</div></div>
+<div class="ttc" id="aclass_personnage_html_a9e32f326606ddeb5f6f948600027577a"><div class="ttname"><a href="class_personnage.html#a9e32f326606ddeb5f6f948600027577a">Personnage::show</a></div><div class="ttdeci">virtual void show() const =0</div><div class="ttdoc">Permets d'afficher le personnage.</div></div>
+<div class="ttc" id="aclass_position_html"><div class="ttname"><a href="class_position.html">Position</a></div><div class="ttdoc">La classe Position permets de définir une position.</div><div class="ttdef"><b>Definition:</b> Position.h:23</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5ae"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a></div><div class="ttdeci">EDirection</div><div class="ttdoc">Enumeration de direction.</div><div class="ttdef"><b>Definition:</b> utilities.h:29</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

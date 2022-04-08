@@ -1,0 +1,234 @@
+\hypertarget{class_bomb}{}\doxysection{Référence de la classe Bomb}
+\label{class_bomb}\index{Bomb@{Bomb}}
+
+
+La classe \mbox{\hyperlink{class_bomb}{Bomb}} hérite de la classe \mbox{\hyperlink{class_item}{Item}} et permets de gérer les flèches.  
+
+
+
+
+{\ttfamily \#include $<$Bomb.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Bomb\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bomb}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bomb_ad3e002306234b6ec235a9c60a3ca8cbe}{Bomb}} (int x=0, int y=0, int turn\+Before\+Explosion=3)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}une Bombe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bomb_acbb47327cfb2fa429887774ef3597965}\label{class_bomb_acbb47327cfb2fa429887774ef3597965}} 
+{\bfseries $\sim$\+Bomb} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la bombe. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_bomb_a61532fd1b1886a8bbb6ea6d4b019372b}{get\+Scope}} () const
+\begin{DoxyCompactList}\small\item\em accesseur de l\textquotesingle{}attribut scope \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bomb_adebbd43ccd9ed34e0db7f00e71617168}{get\+Turn\+Before\+Explosion}} () const
+\begin{DoxyCompactList}\small\item\em accesseur de l\textquotesingle{}attribut turn\+Before\+Explosion \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bomb_ada239acf5fe3ab0fe3a125f2a4cab1f5}{decrease\+Turn\+Before\+Explosion}} ()
+\begin{DoxyCompactList}\small\item\em décrémente le nombre de tour avant l\textquotesingle{}explosion de la bombe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bomb_a5f99f800f52a4decf4aed72687bb2600}{show\+Top}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie haute de la case lors de l\textquotesingle{}affichage de la bombe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bomb_a80f756fe876eb90e49ec7ac1566b5b58}{show\+Middle}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la bombe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bomb_a0837bdafe956dd2bd97342e3bd31e378}{show\+Bottom}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la bombe. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_bomb_a6b8d3d8c30a7f34e9a35075e9622f8a3}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$ $>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items) override
+\begin{DoxyCompactList}\small\item\em Permet de jouer la bombe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_bomb_ab6a625c9b4531a22047021411647c30f}{power}} = 1
+\item 
+static double \mbox{\hyperlink{class_bomb_a86c2c276031db3bdee96efd500f6a01a}{scope}} = 1.\+5
+\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+La classe \mbox{\hyperlink{class_bomb}{Bomb}} hérite de la classe \mbox{\hyperlink{class_item}{Item}} et permets de gérer les flèches. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_item}{Item}}
+\end{DoxySeeAlso}
+Permet de gérer les bombes posées par le \mbox{\hyperlink{class_bomberman}{Bomberman}}
+
+\begin{DoxyAuthor}{Auteur}
+Hocine HADID 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_bomb_ad3e002306234b6ec235a9c60a3ca8cbe}\label{class_bomb_ad3e002306234b6ec235a9c60a3ca8cbe}} 
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{Bomb()}{Bomb()}}
+{\footnotesize\ttfamily Bomb\+::\+Bomb (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0},  }\item[{int}]{turn\+Before\+Explosion = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}une Bombe. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & La ligne sur laquelle se situe la bombe \\
+\hline
+{\em y} & La colonne sur laquelle se situe la bombe \\
+\hline
+{\em turn\+Before\+Explosion} & Le nombre de tour restant avant l\textquotesingle{}explosion de la bombe \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_bomb_ada239acf5fe3ab0fe3a125f2a4cab1f5}\label{class_bomb_ada239acf5fe3ab0fe3a125f2a4cab1f5}} 
+\index{Bomb@{Bomb}!decreaseTurnBeforeExplosion@{decreaseTurnBeforeExplosion}}
+\index{decreaseTurnBeforeExplosion@{decreaseTurnBeforeExplosion}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{decreaseTurnBeforeExplosion()}{decreaseTurnBeforeExplosion()}}
+{\footnotesize\ttfamily void Bomb\+::decrease\+Turn\+Before\+Explosion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+décrémente le nombre de tour avant l\textquotesingle{}explosion de la bombe 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine HADID 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{class_bomb_a61532fd1b1886a8bbb6ea6d4b019372b}\label{class_bomb_a61532fd1b1886a8bbb6ea6d4b019372b}} 
+\index{Bomb@{Bomb}!getScope@{getScope}}
+\index{getScope@{getScope}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{getScope()}{getScope()}}
+{\footnotesize\ttfamily double Bomb\+::get\+Scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+accesseur de l\textquotesingle{}attribut scope 
+
+\begin{DoxyReturn}{Renvoie}
+double La porté de la bombe 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bomb_adebbd43ccd9ed34e0db7f00e71617168}\label{class_bomb_adebbd43ccd9ed34e0db7f00e71617168}} 
+\index{Bomb@{Bomb}!getTurnBeforeExplosion@{getTurnBeforeExplosion}}
+\index{getTurnBeforeExplosion@{getTurnBeforeExplosion}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{getTurnBeforeExplosion()}{getTurnBeforeExplosion()}}
+{\footnotesize\ttfamily int Bomb\+::get\+Turn\+Before\+Explosion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+accesseur de l\textquotesingle{}attribut turn\+Before\+Explosion 
+
+\begin{DoxyReturn}{Renvoie}
+int Le nombre de tour avant l\textquotesingle{}explosion de la bombe 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bomb_a6b8d3d8c30a7f34e9a35075e9622f8a3}\label{class_bomb_a6b8d3d8c30a7f34e9a35075e9622f8a3}} 
+\index{Bomb@{Bomb}!play@{play}}
+\index{play@{play}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily bool Bomb\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$ $>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de jouer la bombe. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_bomberman}{Bomberman}} 
+
+\mbox{\hyperlink{class_item}{Item}} 
+
+\mbox{\hyperlink{class_tile}{Tile}}
+\end{DoxySeeAlso}
+Joue la bombe, si le nombre de tour est supérieur à 0, appelle la méthode decrease\+Turn\+Before\+Explosion.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em map} & La map sur laquelle la bombe est joué \\
+\hline
+{\em player} & Le joueur présent sur la map \\
+\hline
+{\em items} & La liste des items présents sur la map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la bombe doit être supprimé, false sinon
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Hocine HADID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_ae6d586a7503809a4825f35232264d13a}{Item}}.
+
+\mbox{\Hypertarget{class_bomb_a0837bdafe956dd2bd97342e3bd31e378}\label{class_bomb_a0837bdafe956dd2bd97342e3bd31e378}} 
+\index{Bomb@{Bomb}!showBottom@{showBottom}}
+\index{showBottom@{showBottom}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{showBottom()}{showBottom()}}
+{\footnotesize\ttfamily void Bomb\+::show\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la bombe. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine HADID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_a8fc2a13f4f43ff9c60d56ad15cc2b074}{Item}}.
+
+\mbox{\Hypertarget{class_bomb_a80f756fe876eb90e49ec7ac1566b5b58}\label{class_bomb_a80f756fe876eb90e49ec7ac1566b5b58}} 
+\index{Bomb@{Bomb}!showMiddle@{showMiddle}}
+\index{showMiddle@{showMiddle}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{showMiddle()}{showMiddle()}}
+{\footnotesize\ttfamily void Bomb\+::show\+Middle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la bombe. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine HADID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_aaf69cd9b8b9f1c2a5dd70943ceb5158d}{Item}}.
+
+\mbox{\Hypertarget{class_bomb_a5f99f800f52a4decf4aed72687bb2600}\label{class_bomb_a5f99f800f52a4decf4aed72687bb2600}} 
+\index{Bomb@{Bomb}!showTop@{showTop}}
+\index{showTop@{showTop}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{showTop()}{showTop()}}
+{\footnotesize\ttfamily void Bomb\+::show\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie haute de la case lors de l\textquotesingle{}affichage de la bombe. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine HADID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_a9e06a24ba1b70f7f826796bb5fed62be}{Item}}.
+
+
+
+\doxysubsection{Documentation des données membres}
+\mbox{\Hypertarget{class_bomb_ab6a625c9b4531a22047021411647c30f}\label{class_bomb_ab6a625c9b4531a22047021411647c30f}} 
+\index{Bomb@{Bomb}!power@{power}}
+\index{power@{power}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{power}{power}}
+{\footnotesize\ttfamily int Bomb\+::power = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+La puissance de la bombe \mbox{\Hypertarget{class_bomb_a86c2c276031db3bdee96efd500f6a01a}\label{class_bomb_a86c2c276031db3bdee96efd500f6a01a}} 
+\index{Bomb@{Bomb}!scope@{scope}}
+\index{scope@{scope}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{scope}{scope}}
+{\footnotesize\ttfamily double Bomb\+::scope = 1.\+5\hspace{0.3cm}{\ttfamily [static]}}
+
+La portée de la bombe 
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/include/\+Items/\mbox{\hyperlink{_bomb_8h}{Bomb.\+h}}\item 
+src/src/\+Items/Bomb.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,135 @@
+\hypertarget{class_tile}{}\doxysection{Référence de la classe Tile}
+\label{class_tile}\index{Tile@{Tile}}
+
+
+La classe \mbox{\hyperlink{class_tile}{Tile}} permets de définir une case de la map.  
+
+
+
+
+{\ttfamily \#include $<$Tile.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Tile\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tile}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tile_ade47a28c5ba1123d8d8ecfd446df20e0}{Tile}} (int x=0, int y=0, bool be\+Crossed=true)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}une \mbox{\hyperlink{class_tile}{Tile}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tile_a98634abbd93fa13d0578d7103202d03d}\label{class_tile_a98634abbd93fa13d0578d7103202d03d}} 
+{\bfseries $\sim$\+Tile} ()
+\begin{DoxyCompactList}\small\item\em Destructeur d\textquotesingle{}une \mbox{\hyperlink{class_tile}{Tile}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_tile_a18aaf97e2f662065da3f60f19690bc56}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut m\+\_\+position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tile_a5774a164413e609744853bfc0d66e893}{set\+Be\+Crossed}} (bool be\+Crossed)
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut m\+\_\+be\+Crossed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tile_a316417842052ed625c0af916cfd0d712}{get\+Be\+Crossed}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut m\+\_\+be\+Crossed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_tile_a561baa75c1d784e5ac5cc52f634146d5}{show}} () const
+\begin{DoxyCompactList}\small\item\em Permets d\textquotesingle{}afficher une \mbox{\hyperlink{class_tile}{Tile}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+La classe \mbox{\hyperlink{class_tile}{Tile}} permets de définir une case de la map. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_position}{Position}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Auteur}
+Hocine HADID 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_tile_ade47a28c5ba1123d8d8ecfd446df20e0}\label{class_tile_ade47a28c5ba1123d8d8ecfd446df20e0}} 
+\index{Tile@{Tile}!Tile@{Tile}}
+\index{Tile@{Tile}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{Tile()}{Tile()}}
+{\footnotesize\ttfamily Tile\+::\+Tile (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0},  }\item[{bool}]{be\+Crossed = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}une \mbox{\hyperlink{class_tile}{Tile}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & La ligne sur laquelle se situe la \mbox{\hyperlink{class_tile}{Tile}} \\
+\hline
+{\em y} & La colonne sur laquelle se situe la \mbox{\hyperlink{class_tile}{Tile}} \\
+\hline
+{\em be\+Crossed} & Si c\textquotesingle{}est possible de traverser la \mbox{\hyperlink{class_tile}{Tile}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_tile_a316417842052ed625c0af916cfd0d712}\label{class_tile_a316417842052ed625c0af916cfd0d712}} 
+\index{Tile@{Tile}!getBeCrossed@{getBeCrossed}}
+\index{getBeCrossed@{getBeCrossed}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{getBeCrossed()}{getBeCrossed()}}
+{\footnotesize\ttfamily bool Tile\+::get\+Be\+Crossed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur de l\textquotesingle{}attribut m\+\_\+be\+Crossed. 
+
+\begin{DoxyReturn}{Renvoie}
+bool La possibilité de traverser la \mbox{\hyperlink{class_tile}{Tile}} ou non 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_a18aaf97e2f662065da3f60f19690bc56}\label{class_tile_a18aaf97e2f662065da3f60f19690bc56}} 
+\index{Tile@{Tile}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_position}{Position}} Tile\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur de l\textquotesingle{}attribut m\+\_\+position. 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{class_position}{Position}} La position de la \mbox{\hyperlink{class_tile}{Tile}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tile_a5774a164413e609744853bfc0d66e893}\label{class_tile_a5774a164413e609744853bfc0d66e893}} 
+\index{Tile@{Tile}!setBeCrossed@{setBeCrossed}}
+\index{setBeCrossed@{setBeCrossed}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{setBeCrossed()}{setBeCrossed()}}
+{\footnotesize\ttfamily void Tile\+::set\+Be\+Crossed (\begin{DoxyParamCaption}\item[{bool}]{be\+Crossed }\end{DoxyParamCaption})}
+
+
+
+Accesseur de l\textquotesingle{}attribut m\+\_\+be\+Crossed. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em be\+Crossed} & si c\textquotesingle{}est possible de traverser la \mbox{\hyperlink{class_tile}{Tile}} ou non \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tile_a561baa75c1d784e5ac5cc52f634146d5}\label{class_tile_a561baa75c1d784e5ac5cc52f634146d5}} 
+\index{Tile@{Tile}!show@{show}}
+\index{show@{show}!Tile@{Tile}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Tile\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Permets d\textquotesingle{}afficher une \mbox{\hyperlink{class_tile}{Tile}}. 
+
+Affiche la \mbox{\hyperlink{class_tile}{Tile}}, un espace
+
+\begin{DoxyAuthor}{Auteur}
+Hocine HADID 
+\end{DoxyAuthor}
+
+
+Réimplémentée dans \mbox{\hyperlink{class_wall_a02af918924cb1c6580913c43c7be2f54}{Wall}}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/include/\+Map/\mbox{\hyperlink{_tile_8h}{Tile.\+h}}\item 
+src/src/\+Map/Tile.\+cpp\end{DoxyCompactItemize}

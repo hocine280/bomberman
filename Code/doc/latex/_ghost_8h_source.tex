@@ -1,0 +1,24 @@
+\hypertarget{_ghost_8h_source}{}\doxysection{Ghost.\+h}
+\label{_ghost_8h_source}\index{src/include/Persos/Ghost.h@{src/include/Persos/Ghost.h}}
+\mbox{\hyperlink{_ghost_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef \_\_GHOST\_\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define \_\_GHOST\_\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ennemy_8h}{Ennemy.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_bomberman_8h}{Bomberman.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{26 \textcolor{keyword}{class }\mbox{\hyperlink{class_ghost}{Ghost}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_ennemy}{Ennemy}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{keyword}{public}:}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_ghost_a74e44d887d6df4357fc832e5f8162f9e}{Ghost}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} life, \textcolor{keywordtype}{int} speed, \textcolor{keywordtype}{int} damage, \textcolor{keywordtype}{int} still);}
+\DoxyCodeLine{44         \mbox{\hyperlink{class_ghost_a063ed19c1b6f5c07b9109020c6198319}{\string~Ghost}}();}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{58         \textcolor{keyword}{virtual} \mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities::EDirection}} \mbox{\hyperlink{class_ghost_a8cb012408b18ef005b9ec3288af2ab4d}{play}}(std::vector<std::vector<Tile*>> map, \mbox{\hyperlink{class_bomberman}{Bomberman}} *player, std::vector<Item*> *items) \textcolor{keyword}{override};}
+\DoxyCodeLine{66         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_ghost_a93c0eb35c35a33862185aa796c422772}{show}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{67 \};}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Bomberman:  Fichier source de src/include/engine/utilities.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Bomberman<span id="projectnumber">&#160;0.1</span>
+   </div>
+   <div id="projectbrief">Bomberman est un jeu où le joueur incarne un poseur de bombe, le but étant de faire exploser les adversaires/ennemis pour gagner</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="dir_9e183373b3fe5de0903c3882118b1f63.html">engine</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">utilities.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="utilities_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __UTILITIES__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __UTILITIES__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceutilities.html">utilities</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">   28</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea65cb41096402ea4b2d852506a33c4681">   30</a></span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea65cb41096402ea4b2d852506a33c4681">TOP</a>, </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aeadf7c81c006c21b48de6655e8ae21d06f">   31</a></span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aeadf7c81c006c21b48de6655e8ae21d06f">BOTTOM</a>, </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea8c0d51afb0086f8aa60bbd8a8025bc03">   32</a></span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea8c0d51afb0086f8aa60bbd8a8025bc03">LEFT</a>, </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea5fbe77ff37d3561e96877ec9751d010b">   33</a></span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea5fbe77ff37d3561e96877ec9751d010b">RIGHT</a>, </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1">NONE</a> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1">   35</a></span>    }<a class="code hl_enumeration" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">EDirection</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754">   43</a></span>    <span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a1bc725cb45ce253313d8654521ddff4c">   45</a></span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a1bc725cb45ce253313d8654521ddff4c">LINE</a>, </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a625b4f8d7d5eea7104acfe6264632898">   46</a></span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a625b4f8d7d5eea7104acfe6264632898">COLUMN</a>, </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a1fc4667bb614a260acfe69ed73962fd0">   47</a></span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a1fc4667bb614a260acfe69ed73962fd0">CENTER</a>, </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <a class="code hl_enumvalue" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a6f66264918c192cde65f808ebb20e3f8">NOEXPLOSION</a> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a6f66264918c192cde65f808ebb20e3f8">   49</a></span>    }<a class="code hl_enumeration" href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754">EBombExplosionDirection</a>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="anamespaceutilities_html"><div class="ttname"><a href="namespaceutilities.html">utilities</a></div></div>
+<div class="ttc" id="anamespaceutilities_html_a3c1fb4112396dd01c1e365b057267754"><div class="ttname"><a href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754">utilities::EBombExplosionDirection</a></div><div class="ttdeci">EBombExplosionDirection</div><div class="ttdoc">Enumeration de direction d'explosion.</div><div class="ttdef"><b>Definition:</b> utilities.h:44</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3c1fb4112396dd01c1e365b057267754a1bc725cb45ce253313d8654521ddff4c"><div class="ttname"><a href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a1bc725cb45ce253313d8654521ddff4c">utilities::LINE</a></div><div class="ttdeci">@ LINE</div><div class="ttdef"><b>Definition:</b> utilities.h:45</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3c1fb4112396dd01c1e365b057267754a1fc4667bb614a260acfe69ed73962fd0"><div class="ttname"><a href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a1fc4667bb614a260acfe69ed73962fd0">utilities::CENTER</a></div><div class="ttdeci">@ CENTER</div><div class="ttdef"><b>Definition:</b> utilities.h:47</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3c1fb4112396dd01c1e365b057267754a625b4f8d7d5eea7104acfe6264632898"><div class="ttname"><a href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a625b4f8d7d5eea7104acfe6264632898">utilities::COLUMN</a></div><div class="ttdeci">@ COLUMN</div><div class="ttdef"><b>Definition:</b> utilities.h:46</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3c1fb4112396dd01c1e365b057267754a6f66264918c192cde65f808ebb20e3f8"><div class="ttname"><a href="namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a6f66264918c192cde65f808ebb20e3f8">utilities::NOEXPLOSION</a></div><div class="ttdeci">@ NOEXPLOSION</div><div class="ttdef"><b>Definition:</b> utilities.h:48</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5ae"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a></div><div class="ttdeci">EDirection</div><div class="ttdoc">Enumeration de direction.</div><div class="ttdef"><b>Definition:</b> utilities.h:29</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5aea5fbe77ff37d3561e96877ec9751d010b"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea5fbe77ff37d3561e96877ec9751d010b">utilities::RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdef"><b>Definition:</b> utilities.h:33</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5aea65cb41096402ea4b2d852506a33c4681"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea65cb41096402ea4b2d852506a33c4681">utilities::TOP</a></div><div class="ttdeci">@ TOP</div><div class="ttdef"><b>Definition:</b> utilities.h:30</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1">utilities::NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition:</b> utilities.h:34</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5aea8c0d51afb0086f8aa60bbd8a8025bc03"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea8c0d51afb0086f8aa60bbd8a8025bc03">utilities::LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdef"><b>Definition:</b> utilities.h:32</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5aeadf7c81c006c21b48de6655e8ae21d06f"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aeadf7c81c006c21b48de6655e8ae21d06f">utilities::BOTTOM</a></div><div class="ttdeci">@ BOTTOM</div><div class="ttdef"><b>Definition:</b> utilities.h:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

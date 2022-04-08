@@ -1,0 +1,35 @@
+\hypertarget{_bomb_8h_source}{}\doxysection{Bomb.\+h}
+\label{_bomb_8h_source}\index{src/include/Items/Bomb.h@{src/include/Items/Bomb.h}}
+\mbox{\hyperlink{_bomb_8h}{Aller à la documentation de ce fichier.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef \_\_BOMB\_\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define \_\_BOMB\_\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_item_8h}{Item.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{class_bomb}{Bomb}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_item}{Item}}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \textcolor{keyword}{private}:}
+\DoxyCodeLine{28         \textcolor{keywordtype}{int} m\_turnBeforeExplosion; }
+\DoxyCodeLine{30     \textcolor{keyword}{public}:}
+\DoxyCodeLine{31         \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_bomb_ab6a625c9b4531a22047021411647c30f}{power}}; }
+\DoxyCodeLine{32         \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_bomb_a86c2c276031db3bdee96efd500f6a01a}{scope}}; }
+\DoxyCodeLine{41         \mbox{\hyperlink{class_bomb_ad3e002306234b6ec235a9c60a3ca8cbe}{Bomb}}(\textcolor{keywordtype}{int} x = 0, \textcolor{keywordtype}{int} y = 0, \textcolor{keywordtype}{int} turnBeforeExplosion = 3);}
+\DoxyCodeLine{46         \mbox{\hyperlink{class_bomb_acbb47327cfb2fa429887774ef3597965}{\string~Bomb}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{53         \textcolor{keywordtype}{double} \mbox{\hyperlink{class_bomb_a61532fd1b1886a8bbb6ea6d4b019372b}{getScope}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{59         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_bomb_adebbd43ccd9ed34e0db7f00e71617168}{getTurnBeforeExplosion}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{66         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bomb_ada239acf5fe3ab0fe3a125f2a4cab1f5}{decreaseTurnBeforeExplosion}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{73         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bomb_a5f99f800f52a4decf4aed72687bb2600}{showTop}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{79         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bomb_a80f756fe876eb90e49ec7ac1566b5b58}{showMiddle}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{85         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bomb_a0837bdafe956dd2bd97342e3bd31e378}{showBottom}}() \textcolor{keyword}{const override};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{102         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_bomb_a6b8d3d8c30a7f34e9a35075e9622f8a3}{play}}(std::vector<std::vector<Tile*>> map, \mbox{\hyperlink{class_bomberman}{Bomberman}} *player, std::vector<Item*> *items) \textcolor{keyword}{override};}
+\DoxyCodeLine{103 \};}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
