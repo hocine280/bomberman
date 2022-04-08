@@ -25,7 +25,7 @@
 class MoveException: public std::exception
 {
 	private:
-		char* m_message; /*!< Le message de l'exception*/
+		std::string m_message; /*!< Le message de l'exception*/
 
 	public:
 		/**
@@ -33,7 +33,7 @@ class MoveException: public std::exception
 		 * 
 		 * \param message Le message à afficher par l'exception
 		 */
-		MoveException(char* message): m_message(message){};
+		MoveException(std::string message): m_message(message){};
 		/**
 		 * \brief Permets de savoir pourquoi l'exception est levé
 		 * 
@@ -41,7 +41,7 @@ class MoveException: public std::exception
 		 */
 		virtual const char* what() const throw()
 		{
-			return m_message;
+			return m_message.c_str();
 		}
 };
 
