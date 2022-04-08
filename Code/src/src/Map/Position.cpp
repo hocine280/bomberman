@@ -18,20 +18,16 @@ int Position::getY() const
 
 void Position::setX(int x)
 {
-	this->m_x = x;
+	if(x >= 0)
+	{
+		this->m_x = x;
+	}
 }
 
 void Position::setY(int y)
 {
-	this->m_y = y;
-}
-
-bool Position::operator==(const Position& other)
-{
-	return (m_x == other.m_x && m_y == other.m_y);
-}
-
-bool Position::operator!=(const Position& other)
-{
-	return (m_x != other.m_x || m_y != other.m_y);
+	if(y >= 0)
+	{
+		this->m_y = y;
+	}
 }
