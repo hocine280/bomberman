@@ -2,14 +2,14 @@
 
 Il s'agit de notre projet d'INFO0402 dans lequel nous avons du développer le jeu du **Bomberman**.
 
-## **Auteurs**
+## Auteurs
 
 - CHEMIN Pierre
 - HADID Hocine
 
 ----
 
-## **Architecture du projet**
+## Architecture du projet
 
 En ce qui concerne l'architecture de notre projet, elle est simpliste.  
 A la racine vous disposerez des dossiers et fichiers suivants :
@@ -19,7 +19,7 @@ A la racine vous disposerez des dossiers et fichiers suivants :
 - Doc [PDF] => La documentation généré à l'aide de Doxygen
 - Ce ReadMe
 
-### **Le dossier "Code"** ###
+### Le dossier "Code"
 
 Dans ce dossier, nous retrouverons les dossiers et fichiers suivats :
 
@@ -29,21 +29,21 @@ Dans ce dossier, nous retrouverons les dossiers et fichiers suivats :
 - makefile => Le fichier permettant la création de l'exécutable intitulé "Bomberman"
 - Doxyfile => Le fichier aidant à générer la documentation
 
-### **L'organisation du dossier src** ###
+### L'organisation du dossier src
 
 Le dossier "src" contenant tout le code du projet est subdivisé en 2 dossiers, le dossier "include" contenant tous les '.h' et le dossier "src" contenant tous les '.cpp'.  
 Ces dossiers sont également divisés en sous-dossier correspondant à nos "packages" expliqués dans le rapport.
 
 ---
 
-## **Création d'un exécutable**
+## Création d'un exécutable
 
 Pour créer un exécutable du jeu Bomberman, il vous suffit d'utiliser le makefile disponible avec la commande suivante :
 
-```make```
+    make
 
 Une fois l'exécutable intitulé *Bomberman* créé il vous suffit de le lancer à l'aide de la commande suivante :
 
-```./Bomberman```
+    ./Bomberman
 
 Une fois tout cela effectué, il n'y a plus qu'ç jouer une partie !

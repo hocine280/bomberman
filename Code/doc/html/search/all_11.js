@@ -1,19 +1,7 @@
 var searchData=
 [
-  ['_7ebomb_0',['~Bomb',['../class_bomb.html#acbb47327cfb2fa429887774ef3597965',1,'Bomb']]],
-  ['_7ebomberman_1',['~Bomberman',['../class_bomberman.html#ac4312d03b0fb51d309cfdb75cf520a56',1,'Bomberman']]],
-  ['_7ebowman_2',['~Bowman',['../class_bowman.html#ae3d0e64db001d79290b5f5e0730f39fb',1,'Bowman']]],
-  ['_7eennemy_3',['~Ennemy',['../class_ennemy.html#a684ffd96382382b087d3ea17dbbdc797',1,'Ennemy']]],
-  ['_7eghost_4',['~Ghost',['../class_ghost.html#a063ed19c1b6f5c07b9109020c6198319',1,'Ghost']]],
-  ['_7eitem_5',['~Item',['../class_item.html#a11663c84075b78c3ae5e30fdfcd7c458',1,'Item']]],
-  ['_7emap_6',['~Map',['../class_map.html#aa403fbe09394ccf39747588f5168e3b2',1,'Map']]],
-  ['_7emonster_7',['~Monster',['../class_monster.html#a21619ba1759b910cd2fd50d858aab338',1,'Monster']]],
-  ['_7emorebomb_8',['~MoreBomb',['../class_more_bomb.html#a5526e3e5fc1aa40fb6d63384da34a861',1,'MoreBomb']]],
-  ['_7emorelife_9',['~MoreLife',['../class_more_life.html#a6ff942f1189fe5892504eb5fbb5d9123',1,'MoreLife']]],
-  ['_7epersonnage_10',['~Personnage',['../class_personnage.html#a05bdf2a469885bb1fbb6c2e8f98972ab',1,'Personnage']]],
-  ['_7epowerup_11',['~PowerUp',['../class_power_up.html#a353053fe27c5a148a2fcd4f5f45e19af',1,'PowerUp']]],
-  ['_7escaleup_12',['~ScaleUp',['../class_scale_up.html#a51e930db43739f39d74a6d531f5bcd46',1,'ScaleUp']]],
-  ['_7espeedup_13',['~SpeedUp',['../class_speed_up.html#a2f507932be5f9bed3f16f8588f75b7d1',1,'SpeedUp']]],
-  ['_7etile_14',['~Tile',['../class_tile.html#a98634abbd93fa13d0578d7103202d03d',1,'Tile']]],
-  ['_7ewall_15',['~Wall',['../class_wall.html#a9a2992f2b533e1c160513d1e719f920c',1,'Wall']]]
+  ['wall_0',['Wall',['../class_wall.html',1,'Wall'],['../class_wall.html#a25eb265bfe8341f22aee82a1eee292f1',1,'Wall::Wall()']]],
+  ['wall_2eh_1',['Wall.h',['../_wall_8h.html',1,'']]],
+  ['weaken_2',['weaken',['../class_wall.html#a35440b1bdb6f3188b4c3c110d40f7244',1,'Wall']]],
+  ['what_3',['what',['../class_move_exception.html#a9bd99baa4f7f0dff5c47413600daf0ca',1,'MoveException']]]
 ];
