@@ -1,6 +1,6 @@
 12 12
-t,I,t,w,W,w,w,t,
-t,
+t,I,t,w,W,w,w,t,t,t,t,W
+t,P,
 t,
 t,
 t,
