@@ -18,7 +18,7 @@ Graphe d\textquotesingle{}héritage de Arrow\+:\begin{figure}[H]
 \doxysubsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_arrow_a57a35bd365e67a87e7d405384bc6482d}{Arrow}} (int x=0, int y=0, int speed=1, int damage=1, \mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities\+::\+EDirection}} direction=utilities\+::\+EDirection\+::\+NONE)
+\mbox{\hyperlink{class_arrow_a57a35bd365e67a87e7d405384bc6482d}{Arrow}} (int x=0, int y=0, int speed=1, int damage=1, \mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities\+::\+E\+Direction}} direction=utilities\+::\+E\+Direction\+::\+N\+O\+NE)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_arrow}{Arrow}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_arrow_aab8bcf5d8e523c6d992c96af645dd30a}{move}} ()
 \begin{DoxyCompactList}\small\item\em Déplace la flèche. \end{DoxyCompactList}\item 
@@ -28,7 +28,7 @@ virtual void \mbox{\hyperlink{class_arrow_a4a1a160823ad80e295c173fec629b63b}{sho
 \begin{DoxyCompactList}\small\item\em Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la flèche. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_arrow_ada8cd4ec00ca0ffac49ebabad9620f5c}{show\+Bottom}} () const override
 \begin{DoxyCompactList}\small\item\em Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la flèche. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_arrow_a74e6d4613c8d1eeb3447350604f0eac6}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$ $>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items) override
+virtual bool \mbox{\hyperlink{class_arrow_ac7283ed4f7e8f91634ab7b164ced0bee}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items) override
 \begin{DoxyCompactList}\small\item\em Permet de jouer la flèche. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membres hérités additionnels}
 
@@ -42,7 +42,7 @@ La classe \mbox{\hyperlink{class_arrow}{Arrow}} hérite de la classe \mbox{\hype
 Permet de gérer les flèches présentes sur la \mbox{\hyperlink{class_map}{Map}}
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -51,7 +51,7 @@ Hocine HADID
 \index{Arrow@{Arrow}!Arrow@{Arrow}}
 \index{Arrow@{Arrow}!Arrow@{Arrow}}
 \doxysubsubsection{\texorpdfstring{Arrow()}{Arrow()}}
-{\footnotesize\ttfamily Arrow\+::\+Arrow (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0},  }\item[{int}]{speed = {\ttfamily 1},  }\item[{int}]{damage = {\ttfamily 1},  }\item[{\mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities\+::\+EDirection}}}]{direction = {\ttfamily utilities\+:\+:EDirection\+:\+:NONE} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Arrow\+::\+Arrow (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0},  }\item[{int}]{speed = {\ttfamily 1},  }\item[{int}]{damage = {\ttfamily 1},  }\item[{\mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities\+::\+E\+Direction}}}]{direction = {\ttfamily utilities\+:\+:EDirection\+:\+:NONE} }\end{DoxyParamCaption})}
 
 
 
@@ -89,13 +89,13 @@ Déplace la flèche.
 Permets de déplacer la flèche en fonction de direction et de sa vitesse
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
-\mbox{\Hypertarget{class_arrow_a74e6d4613c8d1eeb3447350604f0eac6}\label{class_arrow_a74e6d4613c8d1eeb3447350604f0eac6}} 
+\mbox{\Hypertarget{class_arrow_ac7283ed4f7e8f91634ab7b164ced0bee}\label{class_arrow_ac7283ed4f7e8f91634ab7b164ced0bee}} 
 \index{Arrow@{Arrow}!play@{play}}
 \index{play@{play}!Arrow@{Arrow}}
 \doxysubsubsection{\texorpdfstring{play()}{play()}}
-{\footnotesize\ttfamily bool Arrow\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$ $>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Arrow\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -123,11 +123,11 @@ Joue la flèche, vérifie si la flèche une fois déplacé est sur la même case
 true si la flèche doit être supprimer sinon retourne false
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
-Implémente \mbox{\hyperlink{class_item_ae6d586a7503809a4825f35232264d13a}{Item}}.
+Implémente \mbox{\hyperlink{class_item_a544712136c3e92119704a0d07276b1ea}{Item}}.
 
 \mbox{\Hypertarget{class_arrow_ada8cd4ec00ca0ffac49ebabad9620f5c}\label{class_arrow_ada8cd4ec00ca0ffac49ebabad9620f5c}} 
 \index{Arrow@{Arrow}!showBottom@{showBottom}}
@@ -140,7 +140,7 @@ Implémente \mbox{\hyperlink{class_item_ae6d586a7503809a4825f35232264d13a}{Item}
 Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la flèche. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -157,7 +157,7 @@ Implémente \mbox{\hyperlink{class_item_a8fc2a13f4f43ff9c60d56ad15cc2b074}{Item}
 Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la flèche. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -174,7 +174,7 @@ Implémente \mbox{\hyperlink{class_item_aaf69cd9b8b9f1c2a5dd70943ceb5158d}{Item}
 Affiche la partie haute de la case lors de l\textquotesingle{}affichage de la flèche. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -182,7 +182,7 @@ Implémente \mbox{\hyperlink{class_item_a9e06a24ba1b70f7f826796bb5fed62be}{Item}
 
 
 
-La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
 src/include/\+Items/\mbox{\hyperlink{_arrow_8h}{Arrow.\+h}}\item 
 src/src/\+Items/Arrow.\+cpp\end{DoxyCompactItemize}

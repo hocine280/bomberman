@@ -20,8 +20,7 @@ Graphe d\textquotesingle{}héritage de Item\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_item_a843599b31998ffaffbe1a5d610f18e70}{Item}} (int x=0, int y=0)
 \begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_item}{Item}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_item_a11663c84075b78c3ae5e30fdfcd7c458}\label{class_item_a11663c84075b78c3ae5e30fdfcd7c458}} 
-{\bfseries $\sim$\+Item} ()
+\mbox{\hyperlink{class_item_a11663c84075b78c3ae5e30fdfcd7c458}{$\sim$\+Item}} ()
 \begin{DoxyCompactList}\small\item\em Destructeur de la classe \mbox{\hyperlink{class_item}{Item}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_position}{Position}} \mbox{\hyperlink{class_item_a5769a448ba84717044927115edd57e85}{get\+Position}} () const
 \begin{DoxyCompactList}\small\item\em accesseur sur l\textquotesingle{}attribut position \end{DoxyCompactList}\item 
@@ -31,7 +30,7 @@ virtual void \mbox{\hyperlink{class_item_aaf69cd9b8b9f1c2a5dd70943ceb5158d}{show
 \begin{DoxyCompactList}\small\item\em Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de l\textquotesingle{}item. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_item_a8fc2a13f4f43ff9c60d56ad15cc2b074}{show\+Bottom}} () const =0
 \begin{DoxyCompactList}\small\item\em Affiche la partie basse de la case lors de l\textquotesingle{}affichage de l\textquotesingle{}item. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_item_ae6d586a7503809a4825f35232264d13a}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$ $>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items)=0
+virtual bool \mbox{\hyperlink{class_item_a544712136c3e92119704a0d07276b1ea}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items)=0
 \begin{DoxyCompactList}\small\item\em Permet de jouer un item. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Attributs protégés}
 \begin{DoxyCompactItemize}
@@ -49,7 +48,7 @@ La classe abstraite \mbox{\hyperlink{class_item}{Item}}.
 Permet de définir les différents items
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -71,6 +70,16 @@ Constructeur de la classe \mbox{\hyperlink{class_item}{Item}}.
 {\em y} & La colonne sur laquelle se situe l\textquotesingle{}objet \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_item_a11663c84075b78c3ae5e30fdfcd7c458}\label{class_item_a11663c84075b78c3ae5e30fdfcd7c458}} 
+\index{Item@{Item}!````~Item@{$\sim$Item}}
+\index{````~Item@{$\sim$Item}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{$\sim$Item()}{~Item()}}
+{\footnotesize\ttfamily Item\+::$\sim$\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la classe \mbox{\hyperlink{class_item}{Item}}. 
+
 
 
 \doxysubsection{Documentation des fonctions membres}
@@ -87,11 +96,11 @@ accesseur sur l\textquotesingle{}attribut position
 \begin{DoxyReturn}{Renvoie}
 \mbox{\hyperlink{class_position}{Position}} La position de l\textquotesingle{}item 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_item_ae6d586a7503809a4825f35232264d13a}\label{class_item_ae6d586a7503809a4825f35232264d13a}} 
+\mbox{\Hypertarget{class_item_a544712136c3e92119704a0d07276b1ea}\label{class_item_a544712136c3e92119704a0d07276b1ea}} 
 \index{Item@{Item}!play@{play}}
 \index{play@{play}!Item@{Item}}
 \doxysubsubsection{\texorpdfstring{play()}{play()}}
-{\footnotesize\ttfamily virtual bool Item\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$ $>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool Item\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -117,11 +126,11 @@ Permet de jouer un item.
 true si l\textquotesingle{}item doit être supprimé, false sinon
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
-Implémenté dans \mbox{\hyperlink{class_arrow_a74e6d4613c8d1eeb3447350604f0eac6}{Arrow}}, \mbox{\hyperlink{class_bomb_a6b8d3d8c30a7f34e9a35075e9622f8a3}{Bomb}}, \mbox{\hyperlink{class_more_bomb_ace7bd3dc13d53c096b27a70926a64b94}{More\+Bomb}}, \mbox{\hyperlink{class_more_life_ae9e9b89e3cfb9e2a9cf0f32d5d721beb}{More\+Life}}, \mbox{\hyperlink{class_power_up_a155d4e5b0f83b7d72f76a2d47f7148b0}{Power\+Up}}, \mbox{\hyperlink{class_scale_up_a5fb98cf4835151f567e7f4ca63926a10}{Scale\+Up}}, et \mbox{\hyperlink{class_speed_up_a0fee580b04447e43e86d80aae19d7a3c}{Speed\+Up}}.
+Implémenté dans \mbox{\hyperlink{class_bomb_a20689d6b71f27eccb030c32543f85ed1}{Bomb}}, \mbox{\hyperlink{class_arrow_ac7283ed4f7e8f91634ab7b164ced0bee}{Arrow}}, \mbox{\hyperlink{class_more_bomb_ad3ad99d09246612628ff7db8e0bd6fe6}{More\+Bomb}}, \mbox{\hyperlink{class_more_life_a6f8a3010f09efdf8d21d36ed385bfd74}{More\+Life}}, \mbox{\hyperlink{class_speed_up_a531a22c210e0528fc5632d0ecc6263ac}{Speed\+Up}}, \mbox{\hyperlink{class_power_up_a6766e9fa565f30d7156fb1d170883273}{Power\+Up}}, et \mbox{\hyperlink{class_scale_up_ab0dbd555d428242476e5390491a005b9}{Scale\+Up}}.
 
 \mbox{\Hypertarget{class_item_a8fc2a13f4f43ff9c60d56ad15cc2b074}\label{class_item_a8fc2a13f4f43ff9c60d56ad15cc2b074}} 
 \index{Item@{Item}!showBottom@{showBottom}}
@@ -134,11 +143,11 @@ Implémenté dans \mbox{\hyperlink{class_arrow_a74e6d4613c8d1eeb3447350604f0eac6
 Affiche la partie basse de la case lors de l\textquotesingle{}affichage de l\textquotesingle{}item. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
-Implémenté dans \mbox{\hyperlink{class_arrow_ada8cd4ec00ca0ffac49ebabad9620f5c}{Arrow}}, \mbox{\hyperlink{class_bomb_a0837bdafe956dd2bd97342e3bd31e378}{Bomb}}, \mbox{\hyperlink{class_more_bomb_a4da2447a536201e29ca95774dfd56fff}{More\+Bomb}}, \mbox{\hyperlink{class_more_life_a7caa8204aeb899dfffb4e9eb87bb7aad}{More\+Life}}, \mbox{\hyperlink{class_power_up_af7b5c77e84bdf483d8d30c901315273b}{Power\+Up}}, \mbox{\hyperlink{class_scale_up_a742d784909364448a78d02a50abf2b70}{Scale\+Up}}, et \mbox{\hyperlink{class_speed_up_a2c7eccf0e3c24fe43a3ae76a3c71540c}{Speed\+Up}}.
+Implémenté dans \mbox{\hyperlink{class_bomb_a0837bdafe956dd2bd97342e3bd31e378}{Bomb}}, \mbox{\hyperlink{class_arrow_ada8cd4ec00ca0ffac49ebabad9620f5c}{Arrow}}, \mbox{\hyperlink{class_more_bomb_a4da2447a536201e29ca95774dfd56fff}{More\+Bomb}}, \mbox{\hyperlink{class_more_life_a7caa8204aeb899dfffb4e9eb87bb7aad}{More\+Life}}, \mbox{\hyperlink{class_speed_up_a2c7eccf0e3c24fe43a3ae76a3c71540c}{Speed\+Up}}, \mbox{\hyperlink{class_power_up_af7b5c77e84bdf483d8d30c901315273b}{Power\+Up}}, et \mbox{\hyperlink{class_scale_up_a742d784909364448a78d02a50abf2b70}{Scale\+Up}}.
 
 \mbox{\Hypertarget{class_item_aaf69cd9b8b9f1c2a5dd70943ceb5158d}\label{class_item_aaf69cd9b8b9f1c2a5dd70943ceb5158d}} 
 \index{Item@{Item}!showMiddle@{showMiddle}}
@@ -151,11 +160,11 @@ Implémenté dans \mbox{\hyperlink{class_arrow_ada8cd4ec00ca0ffac49ebabad9620f5c
 Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de l\textquotesingle{}item. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
-Implémenté dans \mbox{\hyperlink{class_arrow_a4a1a160823ad80e295c173fec629b63b}{Arrow}}, \mbox{\hyperlink{class_bomb_a80f756fe876eb90e49ec7ac1566b5b58}{Bomb}}, \mbox{\hyperlink{class_more_bomb_acddbb5903e7b807e7c081e18a09f480d}{More\+Bomb}}, \mbox{\hyperlink{class_more_life_a78cf833504c584972e75472bf85ace4e}{More\+Life}}, \mbox{\hyperlink{class_power_up_a515491583a92eedc95056bad09c7348f}{Power\+Up}}, \mbox{\hyperlink{class_scale_up_aa29537f9b112db71b7f684083bab0878}{Scale\+Up}}, et \mbox{\hyperlink{class_speed_up_ab3cd0ce4c2d886e8a1e3cac3e87076ed}{Speed\+Up}}.
+Implémenté dans \mbox{\hyperlink{class_bomb_a80f756fe876eb90e49ec7ac1566b5b58}{Bomb}}, \mbox{\hyperlink{class_arrow_a4a1a160823ad80e295c173fec629b63b}{Arrow}}, \mbox{\hyperlink{class_more_bomb_acddbb5903e7b807e7c081e18a09f480d}{More\+Bomb}}, \mbox{\hyperlink{class_more_life_a78cf833504c584972e75472bf85ace4e}{More\+Life}}, \mbox{\hyperlink{class_speed_up_ab3cd0ce4c2d886e8a1e3cac3e87076ed}{Speed\+Up}}, \mbox{\hyperlink{class_power_up_a515491583a92eedc95056bad09c7348f}{Power\+Up}}, et \mbox{\hyperlink{class_scale_up_aa29537f9b112db71b7f684083bab0878}{Scale\+Up}}.
 
 \mbox{\Hypertarget{class_item_a9e06a24ba1b70f7f826796bb5fed62be}\label{class_item_a9e06a24ba1b70f7f826796bb5fed62be}} 
 \index{Item@{Item}!showTop@{showTop}}
@@ -168,11 +177,11 @@ Implémenté dans \mbox{\hyperlink{class_arrow_a4a1a160823ad80e295c173fec629b63b
 Affiche la partie haute de la case lors de l\textquotesingle{}affichage de l\textquotesingle{}item. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
-Implémenté dans \mbox{\hyperlink{class_arrow_a620802153320a2f7fd47b204622d5159}{Arrow}}, \mbox{\hyperlink{class_bomb_a5f99f800f52a4decf4aed72687bb2600}{Bomb}}, \mbox{\hyperlink{class_more_bomb_ae2bf531a3616ed6102016b81c7ee96ed}{More\+Bomb}}, \mbox{\hyperlink{class_more_life_a124846aad4cdb3a0fb4b275d40749f6c}{More\+Life}}, \mbox{\hyperlink{class_power_up_af0b4d50d8b8eb75b69dbf1ac420f8a9b}{Power\+Up}}, \mbox{\hyperlink{class_scale_up_a33189820fcab6eec1be3469e4c796f3e}{Scale\+Up}}, et \mbox{\hyperlink{class_speed_up_a0e622c9ea9c14e402749d0165ef3c41a}{Speed\+Up}}.
+Implémenté dans \mbox{\hyperlink{class_bomb_a5f99f800f52a4decf4aed72687bb2600}{Bomb}}, \mbox{\hyperlink{class_arrow_a620802153320a2f7fd47b204622d5159}{Arrow}}, \mbox{\hyperlink{class_more_bomb_ae2bf531a3616ed6102016b81c7ee96ed}{More\+Bomb}}, \mbox{\hyperlink{class_more_life_a124846aad4cdb3a0fb4b275d40749f6c}{More\+Life}}, \mbox{\hyperlink{class_speed_up_a0e622c9ea9c14e402749d0165ef3c41a}{Speed\+Up}}, \mbox{\hyperlink{class_power_up_af0b4d50d8b8eb75b69dbf1ac420f8a9b}{Power\+Up}}, et \mbox{\hyperlink{class_scale_up_a33189820fcab6eec1be3469e4c796f3e}{Scale\+Up}}.
 
 
 
@@ -185,7 +194,7 @@ Implémenté dans \mbox{\hyperlink{class_arrow_a620802153320a2f7fd47b204622d5159
 
 La position de l\textquotesingle{}item 
 
-La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
 src/include/\+Items/\mbox{\hyperlink{_item_8h}{Item.\+h}}\item 
 src/src/\+Items/Item.\+cpp\end{DoxyCompactItemize}

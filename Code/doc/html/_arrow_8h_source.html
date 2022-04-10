@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.3"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Bomberman:  Fichier source de src/include/Items/Arrow.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,10 +19,11 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
+ <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
-  <td id="projectalign">
-   <div id="projectname">Bomberman<span id="projectnumber">&#160;0.1</span>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bomberman
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">Bomberman est un jeu où le joueur incarne un poseur de bombe, le but étant de faire exploser les adversaires/ennemis pour gagner</div>
   </td>
@@ -31,22 +32,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.3 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -68,49 +68,52 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Arrow.h</div></div>
+  <div class="headertitle">
+<div class="title">Arrow.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_arrow_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __ARROW__</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __ARROW__</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_item_8h.html">Item.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;../engine/utilities.h&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_arrow.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_arrow.html">Arrow</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_item.html">Item</a></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">int</span> m_speed; </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">int</span> m_damage; </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_enumeration" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a> m_direction; </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_function" href="class_arrow.html#a57a35bd365e67a87e7d405384bc6482d">Arrow</a>(<span class="keywordtype">int</span> x = 0, <span class="keywordtype">int</span> y = 0, <span class="keywordtype">int</span> speed = 1, <span class="keywordtype">int</span> damage = 1, <a class="code hl_enumeration" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a> direction = <a class="code hl_enumvalue" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1">utilities::EDirection::NONE</a>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow.html#aab8bcf5d8e523c6d992c96af645dd30a">move</a>();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow.html#a620802153320a2f7fd47b204622d5159">showTop</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow.html#a4a1a160823ad80e295c173fec629b63b">showMiddle</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_arrow.html#ada8cd4ec00ca0ffac49ebabad9620f5c">showBottom</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_arrow.html#a74e6d4613c8d1eeb3447350604f0eac6">play</a>(std::vector&lt;std::vector&lt;Tile*&gt;&gt; map, <a class="code hl_class" href="class_bomberman.html">Bomberman</a> *player, std::vector&lt;Item*&gt; *items) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="a_item_8h_html"><div class="ttname"><a href="_item_8h.html">Item.h</a></div><div class="ttdoc">Fichier contenant la classe Item.</div></div>
-<div class="ttc" id="aclass_arrow_html"><div class="ttname"><a href="class_arrow.html">Arrow</a></div><div class="ttdoc">La classe Arrow hérite de la classe Item et gère les flèches lancées par le Bowman.</div><div class="ttdef"><b>Definition:</b> Arrow.h:27</div></div>
-<div class="ttc" id="aclass_arrow_html_a4a1a160823ad80e295c173fec629b63b"><div class="ttname"><a href="class_arrow.html#a4a1a160823ad80e295c173fec629b63b">Arrow::showMiddle</a></div><div class="ttdeci">virtual void showMiddle() const override</div><div class="ttdoc">Affiche la partie du milieu de la case lors de l'affichage de la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:81</div></div>
-<div class="ttc" id="aclass_arrow_html_a57a35bd365e67a87e7d405384bc6482d"><div class="ttname"><a href="class_arrow.html#a57a35bd365e67a87e7d405384bc6482d">Arrow::Arrow</a></div><div class="ttdeci">Arrow(int x=0, int y=0, int speed=1, int damage=1, utilities::EDirection direction=utilities::EDirection::NONE)</div><div class="ttdoc">Constructeur de la classe Arrow.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:5</div></div>
-<div class="ttc" id="aclass_arrow_html_a620802153320a2f7fd47b204622d5159"><div class="ttname"><a href="class_arrow.html#a620802153320a2f7fd47b204622d5159">Arrow::showTop</a></div><div class="ttdeci">virtual void showTop() const override</div><div class="ttdoc">Affiche la partie haute de la case lors de l'affichage de la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:69</div></div>
-<div class="ttc" id="aclass_arrow_html_a74e6d4613c8d1eeb3447350604f0eac6"><div class="ttname"><a href="class_arrow.html#a74e6d4613c8d1eeb3447350604f0eac6">Arrow::play</a></div><div class="ttdeci">virtual bool play(std::vector&lt; std::vector&lt; Tile * &gt; &gt; map, Bomberman *player, std::vector&lt; Item * &gt; *items) override</div><div class="ttdoc">Permet de jouer la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:43</div></div>
-<div class="ttc" id="aclass_arrow_html_aab8bcf5d8e523c6d992c96af645dd30a"><div class="ttname"><a href="class_arrow.html#aab8bcf5d8e523c6d992c96af645dd30a">Arrow::move</a></div><div class="ttdeci">void move()</div><div class="ttdoc">Déplace la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:18</div></div>
-<div class="ttc" id="aclass_arrow_html_ada8cd4ec00ca0ffac49ebabad9620f5c"><div class="ttname"><a href="class_arrow.html#ada8cd4ec00ca0ffac49ebabad9620f5c">Arrow::showBottom</a></div><div class="ttdeci">virtual void showBottom() const override</div><div class="ttdoc">Affiche la partie basse de la case lors de l'affichage de la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:106</div></div>
-<div class="ttc" id="aclass_bomberman_html"><div class="ttname"><a href="class_bomberman.html">Bomberman</a></div><div class="ttdoc">La classe Bomberman hérite de la classe Personnage et permets de gérer un Bomberman (le joueur)</div><div class="ttdef"><b>Definition:</b> Bomberman.h:27</div></div>
-<div class="ttc" id="aclass_item_html"><div class="ttname"><a href="class_item.html">Item</a></div><div class="ttdoc">La classe abstraite Item.</div><div class="ttdef"><b>Definition:</b> Item.h:31</div></div>
-<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5ae"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a></div><div class="ttdeci">EDirection</div><div class="ttdoc">Enumeration de direction.</div><div class="ttdef"><b>Definition:</b> utilities.h:29</div></div>
-<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1">utilities::NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition:</b> utilities.h:34</div></div>
+<a href="_arrow_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef __ARROW__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define __ARROW__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_item_8h.html">Item.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;../engine/utilities.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_arrow.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_arrow.html">Arrow</a>: <span class="keyword">public</span> <a class="code" href="class_item.html">Item</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">int</span> m_speed; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">int</span> m_damage; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a> m_direction; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_arrow.html#a57a35bd365e67a87e7d405384bc6482d">Arrow</a>(<span class="keywordtype">int</span> x = 0, <span class="keywordtype">int</span> y = 0, <span class="keywordtype">int</span> speed = 1, <span class="keywordtype">int</span> damage = 1, <a class="code" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a> direction = <a class="code" href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1">utilities::EDirection::NONE</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_arrow.html#aab8bcf5d8e523c6d992c96af645dd30a">move</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_arrow.html#a620802153320a2f7fd47b204622d5159">showTop</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_arrow.html#a4a1a160823ad80e295c173fec629b63b">showMiddle</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_arrow.html#ada8cd4ec00ca0ffac49ebabad9620f5c">showBottom</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="class_arrow.html#ac7283ed4f7e8f91634ab7b164ced0bee">play</a>(std::vector&lt;std::vector&lt;Tile*&gt;&gt; map, <a class="code" href="class_bomberman.html">Bomberman</a> *player, std::vector&lt;Item*&gt; *items) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1">utilities::NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition:</b> utilities.h:34</div></div>
+<div class="ttc" id="aclass_arrow_html_a57a35bd365e67a87e7d405384bc6482d"><div class="ttname"><a href="class_arrow.html#a57a35bd365e67a87e7d405384bc6482d">Arrow::Arrow</a></div><div class="ttdeci">Arrow(int x=0, int y=0, int speed=1, int damage=1, utilities::EDirection direction=utilities::EDirection::NONE)</div><div class="ttdoc">Constructeur de la classe Arrow.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:5</div></div>
+<div class="ttc" id="a_item_8h_html"><div class="ttname"><a href="_item_8h.html">Item.h</a></div><div class="ttdoc">Fichier contenant la classe Item.</div></div>
+<div class="ttc" id="aclass_arrow_html_a620802153320a2f7fd47b204622d5159"><div class="ttname"><a href="class_arrow.html#a620802153320a2f7fd47b204622d5159">Arrow::showTop</a></div><div class="ttdeci">virtual void showTop() const override</div><div class="ttdoc">Affiche la partie haute de la case lors de l'affichage de la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:69</div></div>
+<div class="ttc" id="aclass_arrow_html_ada8cd4ec00ca0ffac49ebabad9620f5c"><div class="ttname"><a href="class_arrow.html#ada8cd4ec00ca0ffac49ebabad9620f5c">Arrow::showBottom</a></div><div class="ttdeci">virtual void showBottom() const override</div><div class="ttdoc">Affiche la partie basse de la case lors de l'affichage de la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:106</div></div>
+<div class="ttc" id="aclass_arrow_html_aab8bcf5d8e523c6d992c96af645dd30a"><div class="ttname"><a href="class_arrow.html#aab8bcf5d8e523c6d992c96af645dd30a">Arrow::move</a></div><div class="ttdeci">void move()</div><div class="ttdoc">Déplace la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:18</div></div>
+<div class="ttc" id="aclass_item_html"><div class="ttname"><a href="class_item.html">Item</a></div><div class="ttdoc">La classe abstraite Item.</div><div class="ttdef"><b>Definition:</b> Item.h:30</div></div>
+<div class="ttc" id="aclass_bomberman_html"><div class="ttname"><a href="class_bomberman.html">Bomberman</a></div><div class="ttdoc">La classe Bomberman hérite de la classe Personnage et permets de gérer un Bomberman (le joueur)</div><div class="ttdef"><b>Definition:</b> Bomberman.h:26</div></div>
+<div class="ttc" id="anamespaceutilities_html_a3f674b131f46ba4b11f5e7665015f5ae"><div class="ttname"><a href="namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5ae">utilities::EDirection</a></div><div class="ttdeci">EDirection</div><div class="ttdoc">Enumeration de direction.</div><div class="ttdef"><b>Definition:</b> utilities.h:28</div></div>
+<div class="ttc" id="aclass_arrow_html"><div class="ttname"><a href="class_arrow.html">Arrow</a></div><div class="ttdoc">La classe Arrow hérite de la classe Item et gère les flèches lancées par le Bowman.</div><div class="ttdef"><b>Definition:</b> Arrow.h:26</div></div>
+<div class="ttc" id="aclass_arrow_html_ac7283ed4f7e8f91634ab7b164ced0bee"><div class="ttname"><a href="class_arrow.html#ac7283ed4f7e8f91634ab7b164ced0bee">Arrow::play</a></div><div class="ttdeci">virtual bool play(std::vector&lt; std::vector&lt; Tile * &gt;&gt; map, Bomberman *player, std::vector&lt; Item * &gt; *items) override</div><div class="ttdoc">Permet de jouer la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:43</div></div>
+<div class="ttc" id="aclass_arrow_html_a4a1a160823ad80e295c173fec629b63b"><div class="ttname"><a href="class_arrow.html#a4a1a160823ad80e295c173fec629b63b">Arrow::showMiddle</a></div><div class="ttdeci">virtual void showMiddle() const override</div><div class="ttdoc">Affiche la partie du milieu de la case lors de l'affichage de la flèche.</div><div class="ttdef"><b>Definition:</b> Arrow.cpp:81</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>

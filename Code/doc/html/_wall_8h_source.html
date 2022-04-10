@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.3"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Bomberman:  Fichier source de src/include/Map/Wall.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -19,10 +19,11 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr id="projectrow">
+ <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
-  <td id="projectalign">
-   <div id="projectname">Bomberman<span id="projectnumber">&#160;0.1</span>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bomberman
+   &#160;<span id="projectnumber">0.1</span>
    </div>
    <div id="projectbrief">Bomberman est un jeu où le joueur incarne un poseur de bombe, le but étant de faire exploser les adversaires/ennemis pour gagner</div>
   </td>
@@ -31,22 +32,21 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.3 -->
+<!-- Généré par Doxygen 1.8.17 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
 <script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
 $(function() {
   initMenu('',true,false,'search.php','Recherche');
   $(document).ready(function() { init_search(); });
 });
-/* @license-end */
-</script>
+/* @license-end */</script>
 <div id="main-nav"></div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -68,44 +68,47 @@ $(function() {
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="headertitle"><div class="title">Wall.h</div></div>
+  <div class="headertitle">
+<div class="title">Wall.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_wall_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __WALL__</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __WALL__</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="_tile_8h.html">Tile.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_wall.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_wall.html">Wall</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_tile.html">Tile</a></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">bool</span> m_destructible; </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">int</span> m_nbNecessaryBomb; </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_function" href="class_wall.html#a25eb265bfe8341f22aee82a1eee292f1">Wall</a>(<span class="keywordtype">int</span> x = 0, <span class="keywordtype">int</span> y = 0, <span class="keywordtype">bool</span> beCrossed = <span class="keyword">false</span>, <span class="keywordtype">bool</span> destructible = <span class="keyword">true</span>, <span class="keywordtype">int</span> nbNecessaryBomb = 2);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_function" href="class_wall.html#a9a2992f2b533e1c160513d1e719f920c">~Wall</a>();</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_wall.html#a8c7fb72681f1cd83cf98176f90ea7a95">getDestructible</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_wall.html#ae4332a591e72c51a402d3b5c057482d9">getNbNecessaryBomb</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_wall.html#a02af918924cb1c6580913c43c7be2f54">show</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_wall.html#a35440b1bdb6f3188b4c3c110d40f7244">weaken</a>();</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>};</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif</span></div>
+<a href="_wall_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef __WALL__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define __WALL__</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tile_8h.html">Tile.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_wall.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_wall.html">Wall</a> : <span class="keyword">public</span> <a class="code" href="class_tile.html">Tile</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">bool</span> m_destructible; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">int</span> m_nbNecessaryBomb; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_wall.html#a25eb265bfe8341f22aee82a1eee292f1">Wall</a>(<span class="keywordtype">int</span> x = 0, <span class="keywordtype">int</span> y = 0, <span class="keywordtype">bool</span> beCrossed = <span class="keyword">false</span>, <span class="keywordtype">bool</span> destructible = <span class="keyword">true</span>, <span class="keywordtype">int</span> nbNecessaryBomb = 2);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="class_wall.html#a9a2992f2b533e1c160513d1e719f920c">~Wall</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_wall.html#a8c7fb72681f1cd83cf98176f90ea7a95">getDestructible</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="class_wall.html#ae4332a591e72c51a402d3b5c057482d9">getNbNecessaryBomb</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_wall.html#a02af918924cb1c6580913c43c7be2f54">show</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_wall.html#a35440b1bdb6f3188b4c3c110d40f7244">weaken</a>();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_wall_html"><div class="ttname"><a href="class_wall.html">Wall</a></div><div class="ttdoc">La classe Wall hérite dec la classe Tile et permets de gérer les murs présents sur la map.</div><div class="ttdef"><b>Definition:</b> Wall.h:23</div></div>
 <div class="ttc" id="a_tile_8h_html"><div class="ttname"><a href="_tile_8h.html">Tile.h</a></div><div class="ttdoc">Fichier contenant la classe Tile.</div></div>
-<div class="ttc" id="aclass_tile_html"><div class="ttname"><a href="class_tile.html">Tile</a></div><div class="ttdoc">La classe Tile permets de définir une case de la map.</div><div class="ttdef"><b>Definition:</b> Tile.h:24</div></div>
-<div class="ttc" id="aclass_wall_html"><div class="ttname"><a href="class_wall.html">Wall</a></div><div class="ttdoc">La classe Wall hérite dec la classe Tile et permets de gérer les murs présents sur la map.</div><div class="ttdef"><b>Definition:</b> Wall.h:24</div></div>
-<div class="ttc" id="aclass_wall_html_a02af918924cb1c6580913c43c7be2f54"><div class="ttname"><a href="class_wall.html#a02af918924cb1c6580913c43c7be2f54">Wall::show</a></div><div class="ttdeci">virtual void show() const override</div><div class="ttdoc">Permets d'afficher une Wall.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:39</div></div>
-<div class="ttc" id="aclass_wall_html_a25eb265bfe8341f22aee82a1eee292f1"><div class="ttname"><a href="class_wall.html#a25eb265bfe8341f22aee82a1eee292f1">Wall::Wall</a></div><div class="ttdeci">Wall(int x=0, int y=0, bool beCrossed=false, bool destructible=true, int nbNecessaryBomb=2)</div><div class="ttdoc">Constructeur d'un Wall.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:5</div></div>
 <div class="ttc" id="aclass_wall_html_a35440b1bdb6f3188b4c3c110d40f7244"><div class="ttname"><a href="class_wall.html#a35440b1bdb6f3188b4c3c110d40f7244">Wall::weaken</a></div><div class="ttdeci">void weaken()</div><div class="ttdoc">Permets d'affaiblir un Wall.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:58</div></div>
+<div class="ttc" id="aclass_wall_html_ae4332a591e72c51a402d3b5c057482d9"><div class="ttname"><a href="class_wall.html#ae4332a591e72c51a402d3b5c057482d9">Wall::getNbNecessaryBomb</a></div><div class="ttdeci">int getNbNecessaryBomb() const</div><div class="ttdoc">Accesseur de l'attribut m_nbNecessaryBomb.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:34</div></div>
+<div class="ttc" id="aclass_wall_html_a25eb265bfe8341f22aee82a1eee292f1"><div class="ttname"><a href="class_wall.html#a25eb265bfe8341f22aee82a1eee292f1">Wall::Wall</a></div><div class="ttdeci">Wall(int x=0, int y=0, bool beCrossed=false, bool destructible=true, int nbNecessaryBomb=2)</div><div class="ttdoc">Constructeur d'un Wall.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:5</div></div>
+<div class="ttc" id="aclass_wall_html_a02af918924cb1c6580913c43c7be2f54"><div class="ttname"><a href="class_wall.html#a02af918924cb1c6580913c43c7be2f54">Wall::show</a></div><div class="ttdeci">virtual void show() const override</div><div class="ttdoc">Permets d'afficher une Wall.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:39</div></div>
 <div class="ttc" id="aclass_wall_html_a8c7fb72681f1cd83cf98176f90ea7a95"><div class="ttname"><a href="class_wall.html#a8c7fb72681f1cd83cf98176f90ea7a95">Wall::getDestructible</a></div><div class="ttdeci">bool getDestructible() const</div><div class="ttdoc">Accesseur de l'attribut m_destructible.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:29</div></div>
 <div class="ttc" id="aclass_wall_html_a9a2992f2b533e1c160513d1e719f920c"><div class="ttname"><a href="class_wall.html#a9a2992f2b533e1c160513d1e719f920c">Wall::~Wall</a></div><div class="ttdeci">~Wall()</div><div class="ttdoc">Destructeur d'un Wall.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:24</div></div>
-<div class="ttc" id="aclass_wall_html_ae4332a591e72c51a402d3b5c057482d9"><div class="ttname"><a href="class_wall.html#ae4332a591e72c51a402d3b5c057482d9">Wall::getNbNecessaryBomb</a></div><div class="ttdeci">int getNbNecessaryBomb() const</div><div class="ttdoc">Accesseur de l'attribut m_nbNecessaryBomb.</div><div class="ttdef"><b>Definition:</b> Wall.cpp:34</div></div>
-</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_tile_html"><div class="ttname"><a href="class_tile.html">Tile</a></div><div class="ttdoc">La classe Tile permets de définir une case de la map.</div><div class="ttdef"><b>Definition:</b> Tile.h:23</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
 </small></address>
 </body>
 </html>

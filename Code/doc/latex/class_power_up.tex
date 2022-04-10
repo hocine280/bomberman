@@ -20,8 +20,7 @@ Graphe d\textquotesingle{}héritage de Power\+Up\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_power_up_ae6e20d95b024beeefe0a3a92adc1cc4a}{Power\+Up}} (int x=0, int y=0, int power\+Point=1)
 \begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un item \mbox{\hyperlink{class_power_up}{Power\+Up}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_power_up_a353053fe27c5a148a2fcd4f5f45e19af}\label{class_power_up_a353053fe27c5a148a2fcd4f5f45e19af}} 
-{\bfseries $\sim$\+Power\+Up} ()
+\mbox{\hyperlink{class_power_up_a353053fe27c5a148a2fcd4f5f45e19af}{$\sim$\+Power\+Up}} ()
 \begin{DoxyCompactList}\small\item\em Destructeur de la \mbox{\hyperlink{class_power_up}{Power\+Up}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_power_up_aa5b9d5d72383c370dc92d5294c2b577a}{increase\+Power}} ()
 \begin{DoxyCompactList}\small\item\em Rajoute la puissance précisé aux bombes. \end{DoxyCompactList}\item 
@@ -31,7 +30,7 @@ void \mbox{\hyperlink{class_power_up_a515491583a92eedc95056bad09c7348f}{show\+Mi
 \begin{DoxyCompactList}\small\item\em Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_power_up}{Power\+Up}}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_power_up_af7b5c77e84bdf483d8d30c901315273b}{show\+Bottom}} () const override
 \begin{DoxyCompactList}\small\item\em Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_power_up}{Power\+Up}}. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_power_up_a155d4e5b0f83b7d72f76a2d47f7148b0}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$ $>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items) override
+virtual bool \mbox{\hyperlink{class_power_up_a6766e9fa565f30d7156fb1d170883273}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items) override
 \begin{DoxyCompactList}\small\item\em Permet de jouer la \mbox{\hyperlink{class_power_up}{Power\+Up}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membres hérités additionnels}
 
@@ -45,7 +44,7 @@ La classe \mbox{\hyperlink{class_power_up}{Power\+Up}} hérite de la classe \mbo
 Permets de gérer les items de type \mbox{\hyperlink{class_more_life}{More\+Life}} qui permettent d\textquotesingle{}augmenter la puissance des bombes
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -69,6 +68,16 @@ Constructeur d\textquotesingle{}un item \mbox{\hyperlink{class_power_up}{Power\+
 {\em power\+Point} & La puissance que rajoutera l\textquotesingle{}item aux bombes \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_power_up_a353053fe27c5a148a2fcd4f5f45e19af}\label{class_power_up_a353053fe27c5a148a2fcd4f5f45e19af}} 
+\index{PowerUp@{PowerUp}!````~PowerUp@{$\sim$PowerUp}}
+\index{````~PowerUp@{$\sim$PowerUp}!PowerUp@{PowerUp}}
+\doxysubsubsection{\texorpdfstring{$\sim$PowerUp()}{~PowerUp()}}
+{\footnotesize\ttfamily Power\+Up\+::$\sim$\+Power\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la \mbox{\hyperlink{class_power_up}{Power\+Up}}. 
+
 
 
 \doxysubsection{Documentation des fonctions membres}
@@ -83,13 +92,13 @@ Constructeur d\textquotesingle{}un item \mbox{\hyperlink{class_power_up}{Power\+
 Rajoute la puissance précisé aux bombes. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
-\mbox{\Hypertarget{class_power_up_a155d4e5b0f83b7d72f76a2d47f7148b0}\label{class_power_up_a155d4e5b0f83b7d72f76a2d47f7148b0}} 
+\mbox{\Hypertarget{class_power_up_a6766e9fa565f30d7156fb1d170883273}\label{class_power_up_a6766e9fa565f30d7156fb1d170883273}} 
 \index{PowerUp@{PowerUp}!play@{play}}
 \index{play@{play}!PowerUp@{PowerUp}}
 \doxysubsubsection{\texorpdfstring{play()}{play()}}
-{\footnotesize\ttfamily bool Power\+Up\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$ $>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Power\+Up\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -117,11 +126,11 @@ Joue la \mbox{\hyperlink{class_power_up}{Power\+Up}}, si la \mbox{\hyperlink{cla
 true si la \mbox{\hyperlink{class_power_up}{Power\+Up}} doit être supprimé, false sinon
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
-Implémente \mbox{\hyperlink{class_item_ae6d586a7503809a4825f35232264d13a}{Item}}.
+Implémente \mbox{\hyperlink{class_item_a544712136c3e92119704a0d07276b1ea}{Item}}.
 
 \mbox{\Hypertarget{class_power_up_af7b5c77e84bdf483d8d30c901315273b}\label{class_power_up_af7b5c77e84bdf483d8d30c901315273b}} 
 \index{PowerUp@{PowerUp}!showBottom@{showBottom}}
@@ -134,7 +143,7 @@ Implémente \mbox{\hyperlink{class_item_ae6d586a7503809a4825f35232264d13a}{Item}
 Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_power_up}{Power\+Up}}. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -151,7 +160,7 @@ Implémente \mbox{\hyperlink{class_item_a8fc2a13f4f43ff9c60d56ad15cc2b074}{Item}
 Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_power_up}{Power\+Up}}. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -168,7 +177,7 @@ Implémente \mbox{\hyperlink{class_item_aaf69cd9b8b9f1c2a5dd70943ceb5158d}{Item}
 Affiche la partie haute de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_power_up}{Power\+Up}}. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -176,7 +185,7 @@ Implémente \mbox{\hyperlink{class_item_a9e06a24ba1b70f7f826796bb5fed62be}{Item}
 
 
 
-La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
 src/include/\+Items/\mbox{\hyperlink{_power_up_8h}{Power\+Up.\+h}}\item 
 src/src/\+Items/Power\+Up.\+cpp\end{DoxyCompactItemize}

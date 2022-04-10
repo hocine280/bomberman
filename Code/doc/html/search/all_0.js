@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['_3cspan_20style_3d_22color_3a_20_2317b57d_22_3e_3cstrong_3ebomberman_3c_2fstrong_3e_3c_2fspan_3e_0',['&lt;span style=&quot;color: #17b57d&quot;&gt;&lt;strong&gt;Bomberman&lt;/strong&gt;&lt;/span&gt;',['../index.html',1,'']]]
+  ['addbomb_0',['addBomb',['../class_bomberman.html#af6a5570fcccb7df0f279f3a44f31a373',1,'Bomberman']]],
+  ['addlife_1',['addLife',['../class_bomberman.html#ad6775279ce267e89aee1c70553f0f109',1,'Bomberman']]],
+  ['addspeed_2',['addSpeed',['../class_bomberman.html#ae705bacebd1761c0253dfa4b501bdd79',1,'Bomberman']]],
+  ['arrow_3',['Arrow',['../class_arrow.html',1,'Arrow'],['../class_arrow.html#a57a35bd365e67a87e7d405384bc6482d',1,'Arrow::Arrow()']]],
+  ['arrow_2eh_4',['Arrow.h',['../_arrow_8h.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['noexplosion_0',['NOEXPLOSION',['../namespaceutilities.html#a3c1fb4112396dd01c1e365b057267754a6f66264918c192cde65f808ebb20e3f8',1,'utilities']]],
-  ['none_1',['NONE',['../namespaceutilities.html#a3f674b131f46ba4b11f5e7665015f5aea834752b76b3b6fee96006a844c6730b1',1,'utilities']]]
+  ['operator_21_3d_73',['operator!=',['../class_position.html#aa16cf039e8d297d6943b75d017d5d9eb',1,'Position']]],
+  ['operator_3d_3d_74',['operator==',['../class_position.html#a3f36325aa0932faba42562cd4fe12b62',1,'Position']]]
 ];

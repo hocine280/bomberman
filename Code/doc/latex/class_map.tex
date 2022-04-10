@@ -14,8 +14,7 @@ La classe \mbox{\hyperlink{class_map}{Map}} permets de gérer une map du jeu \mb
 \item 
 \mbox{\hyperlink{class_map_a7454d3461fae2223175c3a10902bc2cc}{Map}} (int level=0)
 \begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}une \mbox{\hyperlink{class_map}{Map}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}} 
-{\bfseries $\sim$\+Map} ()
+\mbox{\hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map}} ()
 \begin{DoxyCompactList}\small\item\em Destructeur d\textquotesingle{}une \mbox{\hyperlink{class_map}{Map}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_tile}{Tile}} \mbox{\hyperlink{class_map_a6bc73436ff50db7fc3c260e548713393}{get\+Target}} () const
 \begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut m\+\_\+target. \end{DoxyCompactList}\item 
@@ -39,7 +38,7 @@ void \mbox{\hyperlink{class_map_a49670a6c7bf2bd5be5927023049622b7}{show\+Map}} (
 \begin{DoxyCompactList}\small\item\em Permet l\textquotesingle{}affichage de la map sur la console. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_map_a0ad9bb3bdf1545d8babe160c7c3dd1b9}{load\+Map}} (int map)
 \begin{DoxyCompactList}\small\item\em Permets de charger une map en fonction de son niveau. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_map_aa588b9e8c7cf953c8116999bcae8c3a1}{move\+Player}} (\mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities\+::\+EDirection}} direction, int nb\+Case)
+bool \mbox{\hyperlink{class_map_aa588b9e8c7cf953c8116999bcae8c3a1}{move\+Player}} (\mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities\+::\+E\+Direction}} direction, int nb\+Case)
 \begin{DoxyCompactList}\small\item\em Permets de déplacer le \mbox{\hyperlink{class_bomberman}{Bomberman}} dans une direction et un nombre de case précis. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_map_a4c4751574c26641d2a8d6dc8cc16419f}{play\+Ennemy}} (int ennemy)
 \begin{DoxyCompactList}\small\item\em Permets de jouer un ennemie précis sur la map. \end{DoxyCompactList}\item 
@@ -63,10 +62,10 @@ La classe \mbox{\hyperlink{class_map}{Map}} permets de gérer une map du jeu \mb
 
 \mbox{\hyperlink{class_bomb}{Bomb}} 
 
-EBomb\+Explosion\+Direction
+E\+Bomb\+Explosion\+Direction
 \end{DoxySeeAlso}
 \begin{DoxyAuthor}{Auteur}
-Pierre CHEMIN \& Hocine HADID 
+Pierre C\+H\+E\+M\+IN \& Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 
 
@@ -86,6 +85,16 @@ Constructeur d\textquotesingle{}une \mbox{\hyperlink{class_map}{Map}}.
 {\em level} & Le niveau de la \mbox{\hyperlink{class_map}{Map}} à charger \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}} 
+\index{Map@{Map}!````~Map@{$\sim$Map}}
+\index{````~Map@{$\sim$Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{$\sim$Map()}{~Map()}}
+{\footnotesize\ttfamily Map\+::$\sim$\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur d\textquotesingle{}une \mbox{\hyperlink{class_map}{Map}}. 
+
 
 
 \doxysubsection{Documentation des fonctions membres}
@@ -100,7 +109,7 @@ Constructeur d\textquotesingle{}une \mbox{\hyperlink{class_map}{Map}}.
 Permets de remettre à 0 la map de l\textquotesingle{}explosion d\textquotesingle{}une bombe. 
 
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 \mbox{\Hypertarget{class_map_afee0fb606ea757b57a514f39d3a10d3d}\label{class_map_afee0fb606ea757b57a514f39d3a10d3d}} 
 \index{Map@{Map}!getListBombs@{getListBombs}}
@@ -209,13 +218,13 @@ Permets de charger une map en fonction de son niveau.
 \hline
 \end{DoxyParams}
 \begin{DoxyAuthor}{Auteur}
-Pierre CHEMIN 
+Pierre C\+H\+E\+M\+IN 
 \end{DoxyAuthor}
 \mbox{\Hypertarget{class_map_aa588b9e8c7cf953c8116999bcae8c3a1}\label{class_map_aa588b9e8c7cf953c8116999bcae8c3a1}} 
 \index{Map@{Map}!movePlayer@{movePlayer}}
 \index{movePlayer@{movePlayer}!Map@{Map}}
 \doxysubsubsection{\texorpdfstring{movePlayer()}{movePlayer()}}
-{\footnotesize\ttfamily bool Map\+::move\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities\+::\+EDirection}}}]{direction,  }\item[{int}]{nb\+Case }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool Map\+::move\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceutilities_a3f674b131f46ba4b11f5e7665015f5ae}{utilities\+::\+E\+Direction}}}]{direction,  }\item[{int}]{nb\+Case }\end{DoxyParamCaption})}
 
 
 
@@ -237,7 +246,7 @@ Permets de déplacer le \mbox{\hyperlink{class_bomberman}{Bomberman}} dans une d
 true si le déplacement a bien été effectué, false sinon
 \end{DoxyReturn}
 \begin{DoxyAuthor}{Auteur}
-Pierre CHEMIN 
+Pierre C\+H\+E\+M\+IN 
 \end{DoxyAuthor}
 \mbox{\Hypertarget{class_map_a2b61d935d9e3253e181b63244a419117}\label{class_map_a2b61d935d9e3253e181b63244a419117}} 
 \index{Map@{Map}!playBomb@{playBomb}}
@@ -250,7 +259,7 @@ Pierre CHEMIN
 Permets de rajouter une bombe sur la map à la position du joueur. 
 
 \begin{DoxyAuthor}{Auteur}
-Pierre CHEMIN 
+Pierre C\+H\+E\+M\+IN 
 \end{DoxyAuthor}
 \mbox{\Hypertarget{class_map_a3526c9e0f33a517b43532e939ba2f8d4}\label{class_map_a3526c9e0f33a517b43532e939ba2f8d4}} 
 \index{Map@{Map}!playBomb@{playBomb}}
@@ -268,7 +277,7 @@ Permets de jouer une bombe présente sur la map.
 \hline
 \end{DoxyParams}
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 \mbox{\Hypertarget{class_map_a4c4751574c26641d2a8d6dc8cc16419f}\label{class_map_a4c4751574c26641d2a8d6dc8cc16419f}} 
 \index{Map@{Map}!playEnnemy@{playEnnemy}}
@@ -286,7 +295,7 @@ Permets de jouer un ennemie précis sur la map.
 \hline
 \end{DoxyParams}
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 \mbox{\Hypertarget{class_map_af4e1d6a5460f03e9e913c90029298317}\label{class_map_af4e1d6a5460f03e9e913c90029298317}} 
 \index{Map@{Map}!playItem@{playItem}}
@@ -304,7 +313,7 @@ Permets de jouer un item précis sur la map.
 \hline
 \end{DoxyParams}
 \begin{DoxyAuthor}{Auteur}
-Hocine HADID 
+Hocine H\+A\+D\+ID 
 \end{DoxyAuthor}
 \mbox{\Hypertarget{class_map_a49670a6c7bf2bd5be5927023049622b7}\label{class_map_a49670a6c7bf2bd5be5927023049622b7}} 
 \index{Map@{Map}!showMap@{showMap}}
@@ -317,11 +326,11 @@ Hocine HADID
 Permet l\textquotesingle{}affichage de la map sur la console. 
 
 \begin{DoxyAuthor}{Auteur}
-Pierre CHEMIN 
+Pierre C\+H\+E\+M\+IN 
 \end{DoxyAuthor}
 
 
-La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
 src/include/\+Map/\mbox{\hyperlink{_map_8h}{Map.\+h}}\item 
 src/src/\+Map/Map.\+cpp\end{DoxyCompactItemize}

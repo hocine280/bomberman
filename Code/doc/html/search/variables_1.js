@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['power_0',['power',['../class_bomb.html#ab6a625c9b4531a22047021411647c30f',1,'Bomb']]]
+  ['power_274',['power',['../class_bomb.html#ab6a625c9b4531a22047021411647c30f',1,'Bomb']]]
 ];

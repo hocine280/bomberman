@@ -1,6 +1,8 @@
-# <span style="color: #17b57d">**Bomberman**</span>
+# Bomberman
 
 Il s'agit de notre projet d'INFO0402 dans lequel nous avons du développer le jeu du **Bomberman**.
+
+<i>Version 0.1</i>
 
 ## Auteurs
 
@@ -11,7 +13,7 @@ Il s'agit de notre projet d'INFO0402 dans lequel nous avons du développer le je
 
 ## Architecture du projet
 
-En ce qui concerne l'architecture de notre projet, elle est simpliste.  
+En ce qui concerne l'architecture de notre projet, elle est assez simpliste.  
 A la racine vous disposerez des dossiers et fichiers suivants :
 
 - Code [Dossier] => Le code du Bomberman

@@ -1,25 +1,10 @@
 var searchData=
 [
-  ['getbecrossed_0',['getBeCrossed',['../class_tile.html#a316417842052ed625c0af916cfd0d712',1,'Tile']]],
-  ['getbombmax_1',['getBombMax',['../class_bomberman.html#a86929aa2dbc0aefb731a72035a05fc97',1,'Bomberman']]],
-  ['getdestructible_2',['getDestructible',['../class_wall.html#a8c7fb72681f1cd83cf98176f90ea7a95',1,'Wall']]],
-  ['getendgame_3',['getEndGame',['../class_system_game.html#a2bed10e615f6a76cb68d689170129e49',1,'SystemGame']]],
-  ['getlife_4',['getLife',['../class_personnage.html#a425e3bd3972613280ec13079f9ea687d',1,'Personnage']]],
-  ['getlistbombs_5',['getListBombs',['../class_map.html#afee0fb606ea757b57a514f39d3a10d3d',1,'Map']]],
-  ['getlistennemy_6',['getListEnnemy',['../class_map.html#a6ae7f062b4f03d145797e7c313a3626c',1,'Map']]],
-  ['getlistitems_7',['getListItems',['../class_map.html#abba786d64e53d56f4a9abee49035ae5f',1,'Map']]],
-  ['getnbbomb_8',['getNbBomb',['../class_bomberman.html#ad9a455dd4e56dcf2ba1bf59c70182c4d',1,'Bomberman']]],
-  ['getnbcolumn_9',['getNbColumn',['../class_map.html#ad476234ba373175097eba3a17fe37773',1,'Map']]],
-  ['getnbline_10',['getNbLine',['../class_map.html#ae5bd1849bd40b04cb2a274be7b6a29f8',1,'Map']]],
-  ['getnbnecessarybomb_11',['getNbNecessaryBomb',['../class_wall.html#ae4332a591e72c51a402d3b5c057482d9',1,'Wall']]],
-  ['getplayer_12',['getPlayer',['../class_map.html#a90f9ff5f305d5bbd0beb8e23159e88d4',1,'Map']]],
-  ['getposition_13',['getPosition',['../class_item.html#a5769a448ba84717044927115edd57e85',1,'Item::getPosition()'],['../class_tile.html#a18aaf97e2f662065da3f60f19690bc56',1,'Tile::getPosition()'],['../class_personnage.html#a9231b287503dbcfbe5aca055de82a95e',1,'Personnage::getPosition()']]],
-  ['getscope_14',['getScope',['../class_bomb.html#a61532fd1b1886a8bbb6ea6d4b019372b',1,'Bomb']]],
-  ['getspeed_15',['getSpeed',['../class_personnage.html#a784b94831f02dba3471036189e281c07',1,'Personnage']]],
-  ['gettarget_16',['getTarget',['../class_map.html#a6bc73436ff50db7fc3c260e548713393',1,'Map']]],
-  ['getturnbeforeexplosion_17',['getTurnBeforeExplosion',['../class_bomb.html#adebbd43ccd9ed34e0db7f00e71617168',1,'Bomb']]],
-  ['getx_18',['getX',['../class_position.html#aec07bdc14874f47cd1dc675d864f49a2',1,'Position']]],
-  ['gety_19',['getY',['../class_position.html#aecedcf0af53e559ccde18432f20d1a37',1,'Position']]],
-  ['ghost_20',['Ghost',['../class_ghost.html',1,'Ghost'],['../class_ghost.html#a74e44d887d6df4357fc832e5f8162f9e',1,'Ghost::Ghost()']]],
-  ['ghost_2eh_21',['Ghost.h',['../_ghost_8h.html',1,'']]]
+  ['increaselife_44',['increaseLife',['../class_more_life.html#ae12651e90fb546adfa5a2c86a8d4ceb3',1,'MoreLife']]],
+  ['increasenbbomb_45',['increaseNbBomb',['../class_more_bomb.html#ac9c36c6f3dc76c585bc43230244a377f',1,'MoreBomb']]],
+  ['increasepower_46',['increasePower',['../class_power_up.html#aa5b9d5d72383c370dc92d5294c2b577a',1,'PowerUp']]],
+  ['increasescope_47',['increaseScope',['../class_scale_up.html#ace0908b90b14f3762e4a1b72edbce037',1,'ScaleUp']]],
+  ['increasespeed_48',['increaseSpeed',['../class_speed_up.html#a20c46d92241fbf5a59fe41df94cf3b26',1,'SpeedUp']]],
+  ['item_49',['Item',['../class_item.html',1,'Item'],['../class_item.html#a843599b31998ffaffbe1a5d610f18e70',1,'Item::Item()']]],
+  ['item_2eh_50',['Item.h',['../_item_8h.html',1,'']]]
 ];
