@@ -1,0 +1,146 @@
+\hypertarget{class_wall}{}\doxysection{Référence de la classe Wall}
+\label{class_wall}\index{Wall@{Wall}}
+
+
+La classe \mbox{\hyperlink{class_wall}{Wall}} hérite dec la classe \mbox{\hyperlink{class_tile}{Tile}} et permets de gérer les murs présents sur la map.  
+
+
+
+
+{\ttfamily \#include $<$Wall.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Wall\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_wall}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_wall_a25eb265bfe8341f22aee82a1eee292f1}{Wall}} (int x=0, int y=0, bool be\+Crossed=false, bool destructible=true, int nb\+Necessary\+Bomb=2)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un \mbox{\hyperlink{class_wall}{Wall}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_wall_a9a2992f2b533e1c160513d1e719f920c}{$\sim$\+Wall}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur d\textquotesingle{}un \mbox{\hyperlink{class_wall}{Wall}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_wall_a8c7fb72681f1cd83cf98176f90ea7a95}{get\+Destructible}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut m\+\_\+destructible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_wall_ae4332a591e72c51a402d3b5c057482d9}{get\+Nb\+Necessary\+Bomb}} () const
+\begin{DoxyCompactList}\small\item\em Accesseur de l\textquotesingle{}attribut m\+\_\+nb\+Necessary\+Bomb. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_wall_a02af918924cb1c6580913c43c7be2f54}{show}} () const override
+\begin{DoxyCompactList}\small\item\em Permets d\textquotesingle{}afficher une \mbox{\hyperlink{class_wall}{Wall}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_wall_a35440b1bdb6f3188b4c3c110d40f7244}{weaken}} ()
+\begin{DoxyCompactList}\small\item\em Permets d\textquotesingle{}affaiblir un \mbox{\hyperlink{class_wall}{Wall}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+La classe \mbox{\hyperlink{class_wall}{Wall}} hérite dec la classe \mbox{\hyperlink{class_tile}{Tile}} et permets de gérer les murs présents sur la map. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_tile}{Tile}}
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_wall_a25eb265bfe8341f22aee82a1eee292f1}\label{class_wall_a25eb265bfe8341f22aee82a1eee292f1}} 
+\index{Wall@{Wall}!Wall@{Wall}}
+\index{Wall@{Wall}!Wall@{Wall}}
+\doxysubsubsection{\texorpdfstring{Wall()}{Wall()}}
+{\footnotesize\ttfamily Wall\+::\+Wall (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0},  }\item[{bool}]{be\+Crossed = {\ttfamily false},  }\item[{bool}]{destructible = {\ttfamily true},  }\item[{int}]{nb\+Necessary\+Bomb = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}un \mbox{\hyperlink{class_wall}{Wall}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & La ligne sur laquelle se situe le \mbox{\hyperlink{class_wall}{Wall}} \\
+\hline
+{\em y} & La colonne sur laquelle se situe le \mbox{\hyperlink{class_wall}{Wall}} \\
+\hline
+{\em be\+Crossed} & Si c\textquotesingle{}est possible de traverser le \mbox{\hyperlink{class_wall}{Wall}} \\
+\hline
+{\em destructible} & Si le \mbox{\hyperlink{class_wall}{Wall}} est destructible ou non \\
+\hline
+{\em nb\+Necessary\+Bomb} & Le nombre de bombe nécessaire pour détruire le \mbox{\hyperlink{class_wall}{Wall}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_wall_a9a2992f2b533e1c160513d1e719f920c}\label{class_wall_a9a2992f2b533e1c160513d1e719f920c}} 
+\index{Wall@{Wall}!````~Wall@{$\sim$Wall}}
+\index{````~Wall@{$\sim$Wall}!Wall@{Wall}}
+\doxysubsubsection{\texorpdfstring{$\sim$Wall()}{~Wall()}}
+{\footnotesize\ttfamily Wall\+::$\sim$\+Wall (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur d\textquotesingle{}un \mbox{\hyperlink{class_wall}{Wall}}. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_wall_a8c7fb72681f1cd83cf98176f90ea7a95}\label{class_wall_a8c7fb72681f1cd83cf98176f90ea7a95}} 
+\index{Wall@{Wall}!getDestructible@{getDestructible}}
+\index{getDestructible@{getDestructible}!Wall@{Wall}}
+\doxysubsubsection{\texorpdfstring{getDestructible()}{getDestructible()}}
+{\footnotesize\ttfamily bool Wall\+::get\+Destructible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur de l\textquotesingle{}attribut m\+\_\+destructible. 
+
+\begin{DoxyReturn}{Renvoie}
+true si le \mbox{\hyperlink{class_wall}{Wall}} est destructible, false sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_wall_ae4332a591e72c51a402d3b5c057482d9}\label{class_wall_ae4332a591e72c51a402d3b5c057482d9}} 
+\index{Wall@{Wall}!getNbNecessaryBomb@{getNbNecessaryBomb}}
+\index{getNbNecessaryBomb@{getNbNecessaryBomb}!Wall@{Wall}}
+\doxysubsubsection{\texorpdfstring{getNbNecessaryBomb()}{getNbNecessaryBomb()}}
+{\footnotesize\ttfamily int Wall\+::get\+Nb\+Necessary\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Accesseur de l\textquotesingle{}attribut m\+\_\+nb\+Necessary\+Bomb. 
+
+\begin{DoxyReturn}{Renvoie}
+int Le nombre de bombe nécessaire pour détruire le \mbox{\hyperlink{class_wall}{Wall}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_wall_a02af918924cb1c6580913c43c7be2f54}\label{class_wall_a02af918924cb1c6580913c43c7be2f54}} 
+\index{Wall@{Wall}!show@{show}}
+\index{show@{show}!Wall@{Wall}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Wall\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permets d\textquotesingle{}afficher une \mbox{\hyperlink{class_wall}{Wall}}. 
+
+Affiche le \mbox{\hyperlink{class_wall}{Wall}}, un caractère \char`\"{}\+W\char`\"{} pour les murs, \char`\"{}w\char`\"{} pour les murs ne nécessitant qu\textquotesingle{}une seule bombe pour être détruit et \char`\"{}\+I\char`\"{} pour les murs indestructibles
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Réimplémentée à partir de \mbox{\hyperlink{class_tile_a561baa75c1d784e5ac5cc52f634146d5}{Tile}}.
+
+\mbox{\Hypertarget{class_wall_a35440b1bdb6f3188b4c3c110d40f7244}\label{class_wall_a35440b1bdb6f3188b4c3c110d40f7244}} 
+\index{Wall@{Wall}!weaken@{weaken}}
+\index{weaken@{weaken}!Wall@{Wall}}
+\doxysubsubsection{\texorpdfstring{weaken()}{weaken()}}
+{\footnotesize\ttfamily void Wall\+::weaken (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permets d\textquotesingle{}affaiblir un \mbox{\hyperlink{class_wall}{Wall}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Code/src/include/\+Map/\mbox{\hyperlink{_wall_8h}{Wall.\+h}}\item 
+Code/src/src/\+Map/Wall.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,199 @@
+\hypertarget{class_speed_up}{}\doxysection{Référence de la classe Speed\+Up}
+\label{class_speed_up}\index{SpeedUp@{SpeedUp}}
+
+
+La classe \mbox{\hyperlink{class_speed_up}{Speed\+Up}} hérite de la classe \mbox{\hyperlink{class_item}{Item}} et permets de gérer les items de type \mbox{\hyperlink{class_speed_up}{Speed\+Up}}.  
+
+
+
+
+{\ttfamily \#include $<$Speed\+Up.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de Speed\+Up\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_speed_up}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_speed_up_a1750b512eb7e5d4ce415ec20085e7e7c}{Speed\+Up}} (int x=0, int y=0, int speed=1)
+\begin{DoxyCompactList}\small\item\em Constructeur de la \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_speed_up_a2f507932be5f9bed3f16f8588f75b7d1}{$\sim$\+Speed\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speed_up_a20c46d92241fbf5a59fe41df94cf3b26}{increase\+Speed}} (\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Rajoute la vitesse au \mbox{\hyperlink{class_bomberman}{Bomberman}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speed_up_a0e622c9ea9c14e402749d0165ef3c41a}{show\+Top}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie haute de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speed_up_ab3cd0ce4c2d886e8a1e3cac3e87076ed}{show\+Middle}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_speed_up_a2c7eccf0e3c24fe43a3ae76a3c71540c}{show\+Bottom}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la Speedup. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_speed_up_a531a22c210e0528fc5632d0ecc6263ac}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items) override
+\begin{DoxyCompactList}\small\item\em Permet de jouer la Speedup. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+La classe \mbox{\hyperlink{class_speed_up}{Speed\+Up}} hérite de la classe \mbox{\hyperlink{class_item}{Item}} et permets de gérer les items de type \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_item}{Item}}
+\end{DoxySeeAlso}
+Permets de gérer les items de type \mbox{\hyperlink{class_speed_up}{Speed\+Up}} qui permettent d\textquotesingle{}augmenter la vitesse du \mbox{\hyperlink{class_bomberman}{Bomberman}}
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_speed_up_a1750b512eb7e5d4ce415ec20085e7e7c}\label{class_speed_up_a1750b512eb7e5d4ce415ec20085e7e7c}} 
+\index{SpeedUp@{SpeedUp}!SpeedUp@{SpeedUp}}
+\index{SpeedUp@{SpeedUp}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{SpeedUp()}{SpeedUp()}}
+{\footnotesize\ttfamily Speed\+Up\+::\+Speed\+Up (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0},  }\item[{int}]{speed = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & La ligne sur laquelle se situe la \mbox{\hyperlink{class_scale_up}{Scale\+Up}} \\
+\hline
+{\em y} & La colonne sur laquelle se situe la \mbox{\hyperlink{class_scale_up}{Scale\+Up}} \\
+\hline
+{\em speed} & La vitesse qui sera rajouté au joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_speed_up_a2f507932be5f9bed3f16f8588f75b7d1}\label{class_speed_up_a2f507932be5f9bed3f16f8588f75b7d1}} 
+\index{SpeedUp@{SpeedUp}!````~SpeedUp@{$\sim$SpeedUp}}
+\index{````~SpeedUp@{$\sim$SpeedUp}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{$\sim$SpeedUp()}{~SpeedUp()}}
+{\footnotesize\ttfamily Speed\+Up\+::$\sim$\+Speed\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_speed_up_a20c46d92241fbf5a59fe41df94cf3b26}\label{class_speed_up_a20c46d92241fbf5a59fe41df94cf3b26}} 
+\index{SpeedUp@{SpeedUp}!increaseSpeed@{increaseSpeed}}
+\index{increaseSpeed@{increaseSpeed}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{increaseSpeed()}{increaseSpeed()}}
+{\footnotesize\ttfamily void Speed\+Up\+::increase\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Rajoute la vitesse au \mbox{\hyperlink{class_bomberman}{Bomberman}}. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_bomberman}{Bomberman}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Paramètres}
+{\em b} & Le bomberman auquelle il faut rajouter la vitesse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{class_speed_up_a531a22c210e0528fc5632d0ecc6263ac}\label{class_speed_up_a531a22c210e0528fc5632d0ecc6263ac}} 
+\index{SpeedUp@{SpeedUp}!play@{play}}
+\index{play@{play}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily bool Speed\+Up\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de jouer la Speedup. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_bomberman}{Bomberman}} 
+
+\mbox{\hyperlink{class_item}{Item}} 
+
+\mbox{\hyperlink{class_tile}{Tile}}
+\end{DoxySeeAlso}
+Joue la Speedup, si la Speedup est sur la même case que le joueur alors rajoute la vitesse précisé au joueur
+
+
+\begin{DoxyParams}{Paramètres}
+{\em map} & La map sur laquelle la Speedup est joué \\
+\hline
+{\em player} & Le joueur présent sur la map \\
+\hline
+{\em items} & La liste des items présents sur la map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la Speedup doit être supprimé, false sinon
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_a544712136c3e92119704a0d07276b1ea}{Item}}.
+
+\mbox{\Hypertarget{class_speed_up_a2c7eccf0e3c24fe43a3ae76a3c71540c}\label{class_speed_up_a2c7eccf0e3c24fe43a3ae76a3c71540c}} 
+\index{SpeedUp@{SpeedUp}!showBottom@{showBottom}}
+\index{showBottom@{showBottom}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{showBottom()}{showBottom()}}
+{\footnotesize\ttfamily void Speed\+Up\+::show\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la Speedup. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_a8fc2a13f4f43ff9c60d56ad15cc2b074}{Item}}.
+
+\mbox{\Hypertarget{class_speed_up_ab3cd0ce4c2d886e8a1e3cac3e87076ed}\label{class_speed_up_ab3cd0ce4c2d886e8a1e3cac3e87076ed}} 
+\index{SpeedUp@{SpeedUp}!showMiddle@{showMiddle}}
+\index{showMiddle@{showMiddle}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{showMiddle()}{showMiddle()}}
+{\footnotesize\ttfamily void Speed\+Up\+::show\+Middle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_aaf69cd9b8b9f1c2a5dd70943ceb5158d}{Item}}.
+
+\mbox{\Hypertarget{class_speed_up_a0e622c9ea9c14e402749d0165ef3c41a}\label{class_speed_up_a0e622c9ea9c14e402749d0165ef3c41a}} 
+\index{SpeedUp@{SpeedUp}!showTop@{showTop}}
+\index{showTop@{showTop}!SpeedUp@{SpeedUp}}
+\doxysubsubsection{\texorpdfstring{showTop()}{showTop()}}
+{\footnotesize\ttfamily void Speed\+Up\+::show\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie haute de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_speed_up}{Speed\+Up}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_a9e06a24ba1b70f7f826796bb5fed62be}{Item}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Code/src/include/\+Items/\mbox{\hyperlink{_speed_up_8h}{Speed\+Up.\+h}}\item 
+Code/src/src/\+Items/Speed\+Up.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,199 @@
+\hypertarget{class_more_bomb}{}\doxysection{Référence de la classe More\+Bomb}
+\label{class_more_bomb}\index{MoreBomb@{MoreBomb}}
+
+
+La classe \mbox{\hyperlink{class_more_bomb}{More\+Bomb}} hérite de la classe \mbox{\hyperlink{class_item}{Item}} et permets de gérer les items de type \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}.  
+
+
+
+
+{\ttfamily \#include $<$More\+Bomb.\+h$>$}
+
+Graphe d\textquotesingle{}héritage de More\+Bomb\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_more_bomb}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_more_bomb_a9ec933d03b7088a0232c4e4cdf37c6e3}{More\+Bomb}} (int x=0, int y=0, int nb\+Bomb=1)
+\begin{DoxyCompactList}\small\item\em Constructeur d\textquotesingle{}un item \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_more_bomb_a5526e3e5fc1aa40fb6d63384da34a861}{$\sim$\+More\+Bomb}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_more_bomb_ac9c36c6f3dc76c585bc43230244a377f}{increase\+Nb\+Bomb}} (\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Rajoute le nombre de Bombe au \mbox{\hyperlink{class_bomberman}{Bomberman}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_more_bomb_ae2bf531a3616ed6102016b81c7ee96ed}{show\+Top}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie haute de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_more_bomb_acddbb5903e7b807e7c081e18a09f480d}{show\+Middle}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_more_bomb_a4da2447a536201e29ca95774dfd56fff}{show\+Bottom}} () const override
+\begin{DoxyCompactList}\small\item\em Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_more_bomb_ad3ad99d09246612628ff7db8e0bd6fe6}{play}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$ map, \mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$player, std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$items) override
+\begin{DoxyCompactList}\small\item\em Permet de jouer la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membres hérités additionnels}
+
+
+\doxysubsection{Description détaillée}
+La classe \mbox{\hyperlink{class_more_bomb}{More\+Bomb}} hérite de la classe \mbox{\hyperlink{class_item}{Item}} et permets de gérer les items de type \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_item}{Item}}
+\end{DoxySeeAlso}
+Permets de gérer les items de type \mbox{\hyperlink{class_more_bomb}{More\+Bomb}} qui permettent d\textquotesingle{}ajouter des bombes au \mbox{\hyperlink{class_bomberman}{Bomberman}}
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{class_more_bomb_a9ec933d03b7088a0232c4e4cdf37c6e3}\label{class_more_bomb_a9ec933d03b7088a0232c4e4cdf37c6e3}} 
+\index{MoreBomb@{MoreBomb}!MoreBomb@{MoreBomb}}
+\index{MoreBomb@{MoreBomb}!MoreBomb@{MoreBomb}}
+\doxysubsubsection{\texorpdfstring{MoreBomb()}{MoreBomb()}}
+{\footnotesize\ttfamily More\+Bomb\+::\+More\+Bomb (\begin{DoxyParamCaption}\item[{int}]{x = {\ttfamily 0},  }\item[{int}]{y = {\ttfamily 0},  }\item[{int}]{nb\+Bomb = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Constructeur d\textquotesingle{}un item \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & La ligne sur laquelle se situe la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}} \\
+\hline
+{\em y} & La colonne sur laquelle se situe la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}} \\
+\hline
+{\em nb\+Bomb} & Le nombre de bombe que rajoutera l\textquotesingle{}item \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_more_bomb_a5526e3e5fc1aa40fb6d63384da34a861}\label{class_more_bomb_a5526e3e5fc1aa40fb6d63384da34a861}} 
+\index{MoreBomb@{MoreBomb}!````~MoreBomb@{$\sim$MoreBomb}}
+\index{````~MoreBomb@{$\sim$MoreBomb}!MoreBomb@{MoreBomb}}
+\doxysubsubsection{\texorpdfstring{$\sim$MoreBomb()}{~MoreBomb()}}
+{\footnotesize\ttfamily More\+Bomb\+::$\sim$\+More\+Bomb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. 
+
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_more_bomb_ac9c36c6f3dc76c585bc43230244a377f}\label{class_more_bomb_ac9c36c6f3dc76c585bc43230244a377f}} 
+\index{MoreBomb@{MoreBomb}!increaseNbBomb@{increaseNbBomb}}
+\index{increaseNbBomb@{increaseNbBomb}!MoreBomb@{MoreBomb}}
+\doxysubsubsection{\texorpdfstring{increaseNbBomb()}{increaseNbBomb()}}
+{\footnotesize\ttfamily void More\+Bomb\+::increase\+Nb\+Bomb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Rajoute le nombre de Bombe au \mbox{\hyperlink{class_bomberman}{Bomberman}}. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_bomberman}{Bomberman}}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Paramètres}
+{\em b} & Le bomberman auquelle il faut rajouter le nombre de bombe\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{class_more_bomb_ad3ad99d09246612628ff7db8e0bd6fe6}\label{class_more_bomb_ad3ad99d09246612628ff7db8e0bd6fe6}} 
+\index{MoreBomb@{MoreBomb}!play@{play}}
+\index{play@{play}!MoreBomb@{MoreBomb}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily bool More\+Bomb\+::play (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{class_tile}{Tile}} $\ast$ $>$$>$}]{map,  }\item[{\mbox{\hyperlink{class_bomberman}{Bomberman}} $\ast$}]{player,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_item}{Item}} $\ast$ $>$ $\ast$}]{items }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Permet de jouer la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. 
+
+\begin{DoxySeeAlso}{Voir également}
+\mbox{\hyperlink{class_bomberman}{Bomberman}} 
+
+\mbox{\hyperlink{class_item}{Item}} 
+
+\mbox{\hyperlink{class_tile}{Tile}}
+\end{DoxySeeAlso}
+Joue la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}, si la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}} est sur la même case que le joueur alors rajoute le nombre de bomb indiqué au joueur.
+
+
+\begin{DoxyParams}{Paramètres}
+{\em map} & La map sur laquelle la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}} est joué \\
+\hline
+{\em player} & Le joueur présent sur la map \\
+\hline
+{\em items} & La liste des items présents sur la map \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}} doit être supprimé, false sinon
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_a544712136c3e92119704a0d07276b1ea}{Item}}.
+
+\mbox{\Hypertarget{class_more_bomb_a4da2447a536201e29ca95774dfd56fff}\label{class_more_bomb_a4da2447a536201e29ca95774dfd56fff}} 
+\index{MoreBomb@{MoreBomb}!showBottom@{showBottom}}
+\index{showBottom@{showBottom}!MoreBomb@{MoreBomb}}
+\doxysubsubsection{\texorpdfstring{showBottom()}{showBottom()}}
+{\footnotesize\ttfamily void More\+Bomb\+::show\+Bottom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie basse de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_a8fc2a13f4f43ff9c60d56ad15cc2b074}{Item}}.
+
+\mbox{\Hypertarget{class_more_bomb_acddbb5903e7b807e7c081e18a09f480d}\label{class_more_bomb_acddbb5903e7b807e7c081e18a09f480d}} 
+\index{MoreBomb@{MoreBomb}!showMiddle@{showMiddle}}
+\index{showMiddle@{showMiddle}!MoreBomb@{MoreBomb}}
+\doxysubsubsection{\texorpdfstring{showMiddle()}{showMiddle()}}
+{\footnotesize\ttfamily void More\+Bomb\+::show\+Middle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie du milieu de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_aaf69cd9b8b9f1c2a5dd70943ceb5158d}{Item}}.
+
+\mbox{\Hypertarget{class_more_bomb_ae2bf531a3616ed6102016b81c7ee96ed}\label{class_more_bomb_ae2bf531a3616ed6102016b81c7ee96ed}} 
+\index{MoreBomb@{MoreBomb}!showTop@{showTop}}
+\index{showTop@{showTop}!MoreBomb@{MoreBomb}}
+\doxysubsubsection{\texorpdfstring{showTop()}{showTop()}}
+{\footnotesize\ttfamily void More\+Bomb\+::show\+Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Affiche la partie haute de la case lors de l\textquotesingle{}affichage de la \mbox{\hyperlink{class_more_bomb}{More\+Bomb}}. 
+
+\begin{DoxyAuthor}{Auteur}
+Hocine H\+A\+D\+ID 
+\end{DoxyAuthor}
+
+
+Implémente \mbox{\hyperlink{class_item_a9e06a24ba1b70f7f826796bb5fed62be}{Item}}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+Code/src/include/\+Items/\mbox{\hyperlink{_more_bomb_8h}{More\+Bomb.\+h}}\item 
+Code/src/src/\+Items/More\+Bomb.\+cpp\end{DoxyCompactItemize}

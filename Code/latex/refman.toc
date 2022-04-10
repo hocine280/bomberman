@@ -1,0 +1,297 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {nil}{}
+\contentsline {chapter}{\numberline {1}Bomberman}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Auteurs}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Architecture du projet}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Le dossier \char `\"{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Code\char `\"{}}{1}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}L\textquotesingle {}organisation du dossier src}{2}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Création d\textquotesingle {}un exécutable}{2}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Index des espaces de nommage}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Liste des espaces de nommage}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Index hiérarchique}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Hiérarchie des classes}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Index des classes}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Liste des classes}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Index des fichiers}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Liste des fichiers}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Documentation des espaces de nommage}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Référence de l\textquotesingle {}espace de nommage utilities}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Description détaillée}{11}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Documentation du type de l\textquotesingle {}énumération}{11}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}EBombExplosionDirection}{11}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}EDirection}{11}{subsubsection.6.1.2.2}%
+\contentsline {chapter}{\numberline {7}Documentation des classes}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Référence de la classe Arrow}{13}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Description détaillée}{13}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Documentation des constructeurs et destructeur}{14}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}Arrow()}{14}{subsubsection.7.1.2.1}%
+\contentsline {subsection}{\numberline {7.1.3}Documentation des fonctions membres}{14}{subsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.1}move()}{14}{subsubsection.7.1.3.1}%
+\contentsline {subsubsection}{\numberline {7.1.3.2}play()}{14}{subsubsection.7.1.3.2}%
+\contentsline {subsubsection}{\numberline {7.1.3.3}showBottom()}{15}{subsubsection.7.1.3.3}%
+\contentsline {subsubsection}{\numberline {7.1.3.4}showMiddle()}{15}{subsubsection.7.1.3.4}%
+\contentsline {subsubsection}{\numberline {7.1.3.5}showTop()}{15}{subsubsection.7.1.3.5}%
+\contentsline {section}{\numberline {7.2}Référence de la classe Bomb}{15}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Description détaillée}{16}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Documentation des constructeurs et destructeur}{16}{subsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.2.1}Bomb()}{17}{subsubsection.7.2.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2.2}$\sim $Bomb()}{18}{subsubsection.7.2.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Documentation des fonctions membres}{18}{subsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.1}decreaseTurnBeforeExplosion()}{18}{subsubsection.7.2.3.1}%
+\contentsline {subsubsection}{\numberline {7.2.3.2}getScope()}{18}{subsubsection.7.2.3.2}%
+\contentsline {subsubsection}{\numberline {7.2.3.3}getTurnBeforeExplosion()}{18}{subsubsection.7.2.3.3}%
+\contentsline {subsubsection}{\numberline {7.2.3.4}play()}{18}{subsubsection.7.2.3.4}%
+\contentsline {subsubsection}{\numberline {7.2.3.5}showBottom()}{19}{subsubsection.7.2.3.5}%
+\contentsline {subsubsection}{\numberline {7.2.3.6}showMiddle()}{19}{subsubsection.7.2.3.6}%
+\contentsline {subsubsection}{\numberline {7.2.3.7}showTop()}{19}{subsubsection.7.2.3.7}%
+\contentsline {subsection}{\numberline {7.2.4}Documentation des données membres}{19}{subsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.4.1}power}{19}{subsubsection.7.2.4.1}%
+\contentsline {subsubsection}{\numberline {7.2.4.2}scope}{20}{subsubsection.7.2.4.2}%
+\contentsline {section}{\numberline {7.3}Référence de la classe Bomberman}{20}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Description détaillée}{20}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Documentation des constructeurs et destructeur}{21}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}Bomberman()}{21}{subsubsection.7.3.2.1}%
+\contentsline {subsubsection}{\numberline {7.3.2.2}$\sim $Bomberman()}{21}{subsubsection.7.3.2.2}%
+\contentsline {subsection}{\numberline {7.3.3}Documentation des fonctions membres}{21}{subsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.3.1}addBomb()}{21}{subsubsection.7.3.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.3.2}addLife()}{22}{subsubsection.7.3.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3.3}addSpeed()}{22}{subsubsection.7.3.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.3.4}dropBomb()}{22}{subsubsection.7.3.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.3.5}getBombMax()}{22}{subsubsection.7.3.3.5}%
+\contentsline {subsubsection}{\numberline {7.3.3.6}getNbBomb()}{23}{subsubsection.7.3.3.6}%
+\contentsline {subsubsection}{\numberline {7.3.3.7}move()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{23}{subsubsection.7.3.3.7}%
+\contentsline {subsubsection}{\numberline {7.3.3.8}move()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{23}{subsubsection.7.3.3.8}%
+\contentsline {subsubsection}{\numberline {7.3.3.9}show()}{23}{subsubsection.7.3.3.9}%
+\contentsline {section}{\numberline {7.4}Référence de la classe Bowman}{24}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Description détaillée}{24}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Documentation des constructeurs et destructeur}{24}{subsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.2.1}Bowman()}{25}{subsubsection.7.4.2.1}%
+\contentsline {subsubsection}{\numberline {7.4.2.2}$\sim $Bowman()}{25}{subsubsection.7.4.2.2}%
+\contentsline {subsection}{\numberline {7.4.3}Documentation des fonctions membres}{25}{subsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.3.1}play()}{25}{subsubsection.7.4.3.1}%
+\contentsline {subsubsection}{\numberline {7.4.3.2}shootPlayer()}{26}{subsubsection.7.4.3.2}%
+\contentsline {subsubsection}{\numberline {7.4.3.3}show()}{26}{subsubsection.7.4.3.3}%
+\contentsline {section}{\numberline {7.5}Référence de la classe Ennemy}{26}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Description détaillée}{27}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Documentation des constructeurs et destructeur}{27}{subsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.1}Ennemy()}{27}{subsubsection.7.5.2.1}%
+\contentsline {subsubsection}{\numberline {7.5.2.2}$\sim $Ennemy()}{27}{subsubsection.7.5.2.2}%
+\contentsline {subsection}{\numberline {7.5.3}Documentation des fonctions membres}{27}{subsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.3.1}play()}{27}{subsubsection.7.5.3.1}%
+\contentsline {subsection}{\numberline {7.5.4}Documentation des données membres}{28}{subsection.7.5.4}%
+\contentsline {subsubsection}{\numberline {7.5.4.1}m\_damage}{28}{subsubsection.7.5.4.1}%
+\contentsline {subsubsection}{\numberline {7.5.4.2}m\_still}{28}{subsubsection.7.5.4.2}%
+\contentsline {section}{\numberline {7.6}Référence de la classe Ghost}{28}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Description détaillée}{29}{subsection.7.6.1}%
+\contentsline {subsection}{\numberline {7.6.2}Documentation des constructeurs et destructeur}{29}{subsection.7.6.2}%
+\contentsline {subsubsection}{\numberline {7.6.2.1}Ghost()}{29}{subsubsection.7.6.2.1}%
+\contentsline {subsubsection}{\numberline {7.6.2.2}$\sim $Ghost()}{29}{subsubsection.7.6.2.2}%
+\contentsline {subsection}{\numberline {7.6.3}Documentation des fonctions membres}{29}{subsection.7.6.3}%
+\contentsline {subsubsection}{\numberline {7.6.3.1}play()}{29}{subsubsection.7.6.3.1}%
+\contentsline {subsubsection}{\numberline {7.6.3.2}show()}{30}{subsubsection.7.6.3.2}%
+\contentsline {section}{\numberline {7.7}Référence de la classe Item}{30}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Description détaillée}{31}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Documentation des constructeurs et destructeur}{31}{subsection.7.7.2}%
+\contentsline {subsubsection}{\numberline {7.7.2.1}Item()}{31}{subsubsection.7.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.7.2.2}$\sim $Item()}{31}{subsubsection.7.7.2.2}%
+\contentsline {subsection}{\numberline {7.7.3}Documentation des fonctions membres}{31}{subsection.7.7.3}%
+\contentsline {subsubsection}{\numberline {7.7.3.1}getPosition()}{31}{subsubsection.7.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.7.3.2}play()}{32}{subsubsection.7.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.7.3.3}showBottom()}{32}{subsubsection.7.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.7.3.4}showMiddle()}{32}{subsubsection.7.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.7.3.5}showTop()}{32}{subsubsection.7.7.3.5}%
+\contentsline {subsection}{\numberline {7.7.4}Documentation des données membres}{33}{subsection.7.7.4}%
+\contentsline {subsubsection}{\numberline {7.7.4.1}m\_position}{33}{subsubsection.7.7.4.1}%
+\contentsline {section}{\numberline {7.8}Référence de la classe Map}{33}{section.7.8}%
+\contentsline {subsection}{\numberline {7.8.1}Description détaillée}{34}{subsection.7.8.1}%
+\contentsline {subsection}{\numberline {7.8.2}Documentation des constructeurs et destructeur}{34}{subsection.7.8.2}%
+\contentsline {subsubsection}{\numberline {7.8.2.1}Map()}{34}{subsubsection.7.8.2.1}%
+\contentsline {subsubsection}{\numberline {7.8.2.2}$\sim $Map()}{34}{subsubsection.7.8.2.2}%
+\contentsline {subsection}{\numberline {7.8.3}Documentation des fonctions membres}{34}{subsection.7.8.3}%
+\contentsline {subsubsection}{\numberline {7.8.3.1}eraseBombExplosion()}{34}{subsubsection.7.8.3.1}%
+\contentsline {subsubsection}{\numberline {7.8.3.2}getListBombs()}{34}{subsubsection.7.8.3.2}%
+\contentsline {subsubsection}{\numberline {7.8.3.3}getListEnnemy()}{35}{subsubsection.7.8.3.3}%
+\contentsline {subsubsection}{\numberline {7.8.3.4}getListItems()}{35}{subsubsection.7.8.3.4}%
+\contentsline {subsubsection}{\numberline {7.8.3.5}getNbColumn()}{35}{subsubsection.7.8.3.5}%
+\contentsline {subsubsection}{\numberline {7.8.3.6}getNbLine()}{35}{subsubsection.7.8.3.6}%
+\contentsline {subsubsection}{\numberline {7.8.3.7}getPlayer()}{35}{subsubsection.7.8.3.7}%
+\contentsline {subsubsection}{\numberline {7.8.3.8}getTarget()}{35}{subsubsection.7.8.3.8}%
+\contentsline {subsubsection}{\numberline {7.8.3.9}loadMap()}{36}{subsubsection.7.8.3.9}%
+\contentsline {subsubsection}{\numberline {7.8.3.10}movePlayer()}{36}{subsubsection.7.8.3.10}%
+\contentsline {subsubsection}{\numberline {7.8.3.11}playBomb()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{36}{subsubsection.7.8.3.11}%
+\contentsline {subsubsection}{\numberline {7.8.3.12}playBomb()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{36}{subsubsection.7.8.3.12}%
+\contentsline {subsubsection}{\numberline {7.8.3.13}playEnnemy()}{37}{subsubsection.7.8.3.13}%
+\contentsline {subsubsection}{\numberline {7.8.3.14}playItem()}{37}{subsubsection.7.8.3.14}%
+\contentsline {subsubsection}{\numberline {7.8.3.15}showMap()}{37}{subsubsection.7.8.3.15}%
+\contentsline {section}{\numberline {7.9}Référence de la classe Monster}{37}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Description détaillée}{38}{subsection.7.9.1}%
+\contentsline {subsection}{\numberline {7.9.2}Documentation des constructeurs et destructeur}{38}{subsection.7.9.2}%
+\contentsline {subsubsection}{\numberline {7.9.2.1}Monster()}{38}{subsubsection.7.9.2.1}%
+\contentsline {subsubsection}{\numberline {7.9.2.2}$\sim $Monster()}{39}{subsubsection.7.9.2.2}%
+\contentsline {subsection}{\numberline {7.9.3}Documentation des fonctions membres}{39}{subsection.7.9.3}%
+\contentsline {subsubsection}{\numberline {7.9.3.1}show()}{39}{subsubsection.7.9.3.1}%
+\contentsline {section}{\numberline {7.10}Référence de la classe More\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bomb}{39}{section.7.10}%
+\contentsline {subsection}{\numberline {7.10.1}Description détaillée}{40}{subsection.7.10.1}%
+\contentsline {subsection}{\numberline {7.10.2}Documentation des constructeurs et destructeur}{40}{subsection.7.10.2}%
+\contentsline {subsubsection}{\numberline {7.10.2.1}MoreBomb()}{40}{subsubsection.7.10.2.1}%
+\contentsline {subsubsection}{\numberline {7.10.2.2}$\sim $MoreBomb()}{40}{subsubsection.7.10.2.2}%
+\contentsline {subsection}{\numberline {7.10.3}Documentation des fonctions membres}{40}{subsection.7.10.3}%
+\contentsline {subsubsection}{\numberline {7.10.3.1}increaseNbBomb()}{40}{subsubsection.7.10.3.1}%
+\contentsline {subsubsection}{\numberline {7.10.3.2}play()}{41}{subsubsection.7.10.3.2}%
+\contentsline {subsubsection}{\numberline {7.10.3.3}showBottom()}{41}{subsubsection.7.10.3.3}%
+\contentsline {subsubsection}{\numberline {7.10.3.4}showMiddle()}{41}{subsubsection.7.10.3.4}%
+\contentsline {subsubsection}{\numberline {7.10.3.5}showTop()}{42}{subsubsection.7.10.3.5}%
+\contentsline {section}{\numberline {7.11}Référence de la classe More\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Life}{42}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Description détaillée}{42}{subsection.7.11.1}%
+\contentsline {subsection}{\numberline {7.11.2}Documentation des constructeurs et destructeur}{43}{subsection.7.11.2}%
+\contentsline {subsubsection}{\numberline {7.11.2.1}MoreLife()}{43}{subsubsection.7.11.2.1}%
+\contentsline {subsubsection}{\numberline {7.11.2.2}$\sim $MoreLife()}{43}{subsubsection.7.11.2.2}%
+\contentsline {subsection}{\numberline {7.11.3}Documentation des fonctions membres}{43}{subsection.7.11.3}%
+\contentsline {subsubsection}{\numberline {7.11.3.1}increaseLife()}{43}{subsubsection.7.11.3.1}%
+\contentsline {subsubsection}{\numberline {7.11.3.2}play()}{43}{subsubsection.7.11.3.2}%
+\contentsline {subsubsection}{\numberline {7.11.3.3}showBottom()}{44}{subsubsection.7.11.3.3}%
+\contentsline {subsubsection}{\numberline {7.11.3.4}showMiddle()}{44}{subsubsection.7.11.3.4}%
+\contentsline {subsubsection}{\numberline {7.11.3.5}showTop()}{44}{subsubsection.7.11.3.5}%
+\contentsline {section}{\numberline {7.12}Référence de la classe Move\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception}{45}{section.7.12}%
+\contentsline {subsection}{\numberline {7.12.1}Description détaillée}{45}{subsection.7.12.1}%
+\contentsline {subsection}{\numberline {7.12.2}Documentation des constructeurs et destructeur}{45}{subsection.7.12.2}%
+\contentsline {subsubsection}{\numberline {7.12.2.1}MoveException()}{45}{subsubsection.7.12.2.1}%
+\contentsline {subsection}{\numberline {7.12.3}Documentation des fonctions membres}{45}{subsection.7.12.3}%
+\contentsline {subsubsection}{\numberline {7.12.3.1}what()}{45}{subsubsection.7.12.3.1}%
+\contentsline {section}{\numberline {7.13}Référence de la classe Personnage}{46}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Description détaillée}{46}{subsection.7.13.1}%
+\contentsline {subsection}{\numberline {7.13.2}Documentation des constructeurs et destructeur}{46}{subsection.7.13.2}%
+\contentsline {subsubsection}{\numberline {7.13.2.1}Personnage()}{47}{subsubsection.7.13.2.1}%
+\contentsline {subsubsection}{\numberline {7.13.2.2}$\sim $Personnage()}{47}{subsubsection.7.13.2.2}%
+\contentsline {subsection}{\numberline {7.13.3}Documentation des fonctions membres}{47}{subsection.7.13.3}%
+\contentsline {subsubsection}{\numberline {7.13.3.1}getLife()}{47}{subsubsection.7.13.3.1}%
+\contentsline {subsubsection}{\numberline {7.13.3.2}getPosition()}{47}{subsubsection.7.13.3.2}%
+\contentsline {subsubsection}{\numberline {7.13.3.3}getSpeed()}{47}{subsubsection.7.13.3.3}%
+\contentsline {subsubsection}{\numberline {7.13.3.4}move()}{48}{subsubsection.7.13.3.4}%
+\contentsline {subsubsection}{\numberline {7.13.3.5}receiveDamage()}{48}{subsubsection.7.13.3.5}%
+\contentsline {subsubsection}{\numberline {7.13.3.6}show()}{48}{subsubsection.7.13.3.6}%
+\contentsline {subsection}{\numberline {7.13.4}Documentation des données membres}{48}{subsection.7.13.4}%
+\contentsline {subsubsection}{\numberline {7.13.4.1}m\_life}{48}{subsubsection.7.13.4.1}%
+\contentsline {subsubsection}{\numberline {7.13.4.2}m\_position}{49}{subsubsection.7.13.4.2}%
+\contentsline {subsubsection}{\numberline {7.13.4.3}m\_speed}{49}{subsubsection.7.13.4.3}%
+\contentsline {section}{\numberline {7.14}Référence de la classe Position}{49}{section.7.14}%
+\contentsline {subsection}{\numberline {7.14.1}Description détaillée}{49}{subsection.7.14.1}%
+\contentsline {subsection}{\numberline {7.14.2}Documentation des constructeurs et destructeur}{49}{subsection.7.14.2}%
+\contentsline {subsubsection}{\numberline {7.14.2.1}Position()}{49}{subsubsection.7.14.2.1}%
+\contentsline {subsection}{\numberline {7.14.3}Documentation des fonctions membres}{50}{subsection.7.14.3}%
+\contentsline {subsubsection}{\numberline {7.14.3.1}getX()}{50}{subsubsection.7.14.3.1}%
+\contentsline {subsubsection}{\numberline {7.14.3.2}getY()}{50}{subsubsection.7.14.3.2}%
+\contentsline {subsubsection}{\numberline {7.14.3.3}operator"!=()}{50}{subsubsection.7.14.3.3}%
+\contentsline {subsubsection}{\numberline {7.14.3.4}operator==()}{50}{subsubsection.7.14.3.4}%
+\contentsline {subsubsection}{\numberline {7.14.3.5}setX()}{51}{subsubsection.7.14.3.5}%
+\contentsline {subsubsection}{\numberline {7.14.3.6}setY()}{51}{subsubsection.7.14.3.6}%
+\contentsline {section}{\numberline {7.15}Référence de la classe Power\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Up}{51}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Description détaillée}{52}{subsection.7.15.1}%
+\contentsline {subsection}{\numberline {7.15.2}Documentation des constructeurs et destructeur}{52}{subsection.7.15.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.1}PowerUp()}{52}{subsubsection.7.15.2.1}%
+\contentsline {subsubsection}{\numberline {7.15.2.2}$\sim $PowerUp()}{52}{subsubsection.7.15.2.2}%
+\contentsline {subsection}{\numberline {7.15.3}Documentation des fonctions membres}{52}{subsection.7.15.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.1}increasePower()}{53}{subsubsection.7.15.3.1}%
+\contentsline {subsubsection}{\numberline {7.15.3.2}play()}{53}{subsubsection.7.15.3.2}%
+\contentsline {subsubsection}{\numberline {7.15.3.3}showBottom()}{53}{subsubsection.7.15.3.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.4}showMiddle()}{53}{subsubsection.7.15.3.4}%
+\contentsline {subsubsection}{\numberline {7.15.3.5}showTop()}{54}{subsubsection.7.15.3.5}%
+\contentsline {section}{\numberline {7.16}Référence de la classe Scale\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Up}{54}{section.7.16}%
+\contentsline {subsection}{\numberline {7.16.1}Description détaillée}{54}{subsection.7.16.1}%
+\contentsline {subsection}{\numberline {7.16.2}Documentation des constructeurs et destructeur}{55}{subsection.7.16.2}%
+\contentsline {subsubsection}{\numberline {7.16.2.1}ScaleUp()}{55}{subsubsection.7.16.2.1}%
+\contentsline {subsubsection}{\numberline {7.16.2.2}$\sim $ScaleUp()}{55}{subsubsection.7.16.2.2}%
+\contentsline {subsection}{\numberline {7.16.3}Documentation des fonctions membres}{55}{subsection.7.16.3}%
+\contentsline {subsubsection}{\numberline {7.16.3.1}increaseScope()}{55}{subsubsection.7.16.3.1}%
+\contentsline {subsubsection}{\numberline {7.16.3.2}play()}{55}{subsubsection.7.16.3.2}%
+\contentsline {subsubsection}{\numberline {7.16.3.3}showBottom()}{56}{subsubsection.7.16.3.3}%
+\contentsline {subsubsection}{\numberline {7.16.3.4}showMiddle()}{56}{subsubsection.7.16.3.4}%
+\contentsline {subsubsection}{\numberline {7.16.3.5}showTop()}{56}{subsubsection.7.16.3.5}%
+\contentsline {section}{\numberline {7.17}Référence de la classe Speed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Up}{57}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Description détaillée}{57}{subsection.7.17.1}%
+\contentsline {subsection}{\numberline {7.17.2}Documentation des constructeurs et destructeur}{57}{subsection.7.17.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.1}SpeedUp()}{57}{subsubsection.7.17.2.1}%
+\contentsline {subsubsection}{\numberline {7.17.2.2}$\sim $SpeedUp()}{58}{subsubsection.7.17.2.2}%
+\contentsline {subsection}{\numberline {7.17.3}Documentation des fonctions membres}{58}{subsection.7.17.3}%
+\contentsline {subsubsection}{\numberline {7.17.3.1}increaseSpeed()}{58}{subsubsection.7.17.3.1}%
+\contentsline {subsubsection}{\numberline {7.17.3.2}play()}{58}{subsubsection.7.17.3.2}%
+\contentsline {subsubsection}{\numberline {7.17.3.3}showBottom()}{59}{subsubsection.7.17.3.3}%
+\contentsline {subsubsection}{\numberline {7.17.3.4}showMiddle()}{59}{subsubsection.7.17.3.4}%
+\contentsline {subsubsection}{\numberline {7.17.3.5}showTop()}{59}{subsubsection.7.17.3.5}%
+\contentsline {section}{\numberline {7.18}Référence de la classe System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game}{59}{section.7.18}%
+\contentsline {subsection}{\numberline {7.18.1}Description détaillée}{60}{subsection.7.18.1}%
+\contentsline {subsection}{\numberline {7.18.2}Documentation des constructeurs et destructeur}{60}{subsection.7.18.2}%
+\contentsline {subsubsection}{\numberline {7.18.2.1}SystemGame()}{60}{subsubsection.7.18.2.1}%
+\contentsline {subsection}{\numberline {7.18.3}Documentation des fonctions membres}{60}{subsection.7.18.3}%
+\contentsline {subsubsection}{\numberline {7.18.3.1}getEndGame()}{60}{subsubsection.7.18.3.1}%
+\contentsline {subsubsection}{\numberline {7.18.3.2}playTurn()}{60}{subsubsection.7.18.3.2}%
+\contentsline {subsubsection}{\numberline {7.18.3.3}showMap()}{60}{subsubsection.7.18.3.3}%
+\contentsline {section}{\numberline {7.19}Référence de la classe Tile}{61}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Description détaillée}{61}{subsection.7.19.1}%
+\contentsline {subsection}{\numberline {7.19.2}Documentation des constructeurs et destructeur}{61}{subsection.7.19.2}%
+\contentsline {subsubsection}{\numberline {7.19.2.1}Tile()}{61}{subsubsection.7.19.2.1}%
+\contentsline {subsubsection}{\numberline {7.19.2.2}$\sim $Tile()}{62}{subsubsection.7.19.2.2}%
+\contentsline {subsection}{\numberline {7.19.3}Documentation des fonctions membres}{62}{subsection.7.19.3}%
+\contentsline {subsubsection}{\numberline {7.19.3.1}getBeCrossed()}{62}{subsubsection.7.19.3.1}%
+\contentsline {subsubsection}{\numberline {7.19.3.2}getPosition()}{62}{subsubsection.7.19.3.2}%
+\contentsline {subsubsection}{\numberline {7.19.3.3}setBeCrossed()}{62}{subsubsection.7.19.3.3}%
+\contentsline {subsubsection}{\numberline {7.19.3.4}show()}{62}{subsubsection.7.19.3.4}%
+\contentsline {section}{\numberline {7.20}Référence de la classe Wall}{63}{section.7.20}%
+\contentsline {subsection}{\numberline {7.20.1}Description détaillée}{63}{subsection.7.20.1}%
+\contentsline {subsection}{\numberline {7.20.2}Documentation des constructeurs et destructeur}{63}{subsection.7.20.2}%
+\contentsline {subsubsection}{\numberline {7.20.2.1}Wall()}{64}{subsubsection.7.20.2.1}%
+\contentsline {subsubsection}{\numberline {7.20.2.2}$\sim $Wall()}{64}{subsubsection.7.20.2.2}%
+\contentsline {subsection}{\numberline {7.20.3}Documentation des fonctions membres}{64}{subsection.7.20.3}%
+\contentsline {subsubsection}{\numberline {7.20.3.1}getDestructible()}{64}{subsubsection.7.20.3.1}%
+\contentsline {subsubsection}{\numberline {7.20.3.2}getNbNecessaryBomb()}{64}{subsubsection.7.20.3.2}%
+\contentsline {subsubsection}{\numberline {7.20.3.3}show()}{64}{subsubsection.7.20.3.3}%
+\contentsline {subsubsection}{\numberline {7.20.3.4}weaken()}{65}{subsubsection.7.20.3.4}%
+\contentsline {chapter}{\numberline {8}Documentation des fichiers}{67}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Référence du fichier Code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Prog\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bomberman.cpp}{67}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Description détaillée}{67}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Documentation des fonctions}{67}{subsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.1}playGame()}{68}{subsubsection.8.1.2.1}%
+\contentsline {subsubsection}{\numberline {8.1.2.2}showHome()}{68}{subsubsection.8.1.2.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.3}showMenu()}{68}{subsubsection.8.1.2.3}%
+\contentsline {section}{\numberline {8.2}Référence du fichier Code/src/include/engine/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}System\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game.h}{68}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Description détaillée}{68}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}Référence du fichier Code/src/include/engine/utilities.h}{68}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Description détaillée}{69}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Items/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Arrow.h}{69}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Description détaillée}{69}{subsection.8.4.1}%
+\contentsline {section}{\numberline {8.5}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Items/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bomb.h}{70}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Description détaillée}{70}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.6}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Items/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Item.h}{70}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Description détaillée}{70}{subsection.8.6.1}%
+\contentsline {section}{\numberline {8.7}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Items/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}More\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bomb.h}{71}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Description détaillée}{71}{subsection.8.7.1}%
+\contentsline {section}{\numberline {8.8}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Items/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}More\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Life.h}{71}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Description détaillée}{71}{subsection.8.8.1}%
+\contentsline {section}{\numberline {8.9}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Items/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Power\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Up.h}{72}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Description détaillée}{72}{subsection.8.9.1}%
+\contentsline {section}{\numberline {8.10}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Items/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Scale\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Up.h}{72}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Description détaillée}{72}{subsection.8.10.1}%
+\contentsline {section}{\numberline {8.11}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Items/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Speed\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Up.h}{73}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Description détaillée}{73}{subsection.8.11.1}%
+\contentsline {section}{\numberline {8.12}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map.h}{73}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Description détaillée}{73}{subsection.8.12.1}%
+\contentsline {section}{\numberline {8.13}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Move\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Exception.h}{74}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Description détaillée}{74}{subsection.8.13.1}%
+\contentsline {section}{\numberline {8.14}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Position.h}{74}{section.8.14}%
+\contentsline {subsection}{\numberline {8.14.1}Description détaillée}{74}{subsection.8.14.1}%
+\contentsline {section}{\numberline {8.15}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Tile.h}{75}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Description détaillée}{75}{subsection.8.15.1}%
+\contentsline {section}{\numberline {8.16}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Map/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Wall.h}{75}{section.8.16}%
+\contentsline {subsection}{\numberline {8.16.1}Description détaillée}{76}{subsection.8.16.1}%
+\contentsline {section}{\numberline {8.17}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Persos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bomberman.h}{76}{section.8.17}%
+\contentsline {subsection}{\numberline {8.17.1}Description détaillée}{76}{subsection.8.17.1}%
+\contentsline {section}{\numberline {8.18}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Persos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bowman.h}{76}{section.8.18}%
+\contentsline {subsection}{\numberline {8.18.1}Description détaillée}{77}{subsection.8.18.1}%
+\contentsline {section}{\numberline {8.19}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Persos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ennemy.h}{77}{section.8.19}%
+\contentsline {subsection}{\numberline {8.19.1}Description détaillée}{77}{subsection.8.19.1}%
+\contentsline {section}{\numberline {8.20}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Persos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ghost.h}{78}{section.8.20}%
+\contentsline {subsection}{\numberline {8.20.1}Description détaillée}{78}{subsection.8.20.1}%
+\contentsline {section}{\numberline {8.21}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Persos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Monster.h}{78}{section.8.21}%
+\contentsline {subsection}{\numberline {8.21.1}Description détaillée}{78}{subsection.8.21.1}%
+\contentsline {section}{\numberline {8.22}Référence du fichier Code/src/include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Persos/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Personnage.h}{79}{section.8.22}%
+\contentsline {subsection}{\numberline {8.22.1}Description détaillée}{79}{subsection.8.22.1}%
