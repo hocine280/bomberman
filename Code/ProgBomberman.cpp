@@ -58,7 +58,7 @@ int main(void)
 				"=============================================================================================================" << std::endl;
 				do
 				{
-					std::cout << std::endl << "Sélectionnez la map souhaitée :";
+					std::cout << std::endl << "Sélectionnez la map souhaitée : \n\t 1 - El simple \n\t 2 - El complicado\nFaites votre choix : ";
 					std::cin >> level;
 					std::cin.clear();
 

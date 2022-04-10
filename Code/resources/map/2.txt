@@ -1,13 +1,13 @@
 12 12
-t,I,t,w,W,w,w,t,
-t,
-t,
-t,
-t,
-t,
-t,
-t,
-t,
-t,
-t,
-t,
+t,I,t,w,W,w,w,t,t,t,t,W
+t,P,W,t,t,t,w,I,SC,X,t,t
+t,M,t,PU,t,t,t,t,t,W,w,MB
+t,I,M,PU,t,SP,t,t,X,t,t,t
+t,t,W,t,t,G,t,ML,t,I,t,t
+t,t,t,I,t,I,t,I,t,t,t,SP,
+t,w,t,W,t,W,t,W,t,W,t,w
+t,M,t,PU,G,ML,SP,t,t,t,M,B
+t,B,t,ML,PU,W,t,t,SC,X,t,t
+t,t,P,t,t,t,t,t,B,t,t,SC
+t,w,t,W,t,W,t,W,t,W,t,w
+t,W,t,t,T,I,t,t,w,W,t,t
