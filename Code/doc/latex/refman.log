@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.10)  10 APR 2022 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.10)  10 APR 2022 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -953,9 +953,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\char' on input line 21.
 
 LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 31.
+(Font)              scaled to size 10.79993pt on input line 30.
 LaTeX Font Info:    Font shape `TS1/phv/b/n' will be
-(Font)              scaled to size 12.9599pt on input line 36.
+(Font)              scaled to size 12.9599pt on input line 35.
  [1
 
 
@@ -2498,7 +2498,7 @@ sr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (90 pages, 354551 bytes).
+Output written on refman.pdf (90 pages, 354691 bytes).
 PDF statistics:
  3747 PDF objects out of 4296 (max. 8388607)
  3425 compressed objects within 35 object streams
