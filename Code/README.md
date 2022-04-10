@@ -24,7 +24,7 @@ A la racine vous disposerez des dossiers et fichiers suivants :
 ### Le dossier "Code"
 
 Dans ce dossier, nous retrouverons les dossiers et fichiers suivats :
-
+- doc [Dossier] => Le dossier contient la documentation sous format html, latex et pdf
 - src [Dossier] => Le dossier contenant tous les "packages"
 - resources [Dossier] => Les ressources nécessaires, c'est-à-dire les maps au format .txt
 - ProgBomberman.cpp => Le fichier contenant le main du jeu Bomberman et permettant de lancer une partie
