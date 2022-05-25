@@ -6,8 +6,8 @@ Il s'agit de notre projet d'INFO0402 dans lequel nous avons du développer le je
 
 ## Auteurs
 
-- CHEMIN Pierre
-- HADID Hocine
+- Pierre (@PietroCookie)
+- Hocine (@hocine280)
 
 ----
 
