@@ -1,3 +1,4 @@
+# ![alt text](./logo.png) 
 # Bomberman
 
 Il s'agit de notre projet d'INFO0402 dans lequel nous avons du développer le jeu du **Bomberman**.
