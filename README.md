@@ -48,4 +48,4 @@ Une fois l'exécutable intitulé *Bomberman* créé il vous suffit de le lancer 
 
     ./Bomberman
 
-Une fois tout cela effectué, il n'y a plus qu'ç jouer une partie !
+Une fois tout cela effectué, il n'y a plus qu'à jouer une partie !
